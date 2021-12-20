@@ -6,7 +6,9 @@ namespace PetShop
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            int dogCount = int.Parse(Console.ReadLine());
+            int animalCount = int.Parse(Console.ReadLine());
+            Console.WriteLine($"{dogCount*2.50+animalCount*4} lv.");
         }
     }
 }
