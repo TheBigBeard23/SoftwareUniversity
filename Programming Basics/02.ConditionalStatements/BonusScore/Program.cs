@@ -21,7 +21,7 @@ namespace BonusScore
             {
                 bonus += 5;
             }
-            else if (points > 100)
+            else if (points > 100 && points<1000)
             {
                 bonus += points * 0.2;
             }
