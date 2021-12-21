@@ -25,11 +25,11 @@ namespace Shopping
 
             if (budget > totalPrice )
             {
-                Console.WriteLine($"You have {budget-totalPrice} leva left!");
+                Console.WriteLine($"You have {budget-totalPrice:f2} leva left!");
             }
             else
             {
-                Console.WriteLine($"Not enough money! You need {totalPrice-budget} leva more!");
+                Console.WriteLine($"Not enough money! You need {totalPrice-budget:f2} leva more!");
             }
 
         }
