@@ -12,12 +12,14 @@ namespace GodzillaVsKong
 
             double decorPrice = movieBudget * 0.10;
             double suitsTotalPrice = extrasCount*suitPrice;
-            double movieTotalPrice = decorPrice + suitsTotalPrice;
+            
 
             if (extrasCount > 150)
             {
                 suitsTotalPrice -= suitsTotalPrice * 0.10;
             }
+
+            double movieTotalPrice = decorPrice + suitsTotalPrice;
 
             if (movieBudget >= movieTotalPrice)
             {
