@@ -5,17 +5,21 @@ VisualStudioVersion = 16.0.30503.244
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExcellentResult", "ExcellentResult\ExcellentResult.csproj", "{9EEA3F6C-BB43-4DFA-94BA-4AF3CE3875F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreaterNumber", "GreaterNumber\GreaterNumber.csproj", "{72CD87E3-43D4-4B25-9C8F-5EA4C83F3A1E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GreaterNumber", "GreaterNumber\GreaterNumber.csproj", "{72CD87E3-43D4-4B25-9C8F-5EA4C83F3A1E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvenOrOdd", "EvenOrOdd\EvenOrOdd.csproj", "{1299BCC6-5A6C-4AFD-8F6A-671AC9E7E873}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EvenOrOdd", "EvenOrOdd\EvenOrOdd.csproj", "{1299BCC6-5A6C-4AFD-8F6A-671AC9E7E873}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PasswordGuess", "PasswordGuess\PasswordGuess.csproj", "{56F59CD7-E1CD-448B-BD19-8C159B06543E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PasswordGuess", "PasswordGuess\PasswordGuess.csproj", "{56F59CD7-E1CD-448B-BD19-8C159B06543E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Number100to200", "Number100to200\Number100to200.csproj", "{FF2EC183-EA5D-43A0-B7D0-630BA70FC87B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Number100to200", "Number100to200\Number100to200.csproj", "{FF2EC183-EA5D-43A0-B7D0-630BA70FC87B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpeedInfo", "SpeedInfo\SpeedInfo.csproj", "{C7602B52-B2CE-4018-8D98-68995C4ED46F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpeedInfo", "SpeedInfo\SpeedInfo.csproj", "{C7602B52-B2CE-4018-8D98-68995C4ED46F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AreaOfFigures", "AreaOfFigures\AreaOfFigures.csproj", "{54C4400F-5B97-4446-9E35-F2B825DBE465}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AreaOfFigures", "AreaOfFigures\AreaOfFigures.csproj", "{54C4400F-5B97-4446-9E35-F2B825DBE465}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SumSeconds", "SumSeconds\SumSeconds.csproj", "{21F8E8C6-B043-4633-BA94-EC0674E2B402}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BonusScore", "BonusScore\BonusScore.csproj", "{E362161C-1A49-4351-B603-0B857BECD8D2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +55,14 @@ Global
 		{54C4400F-5B97-4446-9E35-F2B825DBE465}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{54C4400F-5B97-4446-9E35-F2B825DBE465}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{54C4400F-5B97-4446-9E35-F2B825DBE465}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21F8E8C6-B043-4633-BA94-EC0674E2B402}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21F8E8C6-B043-4633-BA94-EC0674E2B402}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21F8E8C6-B043-4633-BA94-EC0674E2B402}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21F8E8C6-B043-4633-BA94-EC0674E2B402}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E362161C-1A49-4351-B603-0B857BECD8D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E362161C-1A49-4351-B603-0B857BECD8D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E362161C-1A49-4351-B603-0B857BECD8D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E362161C-1A49-4351-B603-0B857BECD8D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
