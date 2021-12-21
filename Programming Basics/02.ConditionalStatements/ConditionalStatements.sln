@@ -23,6 +23,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BonusScore", "BonusScore\Bo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeAfter15Minutes", "TimeAfter15Minutes\TimeAfter15Minutes.csproj", "{0091250B-7F4D-4BFF-86DA-7013FED8C630}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToyShop", "ToyShop\ToyShop.csproj", "{BF98062B-7021-4848-A7C9-729701567F6E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GodzillaVsKong", "GodzillaVsKong\GodzillaVsKong.csproj", "{CE0B0323-546E-400D-9B81-8D7F0A880356}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +73,14 @@ Global
 		{0091250B-7F4D-4BFF-86DA-7013FED8C630}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0091250B-7F4D-4BFF-86DA-7013FED8C630}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0091250B-7F4D-4BFF-86DA-7013FED8C630}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF98062B-7021-4848-A7C9-729701567F6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF98062B-7021-4848-A7C9-729701567F6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF98062B-7021-4848-A7C9-729701567F6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF98062B-7021-4848-A7C9-729701567F6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE0B0323-546E-400D-9B81-8D7F0A880356}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE0B0323-546E-400D-9B81-8D7F0A880356}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE0B0323-546E-400D-9B81-8D7F0A880356}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE0B0323-546E-400D-9B81-8D7F0A880356}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
