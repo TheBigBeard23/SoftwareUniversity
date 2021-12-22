@@ -6,7 +6,31 @@ namespace PersonalTitles
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            double age = double.Parse(Console.ReadLine());
+            string gender = Console.ReadLine();
+
+            if (gender == "m")
+            {
+                if (age >= 16)
+                {
+                    Console.WriteLine("Mr.");
+                }
+                else
+                {
+                    Console.WriteLine("Master");
+                }
+            }
+            else
+            {
+                if (age >= 16)
+                {
+                    Console.WriteLine("Ms.");
+                }
+                else
+                {
+                    Console.WriteLine("Miss");
+                }
+            }
         }
     }
 }

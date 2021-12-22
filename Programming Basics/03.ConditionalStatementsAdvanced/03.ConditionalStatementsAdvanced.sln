@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimalType", "AnimalType\An
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonalTitles", "PersonalTitles\PersonalTitles.csproj", "{2FF507A2-8319-491B-B388-C22EE0B825D8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmallShop", "SmallShop\SmallShop.csproj", "{D20490D0-7E78-4498-8844-C7085A20871C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{2FF507A2-8319-491B-B388-C22EE0B825D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2FF507A2-8319-491B-B388-C22EE0B825D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2FF507A2-8319-491B-B388-C22EE0B825D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D20490D0-7E78-4498-8844-C7085A20871C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D20490D0-7E78-4498-8844-C7085A20871C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D20490D0-7E78-4498-8844-C7085A20871C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D20490D0-7E78-4498-8844-C7085A20871C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
