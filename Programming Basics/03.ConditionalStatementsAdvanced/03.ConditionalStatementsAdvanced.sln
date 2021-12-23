@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TradeCommissions", "TradeCo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cinema", "Cinema\Cinema.csproj", "{9AE42296-ED1B-4231-A8D4-0B02AF14B18F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SummerOutfit", "SummerOutfit\SummerOutfit.csproj", "{C8283B15-628E-454A-9275-FEBC967BB0D0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{9AE42296-ED1B-4231-A8D4-0B02AF14B18F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9AE42296-ED1B-4231-A8D4-0B02AF14B18F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9AE42296-ED1B-4231-A8D4-0B02AF14B18F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8283B15-628E-454A-9275-FEBC967BB0D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8283B15-628E-454A-9275-FEBC967BB0D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8283B15-628E-454A-9275-FEBC967BB0D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8283B15-628E-454A-9275-FEBC967BB0D0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
