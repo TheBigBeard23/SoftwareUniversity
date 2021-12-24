@@ -12,8 +12,7 @@ namespace NewHouse
             double priceofFlower = 0;
             double discount = 0;
             double fee = 0;
-            double totalPrice = 0.0;
-
+            
             switch (flowerType)
             {
                 case "Roses":
@@ -58,8 +57,9 @@ namespace NewHouse
 
 
             }
-           totalPrice = (flowersCount * priceofFlower) - (totalPrice * discount) + (totalPrice * fee);
-           
+            double totalPrice = flowersCount * priceofFlower;                           
+            totalPrice = totalPrice - totalPrice * discount;
+            totalPrice = totalPrice + totalPrice * fee;
 
             if (budget >= totalPrice)
             {
