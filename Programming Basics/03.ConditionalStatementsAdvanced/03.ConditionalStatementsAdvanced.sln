@@ -25,11 +25,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InvalidNumber", "InvalidNum
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FruitShop", "FruitShop\FruitShop.csproj", "{49EB6998-F7E4-44C1-A867-3E9313637258}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TradeCommissions", "TradeCommissions\TradeCommissions.csproj", "{FE334150-EBF1-44B3-BA29-5115FCBEF780}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TradeCommissions", "TradeCommissions\TradeCommissions.csproj", "{FE334150-EBF1-44B3-BA29-5115FCBEF780}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cinema", "Cinema\Cinema.csproj", "{9AE42296-ED1B-4231-A8D4-0B02AF14B18F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cinema", "Cinema\Cinema.csproj", "{9AE42296-ED1B-4231-A8D4-0B02AF14B18F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SummerOutfit", "SummerOutfit\SummerOutfit.csproj", "{C8283B15-628E-454A-9275-FEBC967BB0D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SummerOutfit", "SummerOutfit\SummerOutfit.csproj", "{C8283B15-628E-454A-9275-FEBC967BB0D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewHouse", "NewHouse\NewHouse.csproj", "{B05E6A76-E71D-4624-8439-FC3F05E58CA0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,6 +95,10 @@ Global
 		{C8283B15-628E-454A-9275-FEBC967BB0D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8283B15-628E-454A-9275-FEBC967BB0D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8283B15-628E-454A-9275-FEBC967BB0D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B05E6A76-E71D-4624-8439-FC3F05E58CA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B05E6A76-E71D-4624-8439-FC3F05E58CA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B05E6A76-E71D-4624-8439-FC3F05E58CA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B05E6A76-E71D-4624-8439-FC3F05E58CA0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
