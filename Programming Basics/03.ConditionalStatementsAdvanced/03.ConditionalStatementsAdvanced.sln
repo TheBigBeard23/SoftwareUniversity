@@ -37,6 +37,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FishingBoat", "FishingBoat\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Journey", "Journey\Journey.csproj", "{2DA99D66-81DB-46EE-9C9F-A69ED4E84816}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OperationsBetweenNumbers", "OperationsBetweenNumbers\OperationsBetweenNumbers.csproj", "{19A632F0-F947-4278-A324-0A6E38272FCB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +113,10 @@ Global
 		{2DA99D66-81DB-46EE-9C9F-A69ED4E84816}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2DA99D66-81DB-46EE-9C9F-A69ED4E84816}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2DA99D66-81DB-46EE-9C9F-A69ED4E84816}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19A632F0-F947-4278-A324-0A6E38272FCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19A632F0-F947-4278-A324-0A6E38272FCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19A632F0-F947-4278-A324-0A6E38272FCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19A632F0-F947-4278-A324-0A6E38272FCB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

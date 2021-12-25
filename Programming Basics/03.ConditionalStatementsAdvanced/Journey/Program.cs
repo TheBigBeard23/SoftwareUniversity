@@ -16,7 +16,15 @@ namespace Journey
             if (budget <= 100)
             {
                 destination = "Bulgaria";
-                place = "Hotel";
+
+                if (season == "summer")
+                {
+                    place = "Camp";
+                }
+                else
+                {
+                    place = "Hotel";
+                }
 
                 if (season == "summer")
                 {
@@ -59,7 +67,7 @@ namespace Journey
             }
 
             Console.WriteLine($"Somewhere in {destination}");
-            Console.WriteLine($"{place} - {price}");
+            Console.WriteLine($"{place} - {price:f2}");
         }
     }
 }
