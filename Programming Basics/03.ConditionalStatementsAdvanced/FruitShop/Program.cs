@@ -19,52 +19,52 @@ namespace FruitShop
                 switch (fruit)
                 {
                     case "banana":
-                        Console.WriteLine($"{2.50 * quantity}:f2");
+                        Console.WriteLine($"{2.50 * quantity:f2}");
                         break;
                     case "apple":
-                        Console.WriteLine($"{1.20 * quantity}:f2");
+                        Console.WriteLine($"{1.20 * quantity:f2}");
                         break;
                     case "orange":
-                        Console.WriteLine($"{0.85 * quantity}:f2");
+                        Console.WriteLine($"{0.85 * quantity:f2}");
                         break;
                     case "grapefruit":
-                        Console.WriteLine($"{1.45 * quantity}:f2");
+                        Console.WriteLine($"{1.45 * quantity:f2}");
                         break;
                     case "kiwi":
-                        Console.WriteLine($"{2.70 * quantity}:f2");
+                        Console.WriteLine($"{2.70 * quantity:f2}");
                         break;
                     case "pineapple":
-                        Console.WriteLine($"{5.50 * quantity}:f2");
+                        Console.WriteLine($"{5.50 * quantity:f2}");
                         break;
                     case "grapes":
-                        Console.WriteLine($"{3.85 * quantity}:f2");
+                        Console.WriteLine($"{3.85 * quantity:f2}");
                         break;
                     default:
                         Console.WriteLine("error");
                         break;
                 }
             }
-            else
+            else if(weekend.Contains(day))
             {
                 switch (fruit)
                 {
                     case "banana":
-                        Console.WriteLine($"{2.70 * quantity}:f2");
+                        Console.WriteLine($"{2.70 * quantity:f2}");
                         break;
                     case "apple":
-                        Console.WriteLine($"{1.25 * quantity}:f2");
+                        Console.WriteLine($"{1.25 * quantity:f2}");
                         break;
                     case "orange":
-                        Console.WriteLine($"{0.90 * quantity}:f2");
+                        Console.WriteLine($"{0.90 * quantity:f2}");
                         break;
                     case "grapefruit":
-                        Console.WriteLine($"{1.60 * quantity}:f2");
+                        Console.WriteLine($"{1.60 * quantity:f2}");
                         break;
                     case "kiwi":
-                        Console.WriteLine($"{3.00 * quantity}:f2");
+                        Console.WriteLine($"{3.00 * quantity:f2}");
                         break;
                     case "pineapple":
-                        Console.WriteLine($"{5.60 * quantity}:f2");
+                        Console.WriteLine($"{5.60 * quantity:f2}");
                         break;
                     case "grapes":
                         Console.WriteLine($"{4.20 * quantity:f2}");
@@ -73,6 +73,10 @@ namespace FruitShop
                         Console.WriteLine("error");
                         break;
                 }
+            }
+            else
+            {
+                Console.WriteLine("error");
             }
 
         }
