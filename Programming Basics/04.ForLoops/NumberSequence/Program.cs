@@ -16,8 +16,9 @@ namespace NumberSequence
                 numbers.Add(int.Parse(Console.ReadLine()));
             }
             var maxNum = numbers.OrderByDescending(n => n).FirstOrDefault();
-
+            var minNum = numbers.OrderBy(n => n).FirstOrDefault();
             Console.WriteLine($"Max number: {maxNum}");
+            Console.WriteLine($"Min number: {minNum}");
         }
     }
 }
