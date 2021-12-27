@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HalfSumElement", "HalfSumEl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Histogram", "Histogram\Histogram.csproj", "{81AF538C-3C97-4A65-B60B-622727063EC8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleverLily", "CleverLily\CleverLily.csproj", "{C9E430CF-134D-432B-8966-F1A97ABC7BB0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{81AF538C-3C97-4A65-B60B-622727063EC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81AF538C-3C97-4A65-B60B-622727063EC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81AF538C-3C97-4A65-B60B-622727063EC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9E430CF-134D-432B-8966-F1A97ABC7BB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9E430CF-134D-432B-8966-F1A97ABC7BB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9E430CF-134D-432B-8966-F1A97ABC7BB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9E430CF-134D-432B-8966-F1A97ABC7BB0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
