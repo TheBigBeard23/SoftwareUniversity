@@ -12,15 +12,16 @@ namespace HalfSumElement
             for (int i = 0; i < count; i++)
             {
                 int num = int.Parse(Console.ReadLine());
+                
                 sum += num;
+
                 if (maxNum < num)
                 {
-                    sum -= num;
                     maxNum = num;
                 }
 
             }
-
+            sum -= maxNum;
             if (maxNum == sum)
             {
                 Console.WriteLine($"Yes{Environment.NewLine}Sum = {sum}");
