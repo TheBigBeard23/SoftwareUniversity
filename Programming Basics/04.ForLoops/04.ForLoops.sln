@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberSequence", "NumberSeq
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OddEvenSum", "OddEvenSum\OddEvenSum.csproj", "{57D94D2B-9B14-402E-81F3-286C03005737}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumbersEndingIn7", "NumbersEndingIn7\NumbersEndingIn7.csproj", "{4ECB7F89-8F1A-42DD-A62D-0F2E95689AC6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{57D94D2B-9B14-402E-81F3-286C03005737}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{57D94D2B-9B14-402E-81F3-286C03005737}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{57D94D2B-9B14-402E-81F3-286C03005737}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4ECB7F89-8F1A-42DD-A62D-0F2E95689AC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4ECB7F89-8F1A-42DD-A62D-0F2E95689AC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4ECB7F89-8F1A-42DD-A62D-0F2E95689AC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4ECB7F89-8F1A-42DD-A62D-0F2E95689AC6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
