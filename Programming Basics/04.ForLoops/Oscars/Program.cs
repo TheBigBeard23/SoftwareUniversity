@@ -14,16 +14,17 @@ namespace Oscars
             {
                 string judgeName = Console.ReadLine();
                 double score = double.Parse(Console.ReadLine());
-                points += score;
+                points += judgeName.Length*score / 2.0;
 
                 if(points> 1250.5)
                 {
-                    Console.WriteLine($"Congratulations, {actorName} got a nominee for leading role with {points}!");
+                    Console.WriteLine($"Congratulations, {actorName} got a nominee for leading role with {points:f1}!");
+                    break;
                 }
             }
             if (points <= 1250.5)
             {
-                Console.WriteLine($"Sorry, {actorName} you need {1250.5-points} more!");
+                Console.WriteLine($"Sorry, {actorName} you need {1250.5-points:f1} more!");
             }
         }
     }
