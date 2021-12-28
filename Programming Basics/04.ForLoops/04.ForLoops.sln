@@ -31,6 +31,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleverLily", "CleverLily\Cl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Salary", "Salary\Salary.csproj", "{6E879FB0-1491-4C3D-A815-5FF71E5ED4BC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oscars", "Oscars\Oscars.csproj", "{2A878270-AB6B-4C84-9082-7C047A9E8EB3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{6E879FB0-1491-4C3D-A815-5FF71E5ED4BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E879FB0-1491-4C3D-A815-5FF71E5ED4BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E879FB0-1491-4C3D-A815-5FF71E5ED4BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A878270-AB6B-4C84-9082-7C047A9E8EB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A878270-AB6B-4C84-9082-7C047A9E8EB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A878270-AB6B-4C84-9082-7C047A9E8EB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A878270-AB6B-4C84-9082-7C047A9E8EB3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
