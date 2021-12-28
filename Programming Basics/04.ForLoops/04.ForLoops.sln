@@ -17,17 +17,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SumNumbers", "SumNumbers\Su
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeftAndRightSum", "LeftAndRightSum\LeftAndRightSum.csproj", "{8808DBD7-DE39-4837-B921-AED9838BAD41}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberSequence", "NumberSequence\NumberSequence.csproj", "{2B81B7FE-DBBA-428F-92B5-8516A86AD105}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NumberSequence", "NumberSequence\NumberSequence.csproj", "{2B81B7FE-DBBA-428F-92B5-8516A86AD105}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OddEvenSum", "OddEvenSum\OddEvenSum.csproj", "{57D94D2B-9B14-402E-81F3-286C03005737}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OddEvenSum", "OddEvenSum\OddEvenSum.csproj", "{57D94D2B-9B14-402E-81F3-286C03005737}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumbersEndingIn7", "NumbersEndingIn7\NumbersEndingIn7.csproj", "{4ECB7F89-8F1A-42DD-A62D-0F2E95689AC6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NumbersEndingIn7", "NumbersEndingIn7\NumbersEndingIn7.csproj", "{4ECB7F89-8F1A-42DD-A62D-0F2E95689AC6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HalfSumElement", "HalfSumElement\HalfSumElement.csproj", "{EB767AC8-640F-4DE1-AC73-9C30E08DECA0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HalfSumElement", "HalfSumElement\HalfSumElement.csproj", "{EB767AC8-640F-4DE1-AC73-9C30E08DECA0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Histogram", "Histogram\Histogram.csproj", "{81AF538C-3C97-4A65-B60B-622727063EC8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Histogram", "Histogram\Histogram.csproj", "{81AF538C-3C97-4A65-B60B-622727063EC8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleverLily", "CleverLily\CleverLily.csproj", "{C9E430CF-134D-432B-8966-F1A97ABC7BB0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleverLily", "CleverLily\CleverLily.csproj", "{C9E430CF-134D-432B-8966-F1A97ABC7BB0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Salary", "Salary\Salary.csproj", "{6E879FB0-1491-4C3D-A815-5FF71E5ED4BC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +89,10 @@ Global
 		{C9E430CF-134D-432B-8966-F1A97ABC7BB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9E430CF-134D-432B-8966-F1A97ABC7BB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9E430CF-134D-432B-8966-F1A97ABC7BB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E879FB0-1491-4C3D-A815-5FF71E5ED4BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E879FB0-1491-4C3D-A815-5FF71E5ED4BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E879FB0-1491-4C3D-A815-5FF71E5ED4BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E879FB0-1491-4C3D-A815-5FF71E5ED4BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
