@@ -29,11 +29,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Histogram", "Histogram\Hist
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleverLily", "CleverLily\CleverLily.csproj", "{C9E430CF-134D-432B-8966-F1A97ABC7BB0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Salary", "Salary\Salary.csproj", "{6E879FB0-1491-4C3D-A815-5FF71E5ED4BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Salary", "Salary\Salary.csproj", "{6E879FB0-1491-4C3D-A815-5FF71E5ED4BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oscars", "Oscars\Oscars.csproj", "{2A878270-AB6B-4C84-9082-7C047A9E8EB3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Oscars", "Oscars\Oscars.csproj", "{2A878270-AB6B-4C84-9082-7C047A9E8EB3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrekkingMania", "TrekkingMania\TrekkingMania.csproj", "{670D896A-A436-4570-BEFD-F2D547E11263}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrekkingMania", "TrekkingMania\TrekkingMania.csproj", "{670D896A-A436-4570-BEFD-F2D547E11263}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TennisRanklist", "TennisRanklist\TennisRanklist.csproj", "{1F5F6732-89D8-4C4E-8513-C883C5526DD5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -105,6 +107,10 @@ Global
 		{670D896A-A436-4570-BEFD-F2D547E11263}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{670D896A-A436-4570-BEFD-F2D547E11263}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{670D896A-A436-4570-BEFD-F2D547E11263}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F5F6732-89D8-4C4E-8513-C883C5526DD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F5F6732-89D8-4C4E-8513-C883C5526DD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F5F6732-89D8-4C4E-8513-C883C5526DD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F5F6732-89D8-4C4E-8513-C883C5526DD5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
