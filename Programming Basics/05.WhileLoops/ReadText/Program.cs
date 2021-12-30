@@ -6,7 +6,12 @@ namespace ReadText
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            string command = Console.ReadLine();
+            while (command != "Stop")
+            {
+                Console.WriteLine(command);
+                command = Console.ReadLine();
+            }
         }
     }
 }
