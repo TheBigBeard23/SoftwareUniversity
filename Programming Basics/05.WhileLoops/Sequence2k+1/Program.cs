@@ -10,7 +10,7 @@ namespace Sequence2k_1
 
             int k = 1;
 
-            while (k<number)
+            while (k<=number)
             {
                 Console.WriteLine(k);
                 k = k * 2 + 1;
