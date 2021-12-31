@@ -23,8 +23,10 @@ namespace Graduation
                 else
                 {
                     badGrades++;
+                    
                     if (badGrades > 1)
                     {
+                        level++;
                         Console.WriteLine($"{name} has been excluded at {level} grade");
                         break;
                     }
