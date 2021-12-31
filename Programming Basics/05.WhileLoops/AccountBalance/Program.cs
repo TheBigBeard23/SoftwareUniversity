@@ -20,11 +20,12 @@ namespace AccountBalance
                 }
 
                 balance += currentValue;
+                Console.WriteLine($"Increase: {currentValue:f2}");
 
                 input = Console.ReadLine();
             }
 
-            Console.WriteLine($"Total: {balance}");
+            Console.WriteLine($"Total: {balance:f2}");
 
 
 

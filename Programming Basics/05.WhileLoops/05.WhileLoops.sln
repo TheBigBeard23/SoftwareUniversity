@@ -5,17 +5,19 @@ VisualStudioVersion = 16.0.30517.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReadText", "ReadText\ReadText.csproj", "{FFBBBCDE-C281-4401-84E1-3C19D7545142}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Password", "Password\Password.csproj", "{6CF97CBC-3187-4798-8DAD-0491F66B0454}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Password", "Password\Password.csproj", "{6CF97CBC-3187-4798-8DAD-0491F66B0454}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SumNumbers", "SumNumbers\SumNumbers.csproj", "{C986ED05-BC4F-4A59-9CA5-98E8D179591B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SumNumbers", "SumNumbers\SumNumbers.csproj", "{C986ED05-BC4F-4A59-9CA5-98E8D179591B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sequence2k+1", "Sequence2k+1\Sequence2k+1.csproj", "{AB11CF1E-FEE7-4DCB-B483-1970ADE63445}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sequence2k+1", "Sequence2k+1\Sequence2k+1.csproj", "{AB11CF1E-FEE7-4DCB-B483-1970ADE63445}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountBalance", "AccountBalance\AccountBalance.csproj", "{2E61351E-DEC0-4CEF-83E7-A5F54490FA61}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccountBalance", "AccountBalance\AccountBalance.csproj", "{2E61351E-DEC0-4CEF-83E7-A5F54490FA61}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaxNumber", "MaxNumber\MaxNumber.csproj", "{14702003-5700-40D7-B46D-C9D85B2C5CE1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MaxNumber", "MaxNumber\MaxNumber.csproj", "{14702003-5700-40D7-B46D-C9D85B2C5CE1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinNumber", "MinNumber\MinNumber.csproj", "{CB764A18-9FC1-4302-81B7-D45B4D82C38D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MinNumber", "MinNumber\MinNumber.csproj", "{CB764A18-9FC1-4302-81B7-D45B4D82C38D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graduation", "Graduation\Graduation.csproj", "{9B9A4A1B-3898-4CA2-81BC-84C0D7AB7A34}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{CB764A18-9FC1-4302-81B7-D45B4D82C38D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CB764A18-9FC1-4302-81B7-D45B4D82C38D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CB764A18-9FC1-4302-81B7-D45B4D82C38D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B9A4A1B-3898-4CA2-81BC-84C0D7AB7A34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B9A4A1B-3898-4CA2-81BC-84C0D7AB7A34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B9A4A1B-3898-4CA2-81BC-84C0D7AB7A34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B9A4A1B-3898-4CA2-81BC-84C0D7AB7A34}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

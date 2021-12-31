@@ -6,7 +6,18 @@ namespace MinNumber
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            string input = "";
+            int minNum = 2147483647;
+
+            while ((input = Console.ReadLine()) != "Stop")
+            {
+                int currentNum = int.Parse(input);
+                if (minNum > currentNum)
+                {
+                    minNum = currentNum;
+                }
+            }
+            Console.WriteLine(minNum);
         }
     }
 }
