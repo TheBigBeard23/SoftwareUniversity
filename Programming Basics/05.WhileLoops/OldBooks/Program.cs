@@ -13,7 +13,8 @@ namespace OldBooks
             {
                 if (currentBook == "No More Books")
                 {
-                    Console.WriteLine();
+                    Console.WriteLine($"The book you search is not here!" +
+                   $"{Environment.NewLine}You checked {checkedBooks} books.");
                     break;
                 }
 
@@ -22,8 +23,7 @@ namespace OldBooks
 
             if (currentBook == wantedBook)
             {
-                Console.WriteLine($"The book you search is not here!" +
-                Environment.NewLine ,$"You checked {checkedBooks} books.");
+                Console.WriteLine($"You checked {checkedBooks} books and found it.");
             }
         }
     }

@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graduation", "Graduation\Gr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OldBooks", "OldBooks\OldBooks.csproj", "{82E0FA38-0C21-4EB0-95FE-B3565DC402FA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vacation", "Vacation\Vacation.csproj", "{CDF88631-2325-4AE3-8E2A-AECA0500483A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{82E0FA38-0C21-4EB0-95FE-B3565DC402FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82E0FA38-0C21-4EB0-95FE-B3565DC402FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{82E0FA38-0C21-4EB0-95FE-B3565DC402FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDF88631-2325-4AE3-8E2A-AECA0500483A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDF88631-2325-4AE3-8E2A-AECA0500483A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDF88631-2325-4AE3-8E2A-AECA0500483A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDF88631-2325-4AE3-8E2A-AECA0500483A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
