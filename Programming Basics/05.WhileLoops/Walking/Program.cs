@@ -6,29 +6,34 @@ namespace Walking
     {
         static void Main(string[] args)
         {
-            int currentSteps = int.Parse(Console.ReadLine());
+            string input = Console.ReadLine();
             int stepsCount = 0;
             int goalSteps = 10000;
-            stepsCount += currentSteps;
+            
 
-            while (stepsCount< goalSteps)
+            while (input!= "Going home")
             {
-                
-                string input = Console.ReadLine();
-
-                if(input == "Going home")
-                {
-                    stepsCount += int.Parse(Console.ReadLine());
-                    break;
-                }
 
                 stepsCount += int.Parse(input);
 
+                if (stepsCount >= goalSteps)
+                {
+                    break;
+                }
+                
+                input = Console.ReadLine();
             }
+
+            if(input== "Going home")
+            {
+                input = Console.ReadLine();
+                stepsCount += int.Parse(input);
+            }
+            
             if (stepsCount >= goalSteps)
             {
                 Console.WriteLine("Goal reached! Good job!");
-                Console.WriteLine($"{stepsCount- goalSteps} steps over the goal!");
+                Console.WriteLine($"{stepsCount - goalSteps} steps over the goal!");
             }
             else
             {
