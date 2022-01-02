@@ -17,25 +17,23 @@ namespace ExamPreparation
             {
                 
                 string problem = Console.ReadLine();
+
                 if (problem == "Enough")
                 {
                     break;
                 }
+
                 int grade = int.Parse(Console.ReadLine());
 
-                
-
+                problemsCount++;
+                score += grade;
                 lastProblem = problem;
 
                 if (grade <= 4)
                 {
                     currentPoorGrades++;
                 }
-                else
-                {
-                    problemsCount++;
-                    score += grade;
-                }
+               
             }
 
             if (poorGradesCount == currentPoorGrades)
