@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clock", "Clock\Clock.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiplicationTable", "MultiplicationTable\MultiplicationTable.csproj", "{8A558CAE-F058-432A-A9D5-A90B329BC16D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Combinations", "Combinations\Combinations.csproj", "{D5C9FB6B-155C-4C0A-8759-870239767072}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{8A558CAE-F058-432A-A9D5-A90B329BC16D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A558CAE-F058-432A-A9D5-A90B329BC16D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A558CAE-F058-432A-A9D5-A90B329BC16D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5C9FB6B-155C-4C0A-8759-870239767072}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5C9FB6B-155C-4C0A-8759-870239767072}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5C9FB6B-155C-4C0A-8759-870239767072}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5C9FB6B-155C-4C0A-8759-870239767072}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
