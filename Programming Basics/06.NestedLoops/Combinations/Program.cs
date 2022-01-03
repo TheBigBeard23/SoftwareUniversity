@@ -8,6 +8,7 @@ namespace Combinations
         {
             int n = int.Parse(Console.ReadLine());
             int count = 0;
+
             for (int x1 = 0; x1 <= n; x1++)
             {
                 for (int x2 = 0; x2 <= n; x2++)
@@ -21,6 +22,7 @@ namespace Combinations
                     }
                 }
             }
+
             Console.WriteLine(count);
         }
     }
