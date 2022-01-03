@@ -23,11 +23,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OldBooks", "OldBooks\OldBoo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vacation", "Vacation\Vacation.csproj", "{CDF88631-2325-4AE3-8E2A-AECA0500483A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExamPreparation", "ExamPreparation\ExamPreparation.csproj", "{10898C08-5FBB-400E-8F2B-728D389B02B9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExamPreparation", "ExamPreparation\ExamPreparation.csproj", "{10898C08-5FBB-400E-8F2B-728D389B02B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Walking", "Walking\Walking.csproj", "{C498F0E3-410E-47CB-938F-EAF077D47398}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Walking", "Walking\Walking.csproj", "{C498F0E3-410E-47CB-938F-EAF077D47398}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coins", "Coins\Coins.csproj", "{3112687C-2625-40B8-A6A5-2D37C90A3C09}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Coins", "Coins\Coins.csproj", "{3112687C-2625-40B8-A6A5-2D37C90A3C09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cake", "Cake\Cake.csproj", "{2A509014-137E-4247-9A2B-78D4E358A678}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +89,10 @@ Global
 		{3112687C-2625-40B8-A6A5-2D37C90A3C09}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3112687C-2625-40B8-A6A5-2D37C90A3C09}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3112687C-2625-40B8-A6A5-2D37C90A3C09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A509014-137E-4247-9A2B-78D4E358A678}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A509014-137E-4247-9A2B-78D4E358A678}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A509014-137E-4247-9A2B-78D4E358A678}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A509014-137E-4247-9A2B-78D4E358A678}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
