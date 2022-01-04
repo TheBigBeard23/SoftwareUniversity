@@ -14,14 +14,13 @@ namespace SumOfTwoNumbers
             bool foundCombination = false;
             for (int i = n1; i <= n2; i++)
             {
-                for (int k = n1; k < n2; k++)
+                for (int k = n1; k <= n2; k++)
                 {
                     combinationsCount++;
                     if (i + k == magicNumber)
                     {
                         foundCombination = true;
-                        Console.WriteLine($"Combination N:{combinationsCount}");
-                        Console.WriteLine($"({i} + {k} = {magicNumber})");
+                        Console.WriteLine($"Combination N:{combinationsCount} ({i} + {k} = {magicNumber})");
                         break;
                     }
                 }
