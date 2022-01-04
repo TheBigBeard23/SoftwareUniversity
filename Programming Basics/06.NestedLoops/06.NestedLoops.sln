@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30503.244
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clock", "Clock\Clock.csproj", "{1BC81255-3B66-4F02-BD9F-EBA5C5CAF0BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clock", "Clock\Clock.csproj", "{1BC81255-3B66-4F02-BD9F-EBA5C5CAF0BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiplicationTable", "MultiplicationTable\MultiplicationTable.csproj", "{8A558CAE-F058-432A-A9D5-A90B329BC16D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiplicationTable", "MultiplicationTable\MultiplicationTable.csproj", "{8A558CAE-F058-432A-A9D5-A90B329BC16D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Combinations", "Combinations\Combinations.csproj", "{D5C9FB6B-155C-4C0A-8759-870239767072}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Combinations", "Combinations\Combinations.csproj", "{D5C9FB6B-155C-4C0A-8759-870239767072}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SumOfTwoNumbers", "SumOfTwoNumbers\SumOfTwoNumbers.csproj", "{B97B027B-34F6-4E28-94FD-12C0A7E3A702}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SumOfTwoNumbers", "SumOfTwoNumbers\SumOfTwoNumbers.csproj", "{B97B027B-34F6-4E28-94FD-12C0A7E3A702}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Travelling", "Travelling\Travelling.csproj", "{6FB8706C-A9DD-401A-B2B2-73D1FA9C4EB3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{B97B027B-34F6-4E28-94FD-12C0A7E3A702}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B97B027B-34F6-4E28-94FD-12C0A7E3A702}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B97B027B-34F6-4E28-94FD-12C0A7E3A702}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FB8706C-A9DD-401A-B2B2-73D1FA9C4EB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FB8706C-A9DD-401A-B2B2-73D1FA9C4EB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FB8706C-A9DD-401A-B2B2-73D1FA9C4EB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FB8706C-A9DD-401A-B2B2-73D1FA9C4EB3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
