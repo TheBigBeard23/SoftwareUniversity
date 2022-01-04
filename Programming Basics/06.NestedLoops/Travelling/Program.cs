@@ -6,41 +6,28 @@ namespace Travelling
     {
         static void Main(string[] args)
         {
-            string destination = string.Empty;
-            int price = 0;
-            int savings = 0;
-            string command = string.Empty;
 
             while (true)
             {
-                destination = Console.ReadLine();
+               string destination = Console.ReadLine();
 
                 if (destination == "End")
                 {
                     break;
                 }
 
-                price = int.Parse(Console.ReadLine());
+                double price = double.Parse(Console.ReadLine()), savings = 0;
 
                 while (price>savings)
-                {
-                    command = Console.ReadLine();
+                { 
 
-                    if (command == "End")
-                    {
-                        return;
-                    }
-
-                    savings += int.Parse(command);
+                    savings += double.Parse(Console.ReadLine());
 
                 }
                 
                 Console.WriteLine($"Going to {destination}!");
 
-                savings = 0;
             }
-
-
 
         }
     }
