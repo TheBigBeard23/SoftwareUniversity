@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Travelling", "Travelling\Tr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Building", "Building\Building.csproj", "{3DA674E2-45EC-4ACD-B9F6-B463E7F40042}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberPyramid", "NumberPyramid\NumberPyramid.csproj", "{0346A03A-4C37-4681-B3D2-AF1207A89FB3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{3DA674E2-45EC-4ACD-B9F6-B463E7F40042}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3DA674E2-45EC-4ACD-B9F6-B463E7F40042}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3DA674E2-45EC-4ACD-B9F6-B463E7F40042}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0346A03A-4C37-4681-B3D2-AF1207A89FB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0346A03A-4C37-4681-B3D2-AF1207A89FB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0346A03A-4C37-4681-B3D2-AF1207A89FB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0346A03A-4C37-4681-B3D2-AF1207A89FB3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
