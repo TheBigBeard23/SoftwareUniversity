@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberPyramid", "NumberPyra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EqualSumsEvenOddPosition", "EqualSumsEvenOddPosition\EqualSumsEvenOddPosition.csproj", "{F24148FC-8F1B-4324-B145-DE6F2F952625}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SumPrimeNonPrime", "SumPrimeNonPrime\SumPrimeNonPrime.csproj", "{57C27C1D-5B2C-4A2D-99AC-97F3186D348B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{F24148FC-8F1B-4324-B145-DE6F2F952625}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F24148FC-8F1B-4324-B145-DE6F2F952625}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F24148FC-8F1B-4324-B145-DE6F2F952625}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57C27C1D-5B2C-4A2D-99AC-97F3186D348B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57C27C1D-5B2C-4A2D-99AC-97F3186D348B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57C27C1D-5B2C-4A2D-99AC-97F3186D348B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57C27C1D-5B2C-4A2D-99AC-97F3186D348B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

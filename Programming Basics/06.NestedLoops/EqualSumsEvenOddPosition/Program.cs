@@ -28,7 +28,7 @@ namespace EqualSumsEvenOddPosition
 
                 if (oddSum == evenSum)
                 {
-                    Console.WriteLine(i);
+                    Console.Write(i+" ");
                 }
                 oddSum = 0;
                 evenSum = 0;
