@@ -7,7 +7,7 @@ namespace TrainTheTrainers
         static void Main(string[] args)
         {
             int gradesCount = int.Parse(Console.ReadLine());
-            string input = string.Empty;
+            string input = "";
 
             double avgGrade = 0.0;
             int presentationsCount = 0;
@@ -24,12 +24,12 @@ namespace TrainTheTrainers
 
                 currentAvgGrade = currentAvgGrade / gradesCount;
                 avgGrade += currentAvgGrade;
-                Console.WriteLine($"{input} - {currentAvgGrade}.");
+                Console.WriteLine($"{input} - {currentAvgGrade:f2}.");
             }
 
             avgGrade = avgGrade / presentationsCount;
 
-            Console.WriteLine($"Student's final assessment is {avgGrade}.");
+            Console.WriteLine($"Student's final assessment is {avgGrade:f2}.");
 
 
 
