@@ -11,15 +11,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Combinations", "Combination
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SumOfTwoNumbers", "SumOfTwoNumbers\SumOfTwoNumbers.csproj", "{B97B027B-34F6-4E28-94FD-12C0A7E3A702}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Travelling", "Travelling\Travelling.csproj", "{6FB8706C-A9DD-401A-B2B2-73D1FA9C4EB3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Travelling", "Travelling\Travelling.csproj", "{6FB8706C-A9DD-401A-B2B2-73D1FA9C4EB3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Building", "Building\Building.csproj", "{3DA674E2-45EC-4ACD-B9F6-B463E7F40042}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Building", "Building\Building.csproj", "{3DA674E2-45EC-4ACD-B9F6-B463E7F40042}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberPyramid", "NumberPyramid\NumberPyramid.csproj", "{0346A03A-4C37-4681-B3D2-AF1207A89FB3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NumberPyramid", "NumberPyramid\NumberPyramid.csproj", "{0346A03A-4C37-4681-B3D2-AF1207A89FB3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EqualSumsEvenOddPosition", "EqualSumsEvenOddPosition\EqualSumsEvenOddPosition.csproj", "{F24148FC-8F1B-4324-B145-DE6F2F952625}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EqualSumsEvenOddPosition", "EqualSumsEvenOddPosition\EqualSumsEvenOddPosition.csproj", "{F24148FC-8F1B-4324-B145-DE6F2F952625}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SumPrimeNonPrime", "SumPrimeNonPrime\SumPrimeNonPrime.csproj", "{57C27C1D-5B2C-4A2D-99AC-97F3186D348B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SumPrimeNonPrime", "SumPrimeNonPrime\SumPrimeNonPrime.csproj", "{57C27C1D-5B2C-4A2D-99AC-97F3186D348B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainTheTrainers", "TrainTheTrainers\TrainTheTrainers.csproj", "{AF161D2B-B64F-409A-81D4-37630EEF8BBB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{57C27C1D-5B2C-4A2D-99AC-97F3186D348B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{57C27C1D-5B2C-4A2D-99AC-97F3186D348B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{57C27C1D-5B2C-4A2D-99AC-97F3186D348B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF161D2B-B64F-409A-81D4-37630EEF8BBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF161D2B-B64F-409A-81D4-37630EEF8BBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF161D2B-B64F-409A-81D4-37630EEF8BBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF161D2B-B64F-409A-81D4-37630EEF8BBB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
