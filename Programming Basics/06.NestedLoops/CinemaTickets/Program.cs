@@ -11,13 +11,13 @@ namespace CinemaTickets
             {
                 ["student"] = 0,
                 ["standard"] = 0,
-                ["kid"] = 0
+                ["kids"] = 0
 
             };
 
             Dictionary<string, double> occupiedSeatsByMovie = new Dictionary<string, double>();
 
-            
+            double totalSoldTickets = 0.0;
 
             while (true)
             {
@@ -52,21 +52,24 @@ namespace CinemaTickets
                     }
                     else
                     {
-                        ticketsCountByType["kid"]++;
+                        ticketsCountByType["kids"]++;
                     }
                 }
 
                 occupiedSeatsByMovie.Add(input, soldTickets / seats * 100);
-
+                totalSoldTickets += soldTickets;
             }
             foreach (var kvp in occupiedSeatsByMovie)
             {
-                Console.WriteLine($"{kvp.Key} - {kvp.Value}% full.");
+                Console.WriteLine($"{kvp.Key} - {kvp.Value:f2}% full.");
             }
 
+            Console.WriteLine($"Total tickets: {totalSoldTickets}");
 
-
-
+            foreach (var kvp in ticketsCountByType)
+            {
+                Console.WriteLine($"{kvp.Value/totalSoldTickets*100:f2}% {kvp.Key} tickets.");
+            }
         }
 
     }
