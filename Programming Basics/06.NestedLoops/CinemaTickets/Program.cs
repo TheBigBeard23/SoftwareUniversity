@@ -59,6 +59,8 @@ namespace CinemaTickets
                 occupiedSeatsByMovie.Add(input, soldTickets / seats * 100);
                 totalSoldTickets += soldTickets;
             }
+
+
             foreach (var kvp in occupiedSeatsByMovie)
             {
                 Console.WriteLine($"{kvp.Key} - {kvp.Value:f2}% full.");
