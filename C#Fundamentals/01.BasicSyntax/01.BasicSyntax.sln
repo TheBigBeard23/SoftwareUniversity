@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForeignLanguages", "Foreign
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheatrePromotion", "TheatrePromotion\TheatrePromotion.csproj", "{A635FBEB-983D-4297-A979-109A67817F16}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DivisibleBy3", "DivisibleBy3\DivisibleBy3.csproj", "{B228915F-EE61-4D19-9973-21650F577CA4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{A635FBEB-983D-4297-A979-109A67817F16}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A635FBEB-983D-4297-A979-109A67817F16}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A635FBEB-983D-4297-A979-109A67817F16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B228915F-EE61-4D19-9973-21650F577CA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B228915F-EE61-4D19-9973-21650F577CA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B228915F-EE61-4D19-9973-21650F577CA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B228915F-EE61-4D19-9973-21650F577CA4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
