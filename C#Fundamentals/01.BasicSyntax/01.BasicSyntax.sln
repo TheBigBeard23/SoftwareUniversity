@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheatrePromotion", "Theatre
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DivisibleBy3", "DivisibleBy3\DivisibleBy3.csproj", "{B228915F-EE61-4D19-9973-21650F577CA4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SumOfOddNumbers", "SumOfOddNumbers\SumOfOddNumbers.csproj", "{90A06E81-0E5C-4AD8-8691-C21097547B3E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{B228915F-EE61-4D19-9973-21650F577CA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B228915F-EE61-4D19-9973-21650F577CA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B228915F-EE61-4D19-9973-21650F577CA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90A06E81-0E5C-4AD8-8691-C21097547B3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90A06E81-0E5C-4AD8-8691-C21097547B3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90A06E81-0E5C-4AD8-8691-C21097547B3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90A06E81-0E5C-4AD8-8691-C21097547B3E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
