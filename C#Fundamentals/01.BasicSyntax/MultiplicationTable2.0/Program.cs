@@ -11,14 +11,14 @@ namespace MultiplicationTable2._0
 
             if (firstNum > 10 || secondNum > 10)
             {
-                Console.WriteLine(firstNum + " X " + secondNum + " = " + (firstNum * secondNum));
+                Console.WriteLine($"{firstNum} X {secondNum} = {(firstNum * secondNum)}");
             }
             else if (secondNum < 10 || 10 > firstNum)
             {
                 for (int i = secondNum; i <= 10; i++)
                 {
 
-                    Console.WriteLine(firstNum + " X " + i + " = " + (firstNum * i));
+                    Console.WriteLine($"{firstNum} X {i} = {(firstNum * i)}");
                 }
             }
         }
