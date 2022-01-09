@@ -29,6 +29,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EvenNumber", "EvenNumber\Ev
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolidaysBetweenTwoDates", "HolidaysBetweenTwoDates\HolidaysBetweenTwoDates.csproj", "{D15D02A2-DFFA-42FD-9C09-DDAB97288A31}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ages", "Ages\Ages.csproj", "{9F4F9A94-0B6E-42F8-B87E-DBF69C6BEFBD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{D15D02A2-DFFA-42FD-9C09-DDAB97288A31}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D15D02A2-DFFA-42FD-9C09-DDAB97288A31}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D15D02A2-DFFA-42FD-9C09-DDAB97288A31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F4F9A94-0B6E-42F8-B87E-DBF69C6BEFBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F4F9A94-0B6E-42F8-B87E-DBF69C6BEFBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F4F9A94-0B6E-42F8-B87E-DBF69C6BEFBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F4F9A94-0B6E-42F8-B87E-DBF69C6BEFBD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
