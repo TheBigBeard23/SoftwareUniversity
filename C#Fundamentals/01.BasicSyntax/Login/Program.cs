@@ -20,7 +20,7 @@ namespace Login
                 counter++;
                 if (counter == 4)
                 {
-                    Console.WriteLine("User sunny blocked!");
+                    Console.WriteLine($"User {username} blocked!");
                     return;
                 }
 
