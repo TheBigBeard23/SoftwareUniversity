@@ -27,15 +27,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiplicationTable2.0", "M
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EvenNumber", "EvenNumber\EvenNumber.csproj", "{8CE91D70-0EAC-4877-BB23-0C2826B3906C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolidaysBetweenTwoDates", "HolidaysBetweenTwoDates\HolidaysBetweenTwoDates.csproj", "{D15D02A2-DFFA-42FD-9C09-DDAB97288A31}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HolidaysBetweenTwoDates", "HolidaysBetweenTwoDates\HolidaysBetweenTwoDates.csproj", "{D15D02A2-DFFA-42FD-9C09-DDAB97288A31}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ages", "Ages\Ages.csproj", "{9F4F9A94-0B6E-42F8-B87E-DBF69C6BEFBD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ages", "Ages\Ages.csproj", "{9F4F9A94-0B6E-42F8-B87E-DBF69C6BEFBD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Division", "Division\Division.csproj", "{FB22745D-1380-4CC4-A4C6-1DA992B7C337}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Division", "Division\Division.csproj", "{FB22745D-1380-4CC4-A4C6-1DA992B7C337}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vacation", "Vacation\Vacation.csproj", "{B7ACCF6D-D710-475A-951C-986D9C9A27C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vacation", "Vacation\Vacation.csproj", "{B7ACCF6D-D710-475A-951C-986D9C9A27C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintAndSum", "PrintAndSum\PrintAndSum.csproj", "{9E179BAF-0D09-4379-9A18-A891E990F8DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrintAndSum", "PrintAndSum\PrintAndSum.csproj", "{9E179BAF-0D09-4379-9A18-A891E990F8DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Login", "Login\Login.csproj", "{7D264E81-1EF7-416E-8B5E-9E4B089A2CB3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -111,6 +113,10 @@ Global
 		{9E179BAF-0D09-4379-9A18-A891E990F8DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E179BAF-0D09-4379-9A18-A891E990F8DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E179BAF-0D09-4379-9A18-A891E990F8DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D264E81-1EF7-416E-8B5E-9E4B089A2CB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D264E81-1EF7-416E-8B5E-9E4B089A2CB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D264E81-1EF7-416E-8B5E-9E4B089A2CB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D264E81-1EF7-416E-8B5E-9E4B089A2CB3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
