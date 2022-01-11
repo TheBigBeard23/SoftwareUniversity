@@ -9,16 +9,17 @@ namespace PadawanEquipment
             double amount = double.Parse(Console.ReadLine());
             int studentsCount = int.Parse(Console.ReadLine());
             double lightsaberPrice = double.Parse(Console.ReadLine());
-            double beltPrice = double.Parse(Console.ReadLine());
             double robePrice = double.Parse(Console.ReadLine());
+            double beltPrice = double.Parse(Console.ReadLine());
+        
 
             double sumLightsabers = (studentsCount + Math.Ceiling(studentsCount * 0.1)) * lightsaberPrice;
-            double sumBelts = (studentsCount - studentsCount / 6) * beltPrice;
+            double sumBelts = studentsCount > 10 ? (studentsCount - studentsCount / 6) * beltPrice : studentsCount * beltPrice;
             double sumRobes = studentsCount * robePrice;
 
             double totalSum = sumLightsabers + sumBelts + sumRobes;
 
-            if (totalSum < amount)
+            if (totalSum <= amount)
             {
                 Console.WriteLine($"The money is enough - it would cost {totalSum:f2}lv.");
             }
