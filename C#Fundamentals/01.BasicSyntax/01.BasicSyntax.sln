@@ -55,6 +55,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortNumbers", "Sort Numbers
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnglishNameOfTheLastDigit", "EnglishNameOfTheLastDigit\EnglishNameOfTheLastDigit.csproj", "{DA8BDFEE-343C-4057-B7D2-6E81149DA9BF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamingStore", "GamingStore\GamingStore.csproj", "{0C870A25-2A40-420D-8C2D-184B512FD825}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -165,6 +167,10 @@ Global
 		{DA8BDFEE-343C-4057-B7D2-6E81149DA9BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA8BDFEE-343C-4057-B7D2-6E81149DA9BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA8BDFEE-343C-4057-B7D2-6E81149DA9BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C870A25-2A40-420D-8C2D-184B512FD825}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C870A25-2A40-420D-8C2D-184B512FD825}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C870A25-2A40-420D-8C2D-184B512FD825}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C870A25-2A40-420D-8C2D-184B512FD825}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
