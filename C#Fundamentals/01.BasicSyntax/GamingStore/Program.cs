@@ -50,7 +50,7 @@ namespace GamingStore
             }
             else
             {
-                Console.WriteLine($"Total spent: ${totalSpent:f2}. Remaining: ${amount-totalSpent:f2}");
+                Console.WriteLine($"Total spent: ${totalSpent:f2}. Remaining: ${amount:f2}");
             }
         }
     }
