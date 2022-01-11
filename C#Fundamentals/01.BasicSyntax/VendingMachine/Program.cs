@@ -59,9 +59,12 @@ namespace VendingMachine
 
                 if (amount >= price)
                 {
-                    Console.WriteLine($"Purchased {product}");
+                    Console.WriteLine($"Purchased {product.ToLower()}");
                     amount -= price;
-
+                }
+                else
+                {
+                    Console.WriteLine("Sorry, not enough money");
                 }
 
             }
