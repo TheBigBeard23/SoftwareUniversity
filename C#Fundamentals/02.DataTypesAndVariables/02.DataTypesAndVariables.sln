@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReversedChars", "ReversedCh
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConcatNames", "ConcatNames\ConcatNames.csproj", "{7298B4DD-8534-46B3-8833-56096DA350ED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TownInfo", "TownInfo\TownInfo.csproj", "{D9E27CAE-34B8-4FCA-AC54-E4186220DA72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CharsToString", "CharsToString\CharsToString.csproj", "{428F1FFD-80EA-434F-B335-8DB8BBE6CF56}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,14 @@ Global
 		{7298B4DD-8534-46B3-8833-56096DA350ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7298B4DD-8534-46B3-8833-56096DA350ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7298B4DD-8534-46B3-8833-56096DA350ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9E27CAE-34B8-4FCA-AC54-E4186220DA72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9E27CAE-34B8-4FCA-AC54-E4186220DA72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9E27CAE-34B8-4FCA-AC54-E4186220DA72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9E27CAE-34B8-4FCA-AC54-E4186220DA72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{428F1FFD-80EA-434F-B335-8DB8BBE6CF56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{428F1FFD-80EA-434F-B335-8DB8BBE6CF56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{428F1FFD-80EA-434F-B335-8DB8BBE6CF56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{428F1FFD-80EA-434F-B335-8DB8BBE6CF56}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
