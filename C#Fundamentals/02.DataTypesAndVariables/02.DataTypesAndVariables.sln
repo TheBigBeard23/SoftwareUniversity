@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LowerOrUpper", "LowerOrUppe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefactorVolumeOfPyramid", "RefactorVolumeOfPyramid\RefactorVolumeOfPyramid.csproj", "{B8676386-6386-44C1-B5FD-B48330EB6ACB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefactorSpecialNumbers", "RefactorSpecialNumbers\RefactorSpecialNumbers.csproj", "{562B8CCA-E54D-4533-BB5F-D9D4352D2BAA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{B8676386-6386-44C1-B5FD-B48330EB6ACB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8676386-6386-44C1-B5FD-B48330EB6ACB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8676386-6386-44C1-B5FD-B48330EB6ACB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{562B8CCA-E54D-4533-BB5F-D9D4352D2BAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{562B8CCA-E54D-4533-BB5F-D9D4352D2BAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{562B8CCA-E54D-4533-BB5F-D9D4352D2BAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{562B8CCA-E54D-4533-BB5F-D9D4352D2BAA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
