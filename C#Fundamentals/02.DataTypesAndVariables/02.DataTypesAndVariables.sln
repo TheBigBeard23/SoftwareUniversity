@@ -29,6 +29,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RefactorSpecialNumbers", "R
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegerOperations", "IntegerOperations\IntegerOperations.csproj", "{BB7DD59F-02D3-4B86-BFB2-19ADACBE7061}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SumDigits", "SumDigits\SumDigits.csproj", "{1463CE9C-0DBA-4B21-BF90-260CC089971C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{BB7DD59F-02D3-4B86-BFB2-19ADACBE7061}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB7DD59F-02D3-4B86-BFB2-19ADACBE7061}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB7DD59F-02D3-4B86-BFB2-19ADACBE7061}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1463CE9C-0DBA-4B21-BF90-260CC089971C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1463CE9C-0DBA-4B21-BF90-260CC089971C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1463CE9C-0DBA-4B21-BF90-260CC089971C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1463CE9C-0DBA-4B21-BF90-260CC089971C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
