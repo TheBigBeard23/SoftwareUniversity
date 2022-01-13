@@ -11,7 +11,7 @@ namespace PrintPartOfASCIITable
 
             for (int i = firstNum; i <= secondNum; i++)
             {
-                Console.WriteLine((char)i);
+                Console.Write($"{(char)i} ");
             }
         }
     }
