@@ -27,13 +27,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RefactorVolumeOfPyramid", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RefactorSpecialNumbers", "RefactorSpecialNumbers\RefactorSpecialNumbers.csproj", "{562B8CCA-E54D-4533-BB5F-D9D4352D2BAA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegerOperations", "IntegerOperations\IntegerOperations.csproj", "{BB7DD59F-02D3-4B86-BFB2-19ADACBE7061}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntegerOperations", "IntegerOperations\IntegerOperations.csproj", "{BB7DD59F-02D3-4B86-BFB2-19ADACBE7061}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SumDigits", "SumDigits\SumDigits.csproj", "{1463CE9C-0DBA-4B21-BF90-260CC089971C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SumDigits", "SumDigits\SumDigits.csproj", "{1463CE9C-0DBA-4B21-BF90-260CC089971C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elevator", "Elevator\Elevator.csproj", "{0978C350-FAB0-4F7E-BAF7-A60C325CDAA2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Elevator", "Elevator\Elevator.csproj", "{0978C350-FAB0-4F7E-BAF7-A60C325CDAA2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SumOfChars", "SumOfChars\SumOfChars.csproj", "{C8E5A250-0BDA-4D6B-92F0-CD6A84675037}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SumOfChars", "SumOfChars\SumOfChars.csproj", "{C8E5A250-0BDA-4D6B-92F0-CD6A84675037}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintPartOfASCIITable", "PrintPartOfASCIITable\PrintPartOfASCIITable.csproj", "{6D56FB8C-277A-48C0-9175-EFF997B9BFFB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -105,6 +107,10 @@ Global
 		{C8E5A250-0BDA-4D6B-92F0-CD6A84675037}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8E5A250-0BDA-4D6B-92F0-CD6A84675037}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8E5A250-0BDA-4D6B-92F0-CD6A84675037}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D56FB8C-277A-48C0-9175-EFF997B9BFFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D56FB8C-277A-48C0-9175-EFF997B9BFFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D56FB8C-277A-48C0-9175-EFF997B9BFFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D56FB8C-277A-48C0-9175-EFF997B9BFFB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
