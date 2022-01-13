@@ -35,9 +35,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Elevator", "Elevator\Elevat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SumOfChars", "SumOfChars\SumOfChars.csproj", "{C8E5A250-0BDA-4D6B-92F0-CD6A84675037}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintPartOfASCIITable", "PrintPartOfASCIITable\PrintPartOfASCIITable.csproj", "{6D56FB8C-277A-48C0-9175-EFF997B9BFFB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrintPartOfASCIITable", "PrintPartOfASCIITable\PrintPartOfASCIITable.csproj", "{6D56FB8C-277A-48C0-9175-EFF997B9BFFB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TriplesOfLatinLetters", "TriplesOfLatinLetters\TriplesOfLatinLetters.csproj", "{BAE72BC9-80C7-4230-ACD0-99FB6E4FC6C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TriplesOfLatinLetters", "TriplesOfLatinLetters\TriplesOfLatinLetters.csproj", "{BAE72BC9-80C7-4230-ACD0-99FB6E4FC6C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaterOverflow", "WaterOverflow\WaterOverflow.csproj", "{CF88298A-4A17-43FF-A307-FDA530DA0C6C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -117,6 +119,10 @@ Global
 		{BAE72BC9-80C7-4230-ACD0-99FB6E4FC6C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BAE72BC9-80C7-4230-ACD0-99FB6E4FC6C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BAE72BC9-80C7-4230-ACD0-99FB6E4FC6C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF88298A-4A17-43FF-A307-FDA530DA0C6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF88298A-4A17-43FF-A307-FDA530DA0C6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF88298A-4A17-43FF-A307-FDA530DA0C6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF88298A-4A17-43FF-A307-FDA530DA0C6C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
