@@ -39,11 +39,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrintPartOfASCIITable", "Pr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TriplesOfLatinLetters", "TriplesOfLatinLetters\TriplesOfLatinLetters.csproj", "{BAE72BC9-80C7-4230-ACD0-99FB6E4FC6C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaterOverflow", "WaterOverflow\WaterOverflow.csproj", "{CF88298A-4A17-43FF-A307-FDA530DA0C6C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WaterOverflow", "WaterOverflow\WaterOverflow.csproj", "{CF88298A-4A17-43FF-A307-FDA530DA0C6C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeerKegs", "BeerKegs\BeerKegs.csproj", "{E7C6CEC3-A7A8-4F4E-9236-E357F16CFA7B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BeerKegs", "BeerKegs\BeerKegs.csproj", "{E7C6CEC3-A7A8-4F4E-9236-E357F16CFA7B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpiceMustFlow", "SpiceMustFlow\SpiceMustFlow.csproj", "{766A0CFA-7705-4079-8693-6CA2ED267608}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpiceMustFlow", "SpiceMustFlow\SpiceMustFlow.csproj", "{766A0CFA-7705-4079-8693-6CA2ED267608}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokemon", "Pokemon\Pokemon.csproj", "{55204BA1-223A-4F1F-9186-FE1F5F08360B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -135,6 +137,10 @@ Global
 		{766A0CFA-7705-4079-8693-6CA2ED267608}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{766A0CFA-7705-4079-8693-6CA2ED267608}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{766A0CFA-7705-4079-8693-6CA2ED267608}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55204BA1-223A-4F1F-9186-FE1F5F08360B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55204BA1-223A-4F1F-9186-FE1F5F08360B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55204BA1-223A-4F1F-9186-FE1F5F08360B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55204BA1-223A-4F1F-9186-FE1F5F08360B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
