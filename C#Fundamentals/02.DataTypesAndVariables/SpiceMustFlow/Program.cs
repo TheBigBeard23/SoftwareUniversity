@@ -10,6 +10,13 @@ namespace SpiceMustFlow
             int daysCount = 0;
             int yieldQuantity = 0;
 
+            if (startingYield < 100)
+            {
+                Console.WriteLine($"{daysCount}");
+                Console.WriteLine($"{yieldQuantity}");
+                return;
+            }
+
             while (startingYield>=100)
             {
                 daysCount++;
