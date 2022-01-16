@@ -47,9 +47,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpiceMustFlow", "SpiceMustF
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pokemon", "Pokemon\Pokemon.csproj", "{55204BA1-223A-4F1F-9186-FE1F5F08360B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snowballs", "Snowballs\Snowballs.csproj", "{DE3A4528-055F-426E-9037-B2DE4A73C23E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Snowballs", "Snowballs\Snowballs.csproj", "{DE3A4528-055F-426E-9037-B2DE4A73C23E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTypeFinder", "DataTypeFinder\DataTypeFinder.csproj", "{362C1A46-947A-4B5B-9AD4-C9A17E84C803}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataTypeFinder", "DataTypeFinder\DataTypeFinder.csproj", "{362C1A46-947A-4B5B-9AD4-C9A17E84C803}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FromLeftToTheRight", "FromLeftToTheRight\FromLeftToTheRight.csproj", "{B064DD39-ACA6-4CE2-91B3-003F92414E76}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -153,6 +155,10 @@ Global
 		{362C1A46-947A-4B5B-9AD4-C9A17E84C803}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{362C1A46-947A-4B5B-9AD4-C9A17E84C803}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{362C1A46-947A-4B5B-9AD4-C9A17E84C803}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B064DD39-ACA6-4CE2-91B3-003F92414E76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B064DD39-ACA6-4CE2-91B3-003F92414E76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B064DD39-ACA6-4CE2-91B3-003F92414E76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B064DD39-ACA6-4CE2-91B3-003F92414E76}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
