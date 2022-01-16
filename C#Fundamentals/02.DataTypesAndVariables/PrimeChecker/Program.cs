@@ -10,15 +10,16 @@ namespace PrimeChecker
             for (int i = 2; i <= number; i++)
             {
                 bool isPrime = true;
+
                 for (int k = 2; k < i; k++)
                 {
                     if (i % k == 0)
                     {
-                        takovalie = false;
+                        isPrime = false;
                         break;
                     }
                 }
-                Console.WriteLine("{0} -> {1}", i, takovalie);
+                Console.WriteLine("{0} -> {1}", i, isPrime.ToString().ToLower());
             }
 
         }
