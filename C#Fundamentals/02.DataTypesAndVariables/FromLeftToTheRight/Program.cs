@@ -13,12 +13,13 @@ namespace FromLeftToTheRight
             for (int i = 0; i < count; i++)
             {
               
-                BigInteger biggestNumber = Console.ReadLine()
+                Decimal biggestNumber = Console.ReadLine()
                              .Split(" ", StringSplitOptions.RemoveEmptyEntries)
-                             .Select(x => BigInteger.Parse(x))
+                             .Select(x => Decimal.Parse(x))
                              .OrderByDescending(x => x)
                              .FirstOrDefault();
 
+                biggestNumber = Math.Abs(biggestNumber);
                 int digitsSum = 0;
                 string numberAsString = biggestNumber.ToString();
 
@@ -27,7 +28,7 @@ namespace FromLeftToTheRight
                     digitsSum += int.Parse(numberAsString[k].ToString());
                 }
 
-                Console.WriteLine(Math.Abs(digitsSum));
+                Console.WriteLine(digitsSum);
             }
         }
     }
