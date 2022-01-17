@@ -14,7 +14,7 @@ namespace RoundingNumbers
 
             for (int i = 0; i < numbers.Length; i++)
             {
-                Console.WriteLine($"{numbers[i] } => {Math.Round(numbers[i], MidpointRounding.AwayFromZero)}");
+                Console.WriteLine($"{numbers[i] } => {(int)(Math.Round(numbers[i], MidpointRounding.AwayFromZero))}");
             }
         }
     }
