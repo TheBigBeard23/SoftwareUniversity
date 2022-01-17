@@ -14,7 +14,10 @@ namespace RoundingNumbers
 
             for (int i = 0; i < numbers.Length; i++)
             {
-                Console.WriteLine($"{numbers[i] } => {(int)(Math.Round(numbers[i], MidpointRounding.AwayFromZero))}");
+                double number = numbers[i];
+                double roudedNumber = Math.Round(number, MidpointRounding.AwayFromZero);
+
+                Console.WriteLine($"{Convert.ToDecimal(number)} => {Convert.ToDecimal(roudedNumber)}");
             }
         }
     }
