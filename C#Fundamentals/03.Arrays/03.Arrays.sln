@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrintNumbersInReverseOrder"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RoundingNumbers", "RoundingNumbers\RoundingNumbers.csproj", "{307432E8-BC53-4D30-9D90-03C7262819D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReverseArrayOfStrings", "ReverseArrayOfStrings\ReverseArrayOfStrings.csproj", "{8215A999-77B8-488E-B2D5-14A5A91111EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReverseArrayOfStrings", "ReverseArrayOfStrings\ReverseArrayOfStrings.csproj", "{8215A999-77B8-488E-B2D5-14A5A91111EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SumEvenNumbers", "SumEvenNumbers\SumEvenNumbers.csproj", "{D5732C54-66C1-4497-B0CF-C44B8230F1AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SumEvenNumbers", "SumEvenNumbers\SumEvenNumbers.csproj", "{D5732C54-66C1-4497-B0CF-C44B8230F1AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvenAndOddSubtraction", "EvenAndOddSubtraction\EvenAndOddSubtraction.csproj", "{E4C5B6ED-DF13-44CE-9C07-5E855D04C97C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{D5732C54-66C1-4497-B0CF-C44B8230F1AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5732C54-66C1-4497-B0CF-C44B8230F1AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5732C54-66C1-4497-B0CF-C44B8230F1AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4C5B6ED-DF13-44CE-9C07-5E855D04C97C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4C5B6ED-DF13-44CE-9C07-5E855D04C97C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4C5B6ED-DF13-44CE-9C07-5E855D04C97C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4C5B6ED-DF13-44CE-9C07-5E855D04C97C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
