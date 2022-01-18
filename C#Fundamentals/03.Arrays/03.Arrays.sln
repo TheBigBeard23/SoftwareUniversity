@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvenAndOddSubtraction", "Ev
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EqualArrays", "EqualArrays\EqualArrays.csproj", "{7FD96C67-86C6-49BE-BB13-2875C9DE96B0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CondenseArrayToNumber", "CondenseArrayToNumber\CondenseArrayToNumber.csproj", "{868BEBE2-BDB8-4F12-B08E-435C5A568131}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{7FD96C67-86C6-49BE-BB13-2875C9DE96B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7FD96C67-86C6-49BE-BB13-2875C9DE96B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7FD96C67-86C6-49BE-BB13-2875C9DE96B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{868BEBE2-BDB8-4F12-B08E-435C5A568131}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{868BEBE2-BDB8-4F12-B08E-435C5A568131}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{868BEBE2-BDB8-4F12-B08E-435C5A568131}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{868BEBE2-BDB8-4F12-B08E-435C5A568131}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
