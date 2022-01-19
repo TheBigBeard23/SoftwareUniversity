@@ -13,13 +13,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReverseArrayOfStrings", "Re
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SumEvenNumbers", "SumEvenNumbers\SumEvenNumbers.csproj", "{D5732C54-66C1-4497-B0CF-C44B8230F1AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvenAndOddSubtraction", "EvenAndOddSubtraction\EvenAndOddSubtraction.csproj", "{E4C5B6ED-DF13-44CE-9C07-5E855D04C97C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EvenAndOddSubtraction", "EvenAndOddSubtraction\EvenAndOddSubtraction.csproj", "{E4C5B6ED-DF13-44CE-9C07-5E855D04C97C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EqualArrays", "EqualArrays\EqualArrays.csproj", "{7FD96C67-86C6-49BE-BB13-2875C9DE96B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EqualArrays", "EqualArrays\EqualArrays.csproj", "{7FD96C67-86C6-49BE-BB13-2875C9DE96B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CondenseArrayToNumber", "CondenseArrayToNumber\CondenseArrayToNumber.csproj", "{868BEBE2-BDB8-4F12-B08E-435C5A568131}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CondenseArrayToNumber", "CondenseArrayToNumber\CondenseArrayToNumber.csproj", "{868BEBE2-BDB8-4F12-B08E-435C5A568131}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Train", "Train\Train.csproj", "{A3315DEA-3A57-4E33-89B6-DBC5490A811D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Train", "Train\Train.csproj", "{A3315DEA-3A57-4E33-89B6-DBC5490A811D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonElements", "CommonElements\CommonElements.csproj", "{923EC121-9887-42D4-B432-D1E9E928249D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{A3315DEA-3A57-4E33-89B6-DBC5490A811D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3315DEA-3A57-4E33-89B6-DBC5490A811D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3315DEA-3A57-4E33-89B6-DBC5490A811D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{923EC121-9887-42D4-B432-D1E9E928249D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{923EC121-9887-42D4-B432-D1E9E928249D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{923EC121-9887-42D4-B432-D1E9E928249D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{923EC121-9887-42D4-B432-D1E9E928249D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -10,9 +10,9 @@ namespace DataTypeFinder
 
             while ((input=Console.ReadLine())!="END")
             {
-                int number;
+                double number;
 
-                if(!int.TryParse(input,out number))
+                if(!double.TryParse(input,out number))
                 {
                     if (input.Length == 1)
                     {
@@ -28,7 +28,7 @@ namespace DataTypeFinder
                     }                
                 }
 
-                else if (int.TryParse(input, out number))
+                else if (int.TryParse(input, out int doubleValue))
                 {
                     Console.WriteLine($"{input} is integer type");
                 }
