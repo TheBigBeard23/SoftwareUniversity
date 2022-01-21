@@ -73,6 +73,7 @@ namespace KaminoFactory
                     bestSequenceSum = currentSum;
                     bestSequenceLength = currentSequenceLength;
                     bestDna = string.Join(" ", dna);
+                    bestRow = currentRow;
                 }
 
                 else if (currentSequenceLength == bestSequenceLength &&
@@ -83,11 +84,12 @@ namespace KaminoFactory
                     bestSequenceSum = currentSum;
                     bestSequenceLength = currentSequenceLength;
                     bestDna = string.Join(" ", dna);
+                    bestRow = currentRow;
                 }
 
             }
 
-            Console.WriteLine($"Best DNA sample {bestSequenceIndex} with sum: {bestSequenceSum}.");
+            Console.WriteLine($"Best DNA sample {bestRow} with sum: {bestSequenceSum}.");
             Console.WriteLine(bestDna);
 
         }
