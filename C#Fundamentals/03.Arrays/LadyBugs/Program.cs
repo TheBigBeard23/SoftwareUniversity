@@ -7,71 +7,83 @@ namespace LadyBugs
     {
         static void Main(string[] args)
         {
-            int[] field = new int[int.Parse(Console.ReadLine())];
+            int[] filed = new int[int.Parse(Console.ReadLine())];
 
-            int[] ladybugsIndexes = Console.ReadLine()
-                .Split(" ",StringSplitOptions.RemoveEmptyEntries)
+            var indexes = Console.ReadLine()
+                .Split()
                 .Select(int.Parse)
                 .ToArray();
 
-            for (int i = 0; i < ladybugsIndexes.Length; i++)
+            for (int i = 0; i < filed.Length; i++)
             {
-                if(ladybugsIndexes[i]>= 0 &&
-                   ladybugsIndexes[i] <= field.Length - 1)
+                if (indexes.Contains(i))
                 {
-                    field[ladybugsIndexes[i]] = 1;
+                    filed[i] = 1;
                 }
-                
             }
 
-            string input = string.Empty;
+            string input = Console.ReadLine();
 
-            while ((input=Console.ReadLine()).ToLower()!="end")
+            while (input.ToLower()!="end")
             {
                 string[] commands = input
-                    .Split(" ",StringSplitOptions.RemoveEmptyEntries)
+                    .Split()
                     .ToArray();
 
                 int index = int.Parse(commands[0]);
                 string direction = commands[1];
                 int value = int.Parse(commands[2]);
 
-                if (index >= 0 && index <= field.Length - 1)
+                if(index>=0 && index <= filed.Length - 1)
                 {
-                    field[index] = 0;
+                    filed[index] = 0;
 
-                    switch (direction)
+                    if(direction=="left" && value < 0)
                     {
-                        case "right":
-                            if (value > 0 && index + value <= field.Length - 1)
-                            {
-                                field[index + value] = 1;
-                            }
-                            else if (value < 0 && index - value >= 0)
-                            {
-                                field[index - Math.Abs(value)] = 1;
-                            }
-                            break;
+                        value *= -1;
+                    }
+                    else if(direction=="left")
+                    {
+                        value *= -1;
+                    }
+                }
+                else
+                {
+                    input = Console.ReadLine();
+                    continue;
+                }
 
-                        case "left":
-                            if (value > 0 && index - value >= 0)
-                            {
-                                field[index - value] = 1;
-                            }
-                            else if (value < 0 && index + value <= field.Length)
-                            {
-                                field[index + Math.Abs(value)] = 1;
-                            }
-                            break;
+                if (value >= 0 && index + value < filed.Length)
+                {
 
-                        default:
+                    for (int i = index + value; i < filed.Length; i += value)
+                    {
+                        if (filed[i] != 1)
+                        {
+                            filed[i] = 1;
                             break;
+                        }
+                    }
+                }
+                else if (value < 0 && index + value >= 0)
+                {
+                    for (int i = index + value; i >= 0; i += value)
+                    {
+                        if (filed[i] != 1)
+                        {
+                            filed[i] = 1;
+                            break;
+                        }
                     }
 
                 }
-                
+
+                input = Console.ReadLine();
+
             }
-            Console.WriteLine(string.Join(" ", field));
+
+            Console.WriteLine(string.Join(" ",filed));
         }
     }
 }
+            
