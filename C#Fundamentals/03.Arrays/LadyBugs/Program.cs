@@ -38,7 +38,14 @@ namespace LadyBugs
 
                 if (index >= 0 && index <= field.Length - 1)
                 {
+                   
                     field[index] = 0;
+
+                    if (field[index + value]<=field.Length-1 &&
+                       field[index + value] == 1)
+                    {
+                        index += value;
+                    }
 
                     switch (direction)
                     {
