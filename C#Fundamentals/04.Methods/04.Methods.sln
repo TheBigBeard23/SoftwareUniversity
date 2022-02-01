@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grades", "Grades\Grades.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculations", "Calculations\Calculations.csproj", "{6FC245F0-E5C8-45EA-A94C-7F0871291FFF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintingTriangle", "PrintingTriangle\PrintingTriangle.csproj", "{6D171761-C749-4C60-B20E-5AC6AA0D9369}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{6FC245F0-E5C8-45EA-A94C-7F0871291FFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6FC245F0-E5C8-45EA-A94C-7F0871291FFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6FC245F0-E5C8-45EA-A94C-7F0871291FFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D171761-C749-4C60-B20E-5AC6AA0D9369}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D171761-C749-4C60-B20E-5AC6AA0D9369}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D171761-C749-4C60-B20E-5AC6AA0D9369}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D171761-C749-4C60-B20E-5AC6AA0D9369}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
