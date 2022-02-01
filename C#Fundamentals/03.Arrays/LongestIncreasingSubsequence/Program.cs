@@ -25,7 +25,7 @@ namespace LongestIncreasingSubsequence
 
                 for (int k = 0; k < i; k++)
                 {
-                    if(array[k]<array[i] )
+                    if(array[k]<array[i] && len[k] + 1 > len[i])
                     {
                         len[i] = 1 + len[k];
                         prev[i] = k;
