@@ -5,11 +5,13 @@ VisualStudioVersion = 16.0.30517.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignOfIntegerNumbers", "SignOfIntegerNumbers\SignOfIntegerNumbers.csproj", "{D286DE88-4732-4C14-9B16-1E9BD336028F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grades", "Grades\Grades.csproj", "{1E7200F8-5576-41FF-A4A3-AE8DFB36A3CB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Grades", "Grades\Grades.csproj", "{1E7200F8-5576-41FF-A4A3-AE8DFB36A3CB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculations", "Calculations\Calculations.csproj", "{6FC245F0-E5C8-45EA-A94C-7F0871291FFF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calculations", "Calculations\Calculations.csproj", "{6FC245F0-E5C8-45EA-A94C-7F0871291FFF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintingTriangle", "PrintingTriangle\PrintingTriangle.csproj", "{6D171761-C749-4C60-B20E-5AC6AA0D9369}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrintingTriangle", "PrintingTriangle\PrintingTriangle.csproj", "{6D171761-C749-4C60-B20E-5AC6AA0D9369}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orders", "Orders\Orders.csproj", "{1C387623-229F-4BB2-98D5-2177A8AF8B04}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{6D171761-C749-4C60-B20E-5AC6AA0D9369}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D171761-C749-4C60-B20E-5AC6AA0D9369}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D171761-C749-4C60-B20E-5AC6AA0D9369}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C387623-229F-4BB2-98D5-2177A8AF8B04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C387623-229F-4BB2-98D5-2177A8AF8B04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C387623-229F-4BB2-98D5-2177A8AF8B04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C387623-229F-4BB2-98D5-2177A8AF8B04}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
