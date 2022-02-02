@@ -13,7 +13,7 @@ namespace Orders
         }
         static void TotalPrice(string product,int quantity)
         {
-            double sum = double.Parse(Console.ReadLine());
+            double sum = 0.0;
 
             switch (product)
             {
