@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiplyEvensbyOdds", "Mult
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathOperations", "MathOperations\MathOperations.csproj", "{0331D84C-13DE-4D70-8885-FE43CB35D6CD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmallestОfThreeNumbers", "SmallestОfThreeNumbers\SmallestОfThreeNumbers.csproj", "{F6238F63-48C3-45F4-A25C-B72B902DA7D8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{0331D84C-13DE-4D70-8885-FE43CB35D6CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0331D84C-13DE-4D70-8885-FE43CB35D6CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0331D84C-13DE-4D70-8885-FE43CB35D6CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6238F63-48C3-45F4-A25C-B72B902DA7D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6238F63-48C3-45F4-A25C-B72B902DA7D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6238F63-48C3-45F4-A25C-B72B902DA7D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6238F63-48C3-45F4-A25C-B72B902DA7D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
