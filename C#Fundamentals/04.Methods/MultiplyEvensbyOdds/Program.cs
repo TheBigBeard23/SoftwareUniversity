@@ -11,7 +11,7 @@ namespace MultiplyEvensbyOdds
             int sumOfEvenDigits = GetSumOfEvenDigits(number);
             int sumOfOddDigits = GetSumOfOddDigits(number);
 
-            Console.WriteLine(sumOfEvenDigits + sumOfOddDigits); ;
+            Console.WriteLine(sumOfEvenDigits * sumOfOddDigits); ;
         }
         static int GetSumOfEvenDigits(int number)
         {
