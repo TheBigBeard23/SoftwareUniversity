@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathPower", "MathPower\Math
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreaterOfTwoValues", "GreaterOfTwoValues\GreaterOfTwoValues.csproj", "{6A501AD9-AB2E-4AC0-A42D-4D82726FAB46}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiplyEvensbyOdds", "MultiplyEvensbyOdds\MultiplyEvensbyOdds.csproj", "{EA28DEE6-1540-49BA-8325-8443518044AC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{6A501AD9-AB2E-4AC0-A42D-4D82726FAB46}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A501AD9-AB2E-4AC0-A42D-4D82726FAB46}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A501AD9-AB2E-4AC0-A42D-4D82726FAB46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA28DEE6-1540-49BA-8325-8443518044AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA28DEE6-1540-49BA-8325-8443518044AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA28DEE6-1540-49BA-8325-8443518044AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA28DEE6-1540-49BA-8325-8443518044AC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
