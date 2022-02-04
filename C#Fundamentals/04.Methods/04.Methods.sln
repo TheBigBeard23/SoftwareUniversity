@@ -39,6 +39,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiddleCharacters", "MiddleC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NxNMatrix", "NxNMatrix\NxNMatrix.csproj", "{AADBF858-5B09-47D9-BF56-2362FF9F0C0C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactorialDivision", "FactorialDivision\FactorialDivision.csproj", "{2392B1BC-11A4-4712-9327-87C058FE61BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PalindromeIntegers", "PalindromeIntegers\PalindromeIntegers.csproj", "{6AA62BB8-239E-4A46-A36B-4A70C40B8A9A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -117,6 +121,14 @@ Global
 		{AADBF858-5B09-47D9-BF56-2362FF9F0C0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AADBF858-5B09-47D9-BF56-2362FF9F0C0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AADBF858-5B09-47D9-BF56-2362FF9F0C0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2392B1BC-11A4-4712-9327-87C058FE61BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2392B1BC-11A4-4712-9327-87C058FE61BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2392B1BC-11A4-4712-9327-87C058FE61BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2392B1BC-11A4-4712-9327-87C058FE61BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AA62BB8-239E-4A46-A36B-4A70C40B8A9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AA62BB8-239E-4A46-A36B-4A70C40B8A9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AA62BB8-239E-4A46-A36B-4A70C40B8A9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AA62BB8-239E-4A46-A36B-4A70C40B8A9A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
