@@ -47,6 +47,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TopNumber", "TopNumber\TopN
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayManipulator", "ArrayManipulator\ArrayManipulator.csproj", "{1B997177-1F7D-47E3-B287-5F01A5A722A2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTypes", "DataTypes\DataTypes.csproj", "{41E71690-90FF-4F94-9051-F9C26E7613E7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -141,6 +143,10 @@ Global
 		{1B997177-1F7D-47E3-B287-5F01A5A722A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B997177-1F7D-47E3-B287-5F01A5A722A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B997177-1F7D-47E3-B287-5F01A5A722A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41E71690-90FF-4F94-9051-F9C26E7613E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41E71690-90FF-4F94-9051-F9C26E7613E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41E71690-90FF-4F94-9051-F9C26E7613E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41E71690-90FF-4F94-9051-F9C26E7613E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
