@@ -51,6 +51,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTypes", "DataTypes\Data
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CenterPoint", "CenterPoint\CenterPoint.csproj", "{C98F9F84-876D-4E66-BDD6-1CD2BB9E8F82}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LongerLine", "LongerLine\LongerLine.csproj", "{1D1EF78D-4E18-4870-A1FB-7ECA188CB549}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -153,6 +155,10 @@ Global
 		{C98F9F84-876D-4E66-BDD6-1CD2BB9E8F82}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C98F9F84-876D-4E66-BDD6-1CD2BB9E8F82}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C98F9F84-876D-4E66-BDD6-1CD2BB9E8F82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D1EF78D-4E18-4870-A1FB-7ECA188CB549}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D1EF78D-4E18-4870-A1FB-7ECA188CB549}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D1EF78D-4E18-4870-A1FB-7ECA188CB549}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D1EF78D-4E18-4870-A1FB-7ECA188CB549}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

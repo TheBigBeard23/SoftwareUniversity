@@ -28,5 +28,6 @@ namespace CenterPoint
                 Console.WriteLine($"({x1}, {y1})");
             }
         }
+
     }
 }
