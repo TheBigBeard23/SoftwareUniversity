@@ -26,22 +26,10 @@ namespace SumAdjacentEqualNumbers
                 {
                     numbers[i] += numbers[i + 1];
                     numbers.RemoveAt(i + 1);
-                    i--;
+                    i = -1;
                 }
             }
 
-            //    for (int i = 0; i < numbers.Count-1; i++)
-            //    {
-            //        int nextIndex = i + 1;
-
-            //        if (numbers[i] == numbers[nextIndex])
-            //        {
-            //            numbers[i] += numbers[nextIndex];
-            //            numbers.RemoveAt(nextIndex);
-            //            i = -1;
-            //        }
-            //    }
-            //
         }
     }
 }
