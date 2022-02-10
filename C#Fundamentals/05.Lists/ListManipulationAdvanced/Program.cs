@@ -14,6 +14,7 @@ namespace ListManipulationAdvanced
                 .ToList();
 
             string input = Console.ReadLine();
+            bool isChanged = false;
 
             while (input!="end")
             {
@@ -23,6 +24,35 @@ namespace ListManipulationAdvanced
 
                 switch (operation)
                 {
+                    case "Add":
+                        isChanged = true;
+                        int number = int.Parse(commands[1]);
+                        numbers.Add(number);
+
+                        break;
+
+                    case "Remove":
+                        isChanged = true;
+                        number = int.Parse(commands[1]);
+                        numbers.Remove(number);
+
+                        break;
+
+                    case "RemoveAt":
+                        isChanged = true;
+                        number = int.Parse(commands[1]);
+                        numbers.RemoveAt(number);
+
+                        break;
+
+                    case "Insert":
+                        isChanged = true;
+                        number = int.Parse(commands[1]);
+                        int index = int.Parse(commands[2]);
+                        numbers.Insert(index, number);
+
+                        break;
+
                     case "Contains":
 
                         if (numbers.Contains(int.Parse(commands[1])))
@@ -57,7 +87,7 @@ namespace ListManipulationAdvanced
                     case "Filter":
 
                         string condition = commands[1];
-                        int number = int.Parse(commands[2]);
+                        number = int.Parse(commands[2]);
 
                         FilteredPrint(condition, number, numbers);
 
@@ -65,6 +95,11 @@ namespace ListManipulationAdvanced
                 }
 
                 input = Console.ReadLine();
+            }
+
+            if (isChanged)
+            {
+                Console.WriteLine(string.Join(" ",numbers));
             }
 
         }
@@ -105,15 +140,15 @@ namespace ListManipulationAdvanced
             }
             else if ((condition == "<"))
             {
-                Console.WriteLine(numbers.Where(x => x < number));
+                Console.WriteLine(string.Join(" ",numbers.Where(x => x < number)));
             }
             else if ((condition == "<="))
             {
-                Console.WriteLine(numbers.Where(x => x <= number));
+                Console.WriteLine(string.Join(" ",numbers.Where(x => x <= number)));
             }
             else if ((condition == "=="))
             {
-                Console.WriteLine(numbers.Where(x => x == number));
+                Console.WriteLine(string.Join(" ",numbers.Where(x => x == number)));
             }
         }
 
