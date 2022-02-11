@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListOperations", "ListOpera
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BombNumbers", "BombNumbers\BombNumbers.csproj", "{DCFB1EC9-0B06-4AFC-966E-C02BBAEBC632}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardsGame", "CardsGame\CardsGame.csproj", "{0449897D-2879-4071-AB08-04A504333C8D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{DCFB1EC9-0B06-4AFC-966E-C02BBAEBC632}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DCFB1EC9-0B06-4AFC-966E-C02BBAEBC632}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DCFB1EC9-0B06-4AFC-966E-C02BBAEBC632}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0449897D-2879-4071-AB08-04A504333C8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0449897D-2879-4071-AB08-04A504333C8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0449897D-2879-4071-AB08-04A504333C8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0449897D-2879-4071-AB08-04A504333C8D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
