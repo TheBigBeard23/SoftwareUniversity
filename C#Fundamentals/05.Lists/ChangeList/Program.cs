@@ -9,7 +9,7 @@ namespace ChangeList
         static void Main(string[] args)
         {
             List<int> numbers = Console.ReadLine()
-                .Split()
+                .Split(' ',StringSplitOptions.RemoveEmptyEntries)
                 .Select(int.Parse)
                 .ToList();
 
@@ -49,12 +49,12 @@ namespace ChangeList
         {
             if (ithems.Contains(ithem))
             {
-                ithems.Remove(ithem);
+                ithems.RemoveAll(x => x == ithem);
             }
         }
         static void Insert(List<int> ithems, int ithem, int position)
         {
-            if (ithems.Count > position &&
+            if (ithems.Count >= position &&
                 position >= 0)
             {
                 ithems.Insert(position, ithem);
