@@ -13,10 +13,8 @@ namespace AppendArrays
                                      .Reverse()
                                      .ToList();
 
-       
-            string sequencesAsString = string.Join(" ", sequences);
 
-            List<string> sequence = sequencesAsString
+            List<string> sequence = (string.Join(" ", sequences))
                                     .Split(" ", StringSplitOptions.RemoveEmptyEntries)
                                     .ToList();
 

@@ -21,15 +21,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Train", "Train\Train.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChangeList", "ChangeList\ChangeList.csproj", "{50FA3A04-8A2B-4C20-BBDB-289ABA0DC3CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HouseParty", "HouseParty\HouseParty.csproj", "{EE0FCA22-8D11-43C4-A3C3-F9732AFEEE89}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HouseParty", "HouseParty\HouseParty.csproj", "{EE0FCA22-8D11-43C4-A3C3-F9732AFEEE89}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListOperations", "ListOperations\ListOperations.csproj", "{6D3C6AB9-AAE1-42D0-B292-060861859916}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ListOperations", "ListOperations\ListOperations.csproj", "{6D3C6AB9-AAE1-42D0-B292-060861859916}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BombNumbers", "BombNumbers\BombNumbers.csproj", "{DCFB1EC9-0B06-4AFC-966E-C02BBAEBC632}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BombNumbers", "BombNumbers\BombNumbers.csproj", "{DCFB1EC9-0B06-4AFC-966E-C02BBAEBC632}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardsGame", "CardsGame\CardsGame.csproj", "{0449897D-2879-4071-AB08-04A504333C8D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CardsGame", "CardsGame\CardsGame.csproj", "{0449897D-2879-4071-AB08-04A504333C8D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppendArrays", "AppendArrays\AppendArrays.csproj", "{F6574EE1-E45F-412E-94A7-52DF72102361}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppendArrays", "AppendArrays\AppendArrays.csproj", "{F6574EE1-E45F-412E-94A7-52DF72102361}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnonymousThreat", "AnonymousThreat\AnonymousThreat.csproj", "{496CBE1A-E9F9-4BFA-8757-E80464F67535}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,6 +95,10 @@ Global
 		{F6574EE1-E45F-412E-94A7-52DF72102361}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6574EE1-E45F-412E-94A7-52DF72102361}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6574EE1-E45F-412E-94A7-52DF72102361}.Release|Any CPU.Build.0 = Release|Any CPU
+		{496CBE1A-E9F9-4BFA-8757-E80464F67535}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{496CBE1A-E9F9-4BFA-8757-E80464F67535}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{496CBE1A-E9F9-4BFA-8757-E80464F67535}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{496CBE1A-E9F9-4BFA-8757-E80464F67535}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
