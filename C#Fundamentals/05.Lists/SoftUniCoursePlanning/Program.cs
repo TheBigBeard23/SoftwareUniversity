@@ -9,7 +9,7 @@ namespace SoftUniCoursePlanning
         static void Main(string[] args)
         {
             List<string> lessons = Console.ReadLine()
-                                   .Split(", ", StringSplitOptions.RemoveEmptyEntries)
+                                   .Split(", ")
                                    .ToList();
 
             List<string> exercises = new List<string>();
@@ -19,7 +19,7 @@ namespace SoftUniCoursePlanning
             while (input != "course start")
             {
                 List<string> data = input
-                                    .Split(':', StringSplitOptions.RemoveEmptyEntries)
+                                    .Split(':')
                                     .ToList();
 
                 string operation = data[0];
@@ -42,7 +42,7 @@ namespace SoftUniCoursePlanning
                         int index = int.Parse(data[2]);
 
                         if (index >= 0 &&
-                            index <= lessons.Count &&
+                            index < lessons.Count &&
                             !lessons.Contains(lesson))
                         {
                             lessons.Insert(index, lesson);
@@ -53,15 +53,8 @@ namespace SoftUniCoursePlanning
 
                     case "Remove":
 
-                        if (lessons.Contains(lesson))
-                        {
                             lessons.Remove(lesson);
                             exercises.Remove(lesson);
-                        }
-                        else if (exercises.Contains(lesson))
-                        {
-                            exercises.Remove(lesson);
-                        }
 
                         break;
 
