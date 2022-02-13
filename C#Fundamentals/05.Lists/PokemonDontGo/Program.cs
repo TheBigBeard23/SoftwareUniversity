@@ -31,7 +31,7 @@ namespace PokemonDontGo
                     int ithem = sequence[sequence.Count - 1];
                     sum += ithem;
                     sequence.RemoveAt(sequence.Count - 1);
-                    sequence.Insert(sequence.Count , sequence[0]);
+                    sequence.Insert(sequence.Count, sequence[0]);
                     IncreasingAndDecresingIthems(sequence, ithem);
                 }
                 else
