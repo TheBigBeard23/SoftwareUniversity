@@ -39,6 +39,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoftUniCoursePlanning", "So
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messaging", "Messaging\Messaging.csproj", "{84BB04B1-4DF4-41E8-B18D-64ED7F19BEB5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRace", "CarRace\CarRace.csproj", "{F8D3CCAF-6C4B-4350-B30D-CC936070796B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -117,6 +119,10 @@ Global
 		{84BB04B1-4DF4-41E8-B18D-64ED7F19BEB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84BB04B1-4DF4-41E8-B18D-64ED7F19BEB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84BB04B1-4DF4-41E8-B18D-64ED7F19BEB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8D3CCAF-6C4B-4350-B30D-CC936070796B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8D3CCAF-6C4B-4350-B30D-CC936070796B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8D3CCAF-6C4B-4350-B30D-CC936070796B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8D3CCAF-6C4B-4350-B30D-CC936070796B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
