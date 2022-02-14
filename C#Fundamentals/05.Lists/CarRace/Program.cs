@@ -34,7 +34,7 @@ namespace CarRace
         }
         private static decimal CalculateTime(List<int> numbers, int startIndex,int endIndex)
         {
-            decimal time = 0.0m;
+            decimal time = 0;
 
             for (int i = startIndex; i < endIndex; i++)
             {
