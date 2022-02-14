@@ -16,12 +16,11 @@ namespace CarRace
             int startIndex = 0;
             int endIndex = numbers.Count / 2;
 
-            double leftTime = CalculateTime(numbers, startIndex, endIndex);
+            decimal leftTime = CalculateTime(numbers, startIndex, endIndex);
 
-            startIndex = endIndex + 1;
-            endIndex = numbers.Count;
+            numbers.Reverse();
 
-            double rightTime = CalculateTime(numbers, startIndex, endIndex);
+            decimal rightTime = CalculateTime(numbers, startIndex, endIndex);
 
             if (leftTime < rightTime)
             {
@@ -33,21 +32,17 @@ namespace CarRace
             }
 
         }
-
-        private static double CalculateTime(List<int> numbers, int startIndex,int endIndex)
+        private static decimal CalculateTime(List<int> numbers, int startIndex,int endIndex)
         {
-            double time = 0.0;
+            decimal time = 0.0m;
 
             for (int i = startIndex; i < endIndex; i++)
             {
                 if (numbers[i] == 0)
                 {
-                    time *= 0.8;
-                }
-                else
-                {
+                    time *= 0.8m;
+                }            
                     time += numbers[i];
-                }
             }
 
             return time;
