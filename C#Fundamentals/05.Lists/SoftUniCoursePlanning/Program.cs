@@ -66,9 +66,11 @@ namespace SoftUniCoursePlanning
                         if (lessons.Contains(lesson) &&
                             lessons.Contains(secondLesson))
                         {
+                            int firstIndex = lessons.IndexOf(lesson);
+                            int secondIndex = lessons.IndexOf(secondLesson);
 
-                            lessons[lessons.IndexOf(secondLesson)] = lesson;
-                            lessons[lessons.IndexOf(lesson)] = secondLesson;
+                            lessons[secondIndex] = lesson;
+                            lessons[firstIndex] = secondLesson;
                         }
 
                         break;

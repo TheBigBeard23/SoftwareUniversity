@@ -31,11 +31,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CardsGame", "CardsGame\Card
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppendArrays", "AppendArrays\AppendArrays.csproj", "{F6574EE1-E45F-412E-94A7-52DF72102361}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnonymousThreat", "AnonymousThreat\AnonymousThreat.csproj", "{496CBE1A-E9F9-4BFA-8757-E80464F67535}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnonymousThreat", "AnonymousThreat\AnonymousThreat.csproj", "{496CBE1A-E9F9-4BFA-8757-E80464F67535}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokemonDontGo", "PokemonDontGo\PokemonDontGo.csproj", "{C20061D3-94F6-480B-9D9F-21A6F6236862}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PokemonDontGo", "PokemonDontGo\PokemonDontGo.csproj", "{C20061D3-94F6-480B-9D9F-21A6F6236862}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftUniCoursePlanning", "SoftUniCoursePlanning\SoftUniCoursePlanning.csproj", "{B917C5A4-ED44-43E2-9C54-A3FDF4457B9E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoftUniCoursePlanning", "SoftUniCoursePlanning\SoftUniCoursePlanning.csproj", "{B917C5A4-ED44-43E2-9C54-A3FDF4457B9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messaging", "Messaging\Messaging.csproj", "{84BB04B1-4DF4-41E8-B18D-64ED7F19BEB5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -111,6 +113,10 @@ Global
 		{B917C5A4-ED44-43E2-9C54-A3FDF4457B9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B917C5A4-ED44-43E2-9C54-A3FDF4457B9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B917C5A4-ED44-43E2-9C54-A3FDF4457B9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84BB04B1-4DF4-41E8-B18D-64ED7F19BEB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84BB04B1-4DF4-41E8-B18D-64ED7F19BEB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84BB04B1-4DF4-41E8-B18D-64ED7F19BEB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84BB04B1-4DF4-41E8-B18D-64ED7F19BEB5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
