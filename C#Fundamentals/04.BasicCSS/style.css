@@ -23,6 +23,10 @@ span{
     border: 3px solid yellow;
     margin: 20px;
     width: auto;
+    font-family: 'Shizuru', cursive;
+    font-size: larger;
+    font-weight: bold;
+    color:white;
 }
 #orange{
     background-color: orange;
