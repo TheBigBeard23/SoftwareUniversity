@@ -8,15 +8,11 @@ namespace _02.FirstBit
         {
             int number = int.Parse(Console.ReadLine());
 
-            int firstBit = 0;
+            int shiftedNumber = number >> 1;
 
-            while (number>0)
-            {
-                firstBit = number % 2;
-                number /= 2;
-            }
+            int result = shiftedNumber & 1;
 
-            Console.WriteLine(firstBit);
+            Console.WriteLine(result);
 
             
 
