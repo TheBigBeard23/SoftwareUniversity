@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.BitDestroyer", "04.BitDe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.OddTimes", "05.OddTimes\05.OddTimes.csproj", "{55708683-0E38-4A13-A3E0-5F526BB85196}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.TriBitSwitch", "06.TriBitSwitch\06.TriBitSwitch.csproj", "{5B9E1B9E-2D6A-48FE-B711-A47A8693704E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{55708683-0E38-4A13-A3E0-5F526BB85196}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55708683-0E38-4A13-A3E0-5F526BB85196}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{55708683-0E38-4A13-A3E0-5F526BB85196}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B9E1B9E-2D6A-48FE-B711-A47A8693704E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B9E1B9E-2D6A-48FE-B711-A47A8693704E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B9E1B9E-2D6A-48FE-B711-A47A8693704E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B9E1B9E-2D6A-48FE-B711-A47A8693704E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
