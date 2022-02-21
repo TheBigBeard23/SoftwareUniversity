@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.FirstBit", "02.FirstBit\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.PthBit", "03.PthBit\03.PthBit.csproj", "{5B8650AE-B275-4E3C-976B-711E54C17CA3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.BitDestroyer", "04.BitDestroyer\04.BitDestroyer.csproj", "{FA0BD1FC-49A3-488B-A217-6854F8F41401}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{5B8650AE-B275-4E3C-976B-711E54C17CA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B8650AE-B275-4E3C-976B-711E54C17CA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B8650AE-B275-4E3C-976B-711E54C17CA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA0BD1FC-49A3-488B-A217-6854F8F41401}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA0BD1FC-49A3-488B-A217-6854F8F41401}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA0BD1FC-49A3-488B-A217-6854F8F41401}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA0BD1FC-49A3-488B-A217-6854F8F41401}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
