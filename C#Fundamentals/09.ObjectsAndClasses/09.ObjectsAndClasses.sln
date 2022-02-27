@@ -17,15 +17,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06.StoreBoxes", "06.StoreBo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07.VehicleCatalogue", "07.VehicleCatalogue\07.VehicleCatalogue.csproj", "{7691F984-1061-46E3-BDE6-802AB83A7C9A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.AdvertisementMessage", "08.AdvertisementMessage\08.AdvertisementMessage.csproj", "{17CFC400-E052-4A34-B2DF-19675A50A74B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08.AdvertisementMessage", "08.AdvertisementMessage\08.AdvertisementMessage.csproj", "{17CFC400-E052-4A34-B2DF-19675A50A74B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09.Articles", "09.Articles\09.Articles.csproj", "{FF0E1EDF-AE1B-4997-9E40-1EF59C724160}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "09.Articles", "09.Articles\09.Articles.csproj", "{FF0E1EDF-AE1B-4997-9E40-1EF59C724160}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10.Articles2.0", "10.Articles2.0\10.Articles2.0.csproj", "{28BF737F-572D-47E8-9275-096804143FE2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "10.Articles2.0", "10.Articles2.0\10.Articles2.0.csproj", "{28BF737F-572D-47E8-9275-096804143FE2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11.Students", "11.Students\11.Students.csproj", "{529F6E78-8D9F-407C-BEB6-F109DFF48BE2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "11.Students", "11.Students\11.Students.csproj", "{529F6E78-8D9F-407C-BEB6-F109DFF48BE2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12.TeamworkProjects", "12.TeamworkProjects\12.TeamworkProjects.csproj", "{14B98360-B7FE-4952-9443-E04574420E11}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "12.TeamworkProjects", "12.TeamworkProjects\12.TeamworkProjects.csproj", "{14B98360-B7FE-4952-9443-E04574420E11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13.VehicleCatalogue", "13.VehicleCatalogue\13.VehicleCatalogue.csproj", "{CB2456AA-82CC-4E86-9AA7-8A317D69E85C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,10 @@ Global
 		{14B98360-B7FE-4952-9443-E04574420E11}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14B98360-B7FE-4952-9443-E04574420E11}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14B98360-B7FE-4952-9443-E04574420E11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB2456AA-82CC-4E86-9AA7-8A317D69E85C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB2456AA-82CC-4E86-9AA7-8A317D69E85C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB2456AA-82CC-4E86-9AA7-8A317D69E85C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB2456AA-82CC-4E86-9AA7-8A317D69E85C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
