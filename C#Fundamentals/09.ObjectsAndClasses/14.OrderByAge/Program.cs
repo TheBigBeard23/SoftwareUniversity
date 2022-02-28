@@ -35,7 +35,7 @@ namespace _14.OrderByAge
 
             }
 
-            foreach (var person in persons.OrderBy(x=>x.Age))
+            foreach (var person in persons.OrderBy(x => x.Age))
             {
                 Console.WriteLine($"{person.Name} with ID: {person.Id} is {person.Age} years old.");
             }
