@@ -39,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "17.SpeedRacing", "17.SpeedR
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "18.RawData", "18.RawData\18.RawData.csproj", "{3C2C7141-8F0E-4669-A250-BD16F0F854DE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "19.ShoppingSpree", "19.ShoppingSpree\19.ShoppingSpree.csproj", "{E1013A96-6E21-43EB-BB9D-B07D854BA6C4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -117,6 +119,10 @@ Global
 		{3C2C7141-8F0E-4669-A250-BD16F0F854DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C2C7141-8F0E-4669-A250-BD16F0F854DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C2C7141-8F0E-4669-A250-BD16F0F854DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1013A96-6E21-43EB-BB9D-B07D854BA6C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1013A96-6E21-43EB-BB9D-B07D854BA6C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1013A96-6E21-43EB-BB9D-B07D854BA6C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1013A96-6E21-43EB-BB9D-B07D854BA6C4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
