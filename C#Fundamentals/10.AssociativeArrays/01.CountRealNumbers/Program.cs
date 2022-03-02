@@ -27,7 +27,7 @@ namespace _01.CountRealNumbers
                 }
             }
 
-            foreach (var number in numbersCount.OrderBy(x=>x.Key))
+            foreach (var number in numbersCount.OrderBy(x => x.Key))
             {
                 Console.WriteLine($"{number.Key} -> {number.Value}");
             }
