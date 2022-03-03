@@ -16,14 +16,13 @@ namespace _03.WordSynonyms
                 string word = Console.ReadLine();
                 string synonym = Console.ReadLine();
 
-                if (wordSynonyms.ContainsKey(word))
-                {
-                    wordSynonyms[word].Add(synonym);
-                }
-                else
+                if (!wordSynonyms.ContainsKey(word))
                 {
                     wordSynonyms[word] = new List<string>();
+
                 }
+
+                wordSynonyms[word].Add(synonym);
             }
 
             foreach (var word in wordSynonyms)
