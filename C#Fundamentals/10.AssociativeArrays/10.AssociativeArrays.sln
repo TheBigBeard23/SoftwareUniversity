@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.WordFilter", "04.WordFil
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.CountCharsInAString", "05.CountCharsInAString\05.CountCharsInAString.csproj", "{EC973021-1097-4D0D-B177-278D0449E502}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.AMinerTask", "06.AMinerTask\06.AMinerTask.csproj", "{51A93BC7-321B-423D-AF44-AE787305B941}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.LegendaryFarming", "07.LegendaryFarming\07.LegendaryFarming.csproj", "{6884B240-12D0-4F33-8981-D02DD2481378}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{EC973021-1097-4D0D-B177-278D0449E502}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC973021-1097-4D0D-B177-278D0449E502}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC973021-1097-4D0D-B177-278D0449E502}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51A93BC7-321B-423D-AF44-AE787305B941}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51A93BC7-321B-423D-AF44-AE787305B941}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51A93BC7-321B-423D-AF44-AE787305B941}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51A93BC7-321B-423D-AF44-AE787305B941}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6884B240-12D0-4F33-8981-D02DD2481378}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6884B240-12D0-4F33-8981-D02DD2481378}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6884B240-12D0-4F33-8981-D02DD2481378}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6884B240-12D0-4F33-8981-D02DD2481378}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace _05.CountCharsInAString
 {
@@ -7,9 +8,7 @@ namespace _05.CountCharsInAString
     {
         static void Main(string[] args)
         {
-            string word = Console.ReadLine()
-                                 .Split()
-                                 .ToString();
+            string word = string.Join("", Console.ReadLine().Split());
 
             Dictionary<char, int> charsCount = new Dictionary<char, int>();
 
