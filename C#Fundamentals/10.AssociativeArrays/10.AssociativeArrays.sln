@@ -3,23 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30517.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.CountRealNumbers", "01.CountRealNumbers\01.CountRealNumbers.csproj", "{2994A109-3AD4-4B04-BE32-595423918691}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.CountRealNumbers", "01.CountRealNumbers\01.CountRealNumbers.csproj", "{2994A109-3AD4-4B04-BE32-595423918691}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.OddOccurrences", "02.OddOccurrences\02.OddOccurrences.csproj", "{DCE6B1DE-742D-489D-9B6E-3AB0BC7652AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.OddOccurrences", "02.OddOccurrences\02.OddOccurrences.csproj", "{DCE6B1DE-742D-489D-9B6E-3AB0BC7652AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.WordSynonyms", "03.WordSynonyms\03.WordSynonyms.csproj", "{95AA5190-4525-4A4B-A1AA-28919CE74D40}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.WordSynonyms", "03.WordSynonyms\03.WordSynonyms.csproj", "{95AA5190-4525-4A4B-A1AA-28919CE74D40}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.WordFilter", "04.WordFilter\04.WordFilter.csproj", "{C7A48FBE-C1AE-403B-96E2-2E0B27E42B8D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04.WordFilter", "04.WordFilter\04.WordFilter.csproj", "{C7A48FBE-C1AE-403B-96E2-2E0B27E42B8D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.CountCharsInAString", "05.CountCharsInAString\05.CountCharsInAString.csproj", "{EC973021-1097-4D0D-B177-278D0449E502}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05.CountCharsInAString", "05.CountCharsInAString\05.CountCharsInAString.csproj", "{EC973021-1097-4D0D-B177-278D0449E502}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.AMinerTask", "06.AMinerTask\06.AMinerTask.csproj", "{51A93BC7-321B-423D-AF44-AE787305B941}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06.AMinerTask", "06.AMinerTask\06.AMinerTask.csproj", "{51A93BC7-321B-423D-AF44-AE787305B941}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.LegendaryFarming", "07.LegendaryFarming\07.LegendaryFarming.csproj", "{6884B240-12D0-4F33-8981-D02DD2481378}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07.LegendaryFarming", "07.LegendaryFarming\07.LegendaryFarming.csproj", "{6884B240-12D0-4F33-8981-D02DD2481378}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.Orders", "08.Orders\08.Orders.csproj", "{A8B639E3-B9F8-4F2E-AD47-3789707B7887}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08.Orders", "08.Orders\08.Orders.csproj", "{A8B639E3-B9F8-4F2E-AD47-3789707B7887}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09.SoftUniParking", "09.SoftUniParking\09.SoftUniParking.csproj", "{C0710724-B4FC-4CEE-AF06-BAF41C4FEA78}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "09.SoftUniParking", "09.SoftUniParking\09.SoftUniParking.csproj", "{C0710724-B4FC-4CEE-AF06-BAF41C4FEA78}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10.Courses", "10.Courses\10.Courses.csproj", "{D643E505-EF66-4E4D-AB88-73D507880FE6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{C0710724-B4FC-4CEE-AF06-BAF41C4FEA78}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0710724-B4FC-4CEE-AF06-BAF41C4FEA78}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0710724-B4FC-4CEE-AF06-BAF41C4FEA78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D643E505-EF66-4E4D-AB88-73D507880FE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D643E505-EF66-4E4D-AB88-73D507880FE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D643E505-EF66-4E4D-AB88-73D507880FE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D643E505-EF66-4E4D-AB88-73D507880FE6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
