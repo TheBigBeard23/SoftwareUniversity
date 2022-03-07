@@ -33,7 +33,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "14.Judge", "14.Judge\14.Jud
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "15.MOBAChallenger", "15.MOBAChallenger\15.MOBAChallenger.csproj", "{6C6D609C-982F-43DB-9FF1-968F86A5BB9B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "16.Snowwhite", "16.Snowwhite\16.Snowwhite.csproj", "{5BC083B0-99B4-4CB1-9573-8C71132835A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "16.Snowwhite", "16.Snowwhite\16.Snowwhite.csproj", "{5BC083B0-99B4-4CB1-9573-8C71132835A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "17.DragonArmy", "17.DragonArmy\17.DragonArmy.csproj", "{350010CE-CE9C-4C57-8C40-B2A31F4ABB3C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -105,6 +107,10 @@ Global
 		{5BC083B0-99B4-4CB1-9573-8C71132835A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5BC083B0-99B4-4CB1-9573-8C71132835A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5BC083B0-99B4-4CB1-9573-8C71132835A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{350010CE-CE9C-4C57-8C40-B2A31F4ABB3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{350010CE-CE9C-4C57-8C40-B2A31F4ABB3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{350010CE-CE9C-4C57-8C40-B2A31F4ABB3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{350010CE-CE9C-4C57-8C40-B2A31F4ABB3C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
