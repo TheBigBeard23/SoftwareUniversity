@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06.ValidUsernames", "06.Val
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.CharacterMultiplier", "07.CharacterMultiplier\07.CharacterMultiplier.csproj", "{5C20003A-1E10-4910-91AC-F7117B049F97}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.ExtractFile", "08.ExtractFile\08.ExtractFile.csproj", "{AFE2123C-D5DD-488B-AABE-AE1A24774A76}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{5C20003A-1E10-4910-91AC-F7117B049F97}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C20003A-1E10-4910-91AC-F7117B049F97}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C20003A-1E10-4910-91AC-F7117B049F97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFE2123C-D5DD-488B-AABE-AE1A24774A76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFE2123C-D5DD-488B-AABE-AE1A24774A76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFE2123C-D5DD-488B-AABE-AE1A24774A76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFE2123C-D5DD-488B-AABE-AE1A24774A76}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
