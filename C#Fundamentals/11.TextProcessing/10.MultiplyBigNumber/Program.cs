@@ -12,6 +12,12 @@ namespace _10.MultiplyBigNumber
             string sum = string.Empty;
             int remainder = 0;
 
+            if (firstNumber == "0" || multiplier == 0)
+            {
+                Console.WriteLine("0");
+                return;
+            }
+
             while (firstNumber.Length > 0)
             {
                 int currentNum = int.Parse(firstNumber[0].ToString());
