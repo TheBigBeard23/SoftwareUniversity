@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13.LettersChangeNumbers", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14.ExtractPersonInformation", "14.ExtractPersonInformation\14.ExtractPersonInformation.csproj", "{600BEF25-47E0-430E-87AC-C6F674BF34DF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "15.AsciiSumator", "15.AsciiSumator\15.AsciiSumator.csproj", "{D6C1F683-5267-46AF-891C-6F8E84C3952A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{600BEF25-47E0-430E-87AC-C6F674BF34DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{600BEF25-47E0-430E-87AC-C6F674BF34DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{600BEF25-47E0-430E-87AC-C6F674BF34DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6C1F683-5267-46AF-891C-6F8E84C3952A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6C1F683-5267-46AF-891C-6F8E84C3952A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6C1F683-5267-46AF-891C-6F8E84C3952A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6C1F683-5267-46AF-891C-6F8E84C3952A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
