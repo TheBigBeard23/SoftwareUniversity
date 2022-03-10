@@ -8,8 +8,9 @@ namespace _13.LettersChangeNumbers
     {
         static void Main(string[] args)
         {
-            List<string> words = Console.ReadLine().Split().ToList();
-            string bug = Console.ReadLine();
+            List<string> words = Console.ReadLine().Split(' ',StringSplitOptions.RemoveEmptyEntries)
+                                                   .ToList();
+
             double sum = 0;
 
             for (int i = 0; i < words.Count; i++)
