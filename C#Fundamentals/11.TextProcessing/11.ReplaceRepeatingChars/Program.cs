@@ -9,20 +9,15 @@ namespace _11.ReplaceRepeatingChars
             string text = Console.ReadLine();
             string newText = string.Empty;
 
-            while (text.Length>0)
+            while (text.Length > 0)
             {
                 char crnChar = text[0];
                 newText += crnChar;
                 text = text.Remove(0, 1);
 
-                while (crnChar == text[0])
+                while (text.Length > 0 && crnChar == text[0])
                 {
                     text = text.Remove(0, 1);
-
-                    if (text.Length == 0)
-                    {
-                        break;
-                    }
                 }
             }
 
