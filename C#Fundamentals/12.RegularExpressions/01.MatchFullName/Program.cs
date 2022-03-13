@@ -17,7 +17,7 @@ namespace _01.MatchFullName
 
             foreach (var item in matches)
             {
-                Console.WriteLine(item);
+                Console.Write(item+" ");
             }
         }
     }
