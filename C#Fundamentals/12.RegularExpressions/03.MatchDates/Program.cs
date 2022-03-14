@@ -14,8 +14,8 @@ namespace _03.MatchDates
 
             foreach (Match date in dates)
             {
-                Console.WriteLine($"Day: {date.Groups["day"].Value} " +
-                                  $"Month: {date.Groups["month"].Value} " +
+                Console.WriteLine($"Day: {date.Groups["day"].Value}, " +
+                                  $"Month: {date.Groups["month"].Value}, " +
                                   $"Year: {date.Groups["year"].Value}");
             }
         }
