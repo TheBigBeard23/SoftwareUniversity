@@ -34,13 +34,13 @@ namespace _05.Race
                 input = Console.ReadLine();
             }
 
-            namesDistance = namesDistance.OrderByDescending(x => x.Value)
-                                         .ToDictionary(x => x.Key, y => y.Value);
+           List<string> names = namesDistance.OrderByDescending(x => x.Value)
+                                             .Select(x=>x.Key)
+                                             .ToList();
 
-            Console.WriteLine(namesDistance[1]);
- 
-
-
+            Console.WriteLine($"1st place: {names[0]}");
+            Console.WriteLine($"2nd place: {names[1]}");
+            Console.WriteLine($"3rd place: {names[2]}");
 
         }
     }

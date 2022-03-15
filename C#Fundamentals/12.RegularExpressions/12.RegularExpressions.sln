@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30517.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.MatchFullName", "01.MatchFullName\01.MatchFullName.csproj", "{EC1F51D0-D89B-4DBD-AB56-5E1C1C07BAB1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.MatchFullName", "01.MatchFullName\01.MatchFullName.csproj", "{EC1F51D0-D89B-4DBD-AB56-5E1C1C07BAB1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.MatchPhoneNumber", "02.MatchPhoneNumber\02.MatchPhoneNumber.csproj", "{0D062821-67FC-4F55-9B98-97F964C9FBC9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.MatchPhoneNumber", "02.MatchPhoneNumber\02.MatchPhoneNumber.csproj", "{0D062821-67FC-4F55-9B98-97F964C9FBC9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.MatchDates", "03.MatchDates\03.MatchDates.csproj", "{073C128E-B5DD-4A4A-8A9B-FABA0C559BB0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.MatchDates", "03.MatchDates\03.MatchDates.csproj", "{073C128E-B5DD-4A4A-8A9B-FABA0C559BB0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.Furniture", "04.Furniture\04.Furniture.csproj", "{A6A60CC5-926A-4327-ABDA-92341457AB80}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04.Furniture", "04.Furniture\04.Furniture.csproj", "{A6A60CC5-926A-4327-ABDA-92341457AB80}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.Race", "05.Race\05.Race.csproj", "{0B4D760A-FCF1-4A97-9C41-A88291B7D41E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05.Race", "05.Race\05.Race.csproj", "{0B4D760A-FCF1-4A97-9C41-A88291B7D41E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.SoftUniBarIncome", "06.SoftUniBarIncome\06.SoftUniBarIncome.csproj", "{88D70701-69B6-421F-8223-10D842732780}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{0B4D760A-FCF1-4A97-9C41-A88291B7D41E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B4D760A-FCF1-4A97-9C41-A88291B7D41E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B4D760A-FCF1-4A97-9C41-A88291B7D41E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88D70701-69B6-421F-8223-10D842732780}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88D70701-69B6-421F-8223-10D842732780}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88D70701-69B6-421F-8223-10D842732780}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88D70701-69B6-421F-8223-10D842732780}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
