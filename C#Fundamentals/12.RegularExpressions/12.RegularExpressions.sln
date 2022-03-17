@@ -13,13 +13,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04.Furniture", "04.Furnitur
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05.Race", "05.Race\05.Race.csproj", "{0B4D760A-FCF1-4A97-9C41-A88291B7D41E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.SoftUniBarIncome", "06.SoftUniBarIncome\06.SoftUniBarIncome.csproj", "{88D70701-69B6-421F-8223-10D842732780}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06.SoftUniBarIncome", "06.SoftUniBarIncome\06.SoftUniBarIncome.csproj", "{88D70701-69B6-421F-8223-10D842732780}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.StarEnigma", "07.StarEnigma\07.StarEnigma.csproj", "{3B304C22-BC70-4DA9-8C6B-852BEF8D1664}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07.StarEnigma", "07.StarEnigma\07.StarEnigma.csproj", "{3B304C22-BC70-4DA9-8C6B-852BEF8D1664}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.NetherRealms", "08.NetherRealms\08.NetherRealms.csproj", "{9614C511-4475-481F-9A56-4A6636B60D71}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08.NetherRealms", "08.NetherRealms\08.NetherRealms.csproj", "{9614C511-4475-481F-9A56-4A6636B60D71}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09.ExtractEmails", "09.ExtractEmails\09.ExtractEmails.csproj", "{3CF4A50C-0E69-47FA-9A02-7E52E679267D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "09.ExtractEmails", "09.ExtractEmails\09.ExtractEmails.csproj", "{3CF4A50C-0E69-47FA-9A02-7E52E679267D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10.WinningTicket", "10.WinningTicket\10.WinningTicket.csproj", "{44A27BCA-0DC6-4609-9179-3EDCE9B95601}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{3CF4A50C-0E69-47FA-9A02-7E52E679267D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3CF4A50C-0E69-47FA-9A02-7E52E679267D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3CF4A50C-0E69-47FA-9A02-7E52E679267D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44A27BCA-0DC6-4609-9179-3EDCE9B95601}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44A27BCA-0DC6-4609-9179-3EDCE9B95601}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44A27BCA-0DC6-4609-9179-3EDCE9B95601}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44A27BCA-0DC6-4609-9179-3EDCE9B95601}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
