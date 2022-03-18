@@ -42,21 +42,27 @@ namespace _10.WinningTicket
 
         static void PrintResult(MatchCollection matches,string ticket)
         {
-            string firstSequence = matches.OrderByDescending(x => x.Length).First().ToString();
-            string secondSequence = matches.OrderByDescending(x => x.Length)
-                                           .Select(x => x.ToString())
-                                           .ToList()[1];
-
-            if (firstSequence[0] == secondSequence[0] &&
-                secondSequence.Length >= 6 && secondSequence.Length <= 9)
+            if (matches.Count > 1)
             {
-                Console.WriteLine($"ticket \"{ticket}\" - {secondSequence.Length}{secondSequence[0]}");
+                string firstSequence = matches.OrderByDescending(x => x.Length).First().ToString();
+                string secondSequence = matches.OrderByDescending(x => x.Length)
+                                               .Select(x => x.ToString())
+                                               .ToList()[1];
+
+                if (firstSequence[0] == secondSequence[0] &&
+                    secondSequence.Length >= 6 && secondSequence.Length <= 9)
+                {
+                    Console.WriteLine($"ticket \"{ticket}\" - {secondSequence.Length}{secondSequence[0]}");
+                }
+                else
+                {
+                    Console.WriteLine($"ticket \"{ticket}\" - no match");
+                }
             }
             else
-            {     
-                    Console.WriteLine($"ticket \"{ticket}\" - no match");         
+            {
+                Console.WriteLine($"ticket \"{ticket}\" - no match");
             }
-
         }
     }
 }
