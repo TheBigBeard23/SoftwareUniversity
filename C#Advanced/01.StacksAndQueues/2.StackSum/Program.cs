@@ -51,10 +51,12 @@ namespace _2.StackSum
         {
             int count = int.Parse(data[1]);
 
-            for (int i = 0; i < count; i++)
+            if (count <= numbers.Count)
             {
-
-                numbers.Pop();
+                for (int i = 0; i < count; i++)
+                {
+                    numbers.Pop();
+                }
             }
         }
 
