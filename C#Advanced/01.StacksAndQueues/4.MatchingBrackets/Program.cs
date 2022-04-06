@@ -50,6 +50,7 @@ namespace _4.MatchingBrackets
                     
                 }
             }
+
             if (expression != "")
             {
                 Console.WriteLine(expression);
