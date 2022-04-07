@@ -12,20 +12,16 @@ namespace _12.FastFood
             int foodQuantity = int.Parse(Console.ReadLine());
             Queue<int> orders = new Queue<int>(Console.ReadLine().Split()
                                                                  .Select(int.Parse));
-            int biggestOrder = int.MinValue;
+            Console.WriteLine(orders.Max());
 
-            while (orders.Count>0)
+            while (orders.Count > 0)
             {
                 int crnOrder = orders.Peek();
 
                 if (foodQuantity - crnOrder >= 0)
                 {
+                    foodQuantity -= crnOrder;
                     orders.Dequeue();
-
-                    if (crnOrder > biggestOrder)
-                    {
-                        biggestOrder = crnOrder;
-                    }
                 }
                 else
                 {
@@ -35,13 +31,11 @@ namespace _12.FastFood
 
             if (orders.Count == 0)
             {
-                Console.WriteLine(biggestOrder);
                 Console.WriteLine("Orders complete");
             }
             else
             {
-                Console.WriteLine(biggestOrder);
-                Console.WriteLine($"Orders left: {string.Join("", orders)}");
+                Console.WriteLine($"Orders left: {string.Join(" ", orders)}");
             }
         }
     }
