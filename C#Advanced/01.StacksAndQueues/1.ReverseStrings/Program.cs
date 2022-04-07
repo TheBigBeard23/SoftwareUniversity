@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Linq;
 
-namespace _1.ReverseStrings
+namespace _01.ReverseStrings
 {
     class Program
     {
