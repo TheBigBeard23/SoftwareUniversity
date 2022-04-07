@@ -31,7 +31,7 @@ namespace _8.TrafficJam
             Console.WriteLine($"{passedCars} cars passed the crossroads.");
         }
 
-        static void PrintPassedCars(Queue<string> cars, int count,int passedCars)
+        static void PrintPassedCars(Queue<string> cars, int count,ref int passedCars)
         {
             for (int i = 0; i < count; i++)
             {
