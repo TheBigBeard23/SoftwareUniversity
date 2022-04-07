@@ -1,0 +1,48 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace _12.FastFood
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int foodQuantity = int.Parse(Console.ReadLine());
+            Queue<int> orders = new Queue<int>(Console.ReadLine().Split()
+                                                                 .Select(int.Parse));
+            int biggestOrder = int.MinValue;
+
+            while (orders.Count>0)
+            {
+                int crnOrder = orders.Peek();
+
+                if (foodQuantity - crnOrder >= 0)
+                {
+                    orders.Dequeue();
+
+                    if (crnOrder > biggestOrder)
+                    {
+                        biggestOrder = crnOrder;
+                    }
+                }
+                else
+                {
+                    break;
+                }
+            }
+
+            if (orders.Count == 0)
+            {
+                Console.WriteLine(biggestOrder);
+                Console.WriteLine("Orders complete");
+            }
+            else
+            {
+                Console.WriteLine(biggestOrder);
+                Console.WriteLine($"Orders left: {string.Join("", orders)}");
+            }
+        }
+    }
+}

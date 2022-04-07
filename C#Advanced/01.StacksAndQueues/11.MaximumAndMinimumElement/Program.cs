@@ -25,19 +25,27 @@ namespace _11.MaximumAndMinimumElement
                         break;
 
                     case "2":
-                        numbers.Pop();
+                        if (numbers.Count > 0)
+                        {
+                            numbers.Pop();
+                        }
                         break;
 
                     case "3":
-                        PrintMaxNumber(numbers);
+                        if (numbers.Count > 0)
+                        {
+                            PrintMaxNumber(numbers);
+                        }
                         break;
 
                     case "4":
-                        PrintMinNumber(numbers);
+                        if (numbers.Count > 0)
+                        {
+                            PrintMinNumber(numbers);
+                        }
                         break;
 
                 }
-
                 n--;
             }
 
@@ -46,18 +54,19 @@ namespace _11.MaximumAndMinimumElement
 
         private static void PrintMaxNumber(Stack<int> numbers)
         {
+            int[] elements = numbers.ToArray();
+
             int maxNum = int.MinValue;
-
-            for (int i = 0; i < numbers.Count; i++)
+            
+            for (int i = 0; i < elements.Length; i++)
             {
-                int number = numbers.Pop();
+                int crnNumber = elements[i];
 
-                if (number > maxNum)
+                if (crnNumber > maxNum)
                 {
-                    maxNum = number;
+                    maxNum = crnNumber;
                 }
 
-                numbers.Push(number);
             }
 
             Console.WriteLine(maxNum);
@@ -65,18 +74,19 @@ namespace _11.MaximumAndMinimumElement
 
         private static void PrintMinNumber(Stack<int> numbers)
         {
+            int[] elements = numbers.ToArray();
+
             int minNum = int.MaxValue;
 
-            for (int i = 0; i < numbers.Count; i++)
+            for (int i = 0; i < elements.Length; i++)
             {
-                int number = numbers.Pop();
+                int crnNumber = elements[i];
 
-                if (number < minNum)
+                if (crnNumber < minNum)
                 {
-                    minNum = number;
+                    minNum = crnNumber;
                 }
 
-                numbers.Push(number);
             }
 
             Console.WriteLine(minNum);
