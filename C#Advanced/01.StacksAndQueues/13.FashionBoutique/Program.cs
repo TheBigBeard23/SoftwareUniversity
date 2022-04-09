@@ -22,6 +22,7 @@ namespace _13.FashionBoutique
                 if (crnClothes == capacity)
                 {
                     counter++;
+                    clothes.Dequeue();
                     crnClothes = 0;
                 }
                 else if (crnClothes > capacity)
