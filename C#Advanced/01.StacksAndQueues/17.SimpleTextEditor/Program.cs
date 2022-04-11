@@ -38,10 +38,7 @@ namespace _17.SimpleTextEditor
                         text.Pop();
                         break;
                 }
-
             }
-
-
         }
     }
 }
