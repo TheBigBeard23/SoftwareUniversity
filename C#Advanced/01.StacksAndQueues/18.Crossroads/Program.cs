@@ -21,6 +21,7 @@ namespace _18.Crossroads
                 if (input == "green")
                 {
                     skipCars(cars, durationGreenLight, durationFreeWindow , ref passedCarCount,ref crashHappend);
+
                     if (crashHappend)
                     {
                         break;
@@ -68,8 +69,6 @@ namespace _18.Crossroads
                     crash = true;
                     break;
                 }
-
-
             }
         }
     }
