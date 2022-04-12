@@ -41,6 +41,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "18.Crossroads", "18.Crossro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "19.KeyRevolver", "19.KeyRevolver\19.KeyRevolver.csproj", "{7AE03E84-0F0D-41EC-9909-60F10B2E8950}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "20.CupsAndBottles", "20.CupsAndBottles\20.CupsAndBottles.csproj", "{AC1A0689-08BC-496D-BD1C-C0CF7FAC682D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -123,6 +125,10 @@ Global
 		{7AE03E84-0F0D-41EC-9909-60F10B2E8950}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7AE03E84-0F0D-41EC-9909-60F10B2E8950}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7AE03E84-0F0D-41EC-9909-60F10B2E8950}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC1A0689-08BC-496D-BD1C-C0CF7FAC682D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC1A0689-08BC-496D-BD1C-C0CF7FAC682D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC1A0689-08BC-496D-BD1C-C0CF7FAC682D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC1A0689-08BC-496D-BD1C-C0CF7FAC682D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

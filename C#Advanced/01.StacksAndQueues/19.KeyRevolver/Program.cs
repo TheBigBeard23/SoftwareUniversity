@@ -24,7 +24,7 @@ namespace _19.KeyRevolver
             int bulletCounter = 0;
             int totalBulletPrice = 0;
 
-            while (bullets.Count > 0)
+            while (bullets.Count > 0 && locks.Count > 0)
             {
                 bulletCounter++;
                 totalBulletPrice += bulletPrice;
@@ -41,11 +41,9 @@ namespace _19.KeyRevolver
                 {
                     Console.WriteLine("Ping!");
                 }
-                if (locks.Count == 0)
-                {
-                    break;
-                }
-                if (bulletCounter == gunBarrelSize)
+
+                if (bulletCounter == gunBarrelSize &&
+                    bullets.Count > 0)
                 {
                     Console.WriteLine("Reloading!");
                     bulletCounter = 0;
