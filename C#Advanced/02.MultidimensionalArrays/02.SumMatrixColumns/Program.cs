@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Linq;
 
-namespace _2.SumMatrixColumns
+namespace _02.SumMatrixColumns
 {
     class Program
     {
         static void Main(string[] args)
         {
             int[] matrixData = Console.ReadLine().Split(", ")
-                                                .Select(int.Parse)
-                                                .ToArray();
+                                               .Select(int.Parse)
+                                               .ToArray();
             int rows = matrixData[0];
             int cols = matrixData[1];
             int[,] matrix = new int[rows, cols];
@@ -32,9 +32,6 @@ namespace _2.SumMatrixColumns
             {
                 Console.WriteLine(columns[i]);
             }
-
-
-
         }
     }
 }
