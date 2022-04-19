@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace _3.PrimaryDiagonal
+namespace _03.PrimaryDiagonal
 {
     class Program
     {
