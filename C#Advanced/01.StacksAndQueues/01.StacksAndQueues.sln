@@ -3,23 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30517.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.ReverseStrings", "1.ReverseStrings\01.ReverseStrings.csproj", "{FD67699E-3A4E-4E79-97E5-6115D9E70FF4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.ReverseStrings", "01.ReverseStrings\01.ReverseStrings.csproj", "{FD67699E-3A4E-4E79-97E5-6115D9E70FF4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.StackSum", "2.StackSum\02.StackSum.csproj", "{B625942E-D2D1-4103-8D6D-8CE2384FEE34}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.StackSum", "02.StackSum\02.StackSum.csproj", "{B625942E-D2D1-4103-8D6D-8CE2384FEE34}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.SimpleCalculator", "3.SimpleCalculator\03.SimpleCalculator.csproj", "{B0C41000-738B-49B1-A592-7D12C6B3C8C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.SimpleCalculator", "03.SimpleCalculator\03.SimpleCalculator.csproj", "{B0C41000-738B-49B1-A592-7D12C6B3C8C1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04.MatchingBrackets", "4.MatchingBrackets\04.MatchingBrackets.csproj", "{966E2640-E474-4DD4-9A4B-AA9DBEB59AB6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04.MatchingBrackets", "04.MatchingBrackets\04.MatchingBrackets.csproj", "{966E2640-E474-4DD4-9A4B-AA9DBEB59AB6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05.PrintEvenNumbers", "5.PrintEvenNumbers\05.PrintEvenNumbers.csproj", "{EED1E064-1631-41F1-8B64-CF3B0162A056}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05.PrintEvenNumbers", "05.PrintEvenNumbers\05.PrintEvenNumbers.csproj", "{EED1E064-1631-41F1-8B64-CF3B0162A056}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06.Supermarket", "6.Supermarket\06.Supermarket.csproj", "{4D475BD4-0D91-42CC-8CFB-D6450C23D81A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06.Supermarket", "06.Supermarket\06.Supermarket.csproj", "{4D475BD4-0D91-42CC-8CFB-D6450C23D81A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07.HotPotato", "7.HotPotato\07.HotPotato.csproj", "{B0FD5711-1A05-47FE-8C21-89179C706F51}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07.HotPotato", "07.HotPotato\07.HotPotato.csproj", "{B0FD5711-1A05-47FE-8C21-89179C706F51}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08.TrafficJam", "8.TrafficJam\08.TrafficJam.csproj", "{63F802DD-4B10-40BF-8A1B-33FAF786D4D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08.TrafficJam", "08.TrafficJam\08.TrafficJam.csproj", "{63F802DD-4B10-40BF-8A1B-33FAF786D4D0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "09.BasicStackOperations", "9.BasicStackOperations\09.BasicStackOperations.csproj", "{37E2DF02-0D24-42C1-A4CA-C56BDA54722E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "09.BasicStackOperations", "09.BasicStackOperations\09.BasicStackOperations.csproj", "{37E2DF02-0D24-42C1-A4CA-C56BDA54722E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "10.BasicQueueOperations", "10.BasicQueueOperations\10.BasicQueueOperations.csproj", "{C9144561-A889-48D0-89D7-C17BBC1365AC}"
 EndProject

@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Linq;
 
-namespace _2.StackSum
+namespace _02.StackSum
 {
     class Program
     {
@@ -12,7 +12,7 @@ namespace _2.StackSum
 
             string command = Console.ReadLine();
 
-            while (command.ToLower()!="end")
+            while (command.ToLower() != "end")
             {
                 string[] data = command.Split().ToArray();
 
@@ -40,7 +40,7 @@ namespace _2.StackSum
         static int Sum(Stack numbers)
         {
             int sum = 0;
-            while (numbers.Count>0)
+            while (numbers.Count > 0)
             {
                 sum += int.Parse(numbers.Pop().ToString());
             }

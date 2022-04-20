@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections;
 
-namespace _3.SimpleCalculator
+namespace _03.SimpleCalculator
 {
     class Program
     {
@@ -10,7 +10,7 @@ namespace _3.SimpleCalculator
             Stack numbersAndOperations = new Stack(Console.ReadLine().Split());
             int sum = 0;
 
-            while (numbersAndOperations.Count>1)
+            while (numbersAndOperations.Count > 1)
             {
                 int number = int.Parse(numbersAndOperations.Pop().ToString());
                 string operation = numbersAndOperations.Pop().ToString();

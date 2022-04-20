@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace _4.MatchingBrackets
+namespace _04.MatchingBrackets
 {
     class Program
     {
@@ -21,7 +21,7 @@ namespace _4.MatchingBrackets
             {
                 FindExpression(symbols);
             }
-           
+
         }
 
         private static string FindExpression(Queue<string> symbols)
@@ -47,7 +47,7 @@ namespace _4.MatchingBrackets
                         expression += crnSymbol;
                         symbols.Dequeue();
                     }
-                    
+
                 }
             }
 
