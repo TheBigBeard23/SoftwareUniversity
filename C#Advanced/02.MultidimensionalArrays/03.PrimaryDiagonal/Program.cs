@@ -8,7 +8,8 @@ namespace _03.PrimaryDiagonal
         static void Main(string[] args)
         {
             int n = int.Parse(Console.ReadLine());
-            int sum = 0;
+            int firstDiagonal = 0;
+            int secondDiagonal = 0;
             int[,] matrix = new int[n, n];
 
             for (int row = 0; row < n; row++)
@@ -19,10 +20,11 @@ namespace _03.PrimaryDiagonal
                 {
                     matrix[row, col] = data[col];
                 }
-                sum += matrix[row, row];
+                firstDiagonal += matrix[row, row];
+                secondDiagonal += matrix[row, n - row -1];
             }
 
-            Console.WriteLine(sum);
+            Console.WriteLine(Math.Abs(firstDiagonal-secondDiagonal));
 
         }
     }

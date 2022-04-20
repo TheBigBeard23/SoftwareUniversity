@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07.PascalTriangle", "07.Pas
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.SumMatrixColumns", "02.SumMatrixColumns\02.SumMatrixColumns.csproj", "{667824E3-F920-4ECA-9772-1B499BC51A7D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.DiagonalDifference", "08.DiagonalDifference\08.DiagonalDifference.csproj", "{52430FFF-662D-47AD-B714-1A872ACE1371}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{667824E3-F920-4ECA-9772-1B499BC51A7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{667824E3-F920-4ECA-9772-1B499BC51A7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{667824E3-F920-4ECA-9772-1B499BC51A7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52430FFF-662D-47AD-B714-1A872ACE1371}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52430FFF-662D-47AD-B714-1A872ACE1371}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52430FFF-662D-47AD-B714-1A872ACE1371}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52430FFF-662D-47AD-B714-1A872ACE1371}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
