@@ -7,13 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.SumMatrixElements", "01.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.PrimaryDiagonal", "03.PrimaryDiagonal\03.PrimaryDiagonal.csproj", "{2D291B6E-33D3-4824-82C5-2398BBFF27AF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "4.SymbolInMatrix", "04.SymbolInMatrix\4.SymbolInMatrix.csproj", "{CA6F665C-7B91-4D2E-8868-0BFEFEC6B144}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04.SymbolInMatrix", "04.SymbolInMatrix\04.SymbolInMatrix.csproj", "{CA6F665C-7B91-4D2E-8868-0BFEFEC6B144}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "5.SquareWithMaximumSum", "05.SquareWithMaximumSum\5.SquareWithMaximumSum.csproj", "{BDB7F0E5-649A-437B-811C-85CF8126F716}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05.SquareWithMaximumSum", "05.SquareWithMaximumSum\05.SquareWithMaximumSum.csproj", "{BDB7F0E5-649A-437B-811C-85CF8126F716}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "6.JaggedArrayModification", "06.JaggedArrayModification\6.JaggedArrayModification.csproj", "{50DAACDA-98D2-457A-9C33-AEECF48AC9EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06.JaggedArrayModification", "06.JaggedArrayModification\06.JaggedArrayModification.csproj", "{50DAACDA-98D2-457A-9C33-AEECF48AC9EF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "7.PascalTriangle", "07.PascalTriangle\7.PascalTriangle.csproj", "{B9BC0277-65C4-4D23-BF95-E42A74654E3F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07.PascalTriangle", "07.PascalTriangle\07.PascalTriangle.csproj", "{B9BC0277-65C4-4D23-BF95-E42A74654E3F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.SumMatrixColumns", "02.SumMatrixColumns\02.SumMatrixColumns.csproj", "{667824E3-F920-4ECA-9772-1B499BC51A7D}"
 EndProject

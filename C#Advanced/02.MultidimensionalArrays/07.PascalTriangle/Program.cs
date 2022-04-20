@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _7.PascalTriangle
+namespace _07.PascalTriangle
 {
     class Program
     {
@@ -41,7 +41,7 @@ namespace _7.PascalTriangle
             {
                 for (int col = 0; col < matrix[row].Length; col++)
                 {
-                    Console.Write(matrix[row][col]+" ");
+                    Console.Write(matrix[row][col] + " ");
                 }
                 Console.WriteLine();
             }

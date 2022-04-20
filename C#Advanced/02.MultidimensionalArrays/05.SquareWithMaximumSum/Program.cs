@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace _5.SquareWithMaximumSum
+namespace _05.SquareWithMaximumSum
 {
     class Program
     {
@@ -29,13 +29,13 @@ namespace _5.SquareWithMaximumSum
 
             for (int row = 0; row < rows; row++)
             {
-                
+
                 for (int col = 0; col < cols; col++)
                 {
                     if (row + 1 < rows &&
                         col + 1 < cols)
                     {
-                        int crnSum = matrix[row, col] + matrix[row, col + 1] + matrix[row+1, col] + matrix[row+1, col + 1];
+                        int crnSum = matrix[row, col] + matrix[row, col + 1] + matrix[row + 1, col] + matrix[row + 1, col + 1];
 
                         if (sum < crnSum)
                         {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _4.SymbolInMatrix
+namespace _04.SymbolInMatrix
 {
     class Program
     {

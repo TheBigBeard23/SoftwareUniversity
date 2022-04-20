@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace _6.JaggedArrayModification
+namespace _06.JaggedArrayModification
 {
     class Program
     {
@@ -22,7 +22,7 @@ namespace _6.JaggedArrayModification
 
             string input = Console.ReadLine();
 
-            while (input!="END")
+            while (input != "END")
             {
                 string[] data = input.Split();
                 string command = data[0];
@@ -54,7 +54,7 @@ namespace _6.JaggedArrayModification
             {
                 for (int col = 0; col < n; col++)
                 {
-                    Console.Write(matrix[row,col]+" ");
+                    Console.Write(matrix[row, col] + " ");
                 }
                 Console.WriteLine();
             }
