@@ -19,6 +19,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.SumMatrixColumns", "02.S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.DiagonalDifference", "08.DiagonalDifference\08.DiagonalDifference.csproj", "{52430FFF-662D-47AD-B714-1A872ACE1371}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09.SquaresInMatrix", "09.SquaresInMatrix\09.SquaresInMatrix.csproj", "{DCD2EDCB-620D-4933-9D0E-3B8CAB05C22D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{52430FFF-662D-47AD-B714-1A872ACE1371}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52430FFF-662D-47AD-B714-1A872ACE1371}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52430FFF-662D-47AD-B714-1A872ACE1371}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCD2EDCB-620D-4933-9D0E-3B8CAB05C22D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCD2EDCB-620D-4933-9D0E-3B8CAB05C22D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCD2EDCB-620D-4933-9D0E-3B8CAB05C22D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCD2EDCB-620D-4933-9D0E-3B8CAB05C22D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
