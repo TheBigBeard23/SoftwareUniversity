@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace _8.TrafficJam
+namespace _08.TrafficJam
 {
     class Program
     {
@@ -17,7 +17,7 @@ namespace _8.TrafficJam
                 if (input == "green")
                 {
                     PrintPassedCars(cars, count, ref passedCars);
-                  
+
                 }
 
                 else
@@ -31,7 +31,7 @@ namespace _8.TrafficJam
             Console.WriteLine($"{passedCars} cars passed the crossroads.");
         }
 
-        static void PrintPassedCars(Queue<string> cars, int count,ref int passedCars)
+        static void PrintPassedCars(Queue<string> cars, int count, ref int passedCars)
         {
             for (int i = 0; i < count; i++)
             {

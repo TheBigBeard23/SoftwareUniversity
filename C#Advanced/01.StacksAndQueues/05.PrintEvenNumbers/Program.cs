@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace _5.PrintEvenNumbers
+namespace _05.PrintEvenNumbers
 {
     class Program
     {

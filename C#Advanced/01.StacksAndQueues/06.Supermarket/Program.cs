@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace _6.Supermarket
+namespace _06.Supermarket
 {
     class Program
     {
@@ -11,7 +11,7 @@ namespace _6.Supermarket
 
             string input = Console.ReadLine();
 
-            while (input!="End")
+            while (input != "End")
             {
                 if (input == "Paid")
                 {
@@ -32,7 +32,7 @@ namespace _6.Supermarket
 
         static void Pay(Queue<string> customers)
         {
-            while (customers.Count>0)
+            while (customers.Count > 0)
             {
                 Console.WriteLine(customers.Dequeue());
             }

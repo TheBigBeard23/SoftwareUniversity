@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace _7.HotPotato
+namespace _07.HotPotato
 {
     class Program
     {
@@ -10,7 +10,7 @@ namespace _7.HotPotato
             Queue<string> players = new Queue<string>(Console.ReadLine().Split());
             int count = int.Parse(Console.ReadLine());
 
-            while (players.Count>1)
+            while (players.Count > 1)
             {
                 Play(players, count);
             }
