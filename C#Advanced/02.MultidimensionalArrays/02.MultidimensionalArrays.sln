@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10.MaximalSum", "10.Maximal
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11.MatrixShuffling", "11.MatrixShuffling\11.MatrixShuffling.csproj", "{A8B2BCF1-5277-4AB6-81A4-C8CE37A048A5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12.SnakeMoves", "12.SnakeMoves\12.SnakeMoves.csproj", "{55D11D3D-1155-440E-BB54-08F34DDB412A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{A8B2BCF1-5277-4AB6-81A4-C8CE37A048A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8B2BCF1-5277-4AB6-81A4-C8CE37A048A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8B2BCF1-5277-4AB6-81A4-C8CE37A048A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55D11D3D-1155-440E-BB54-08F34DDB412A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55D11D3D-1155-440E-BB54-08F34DDB412A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55D11D3D-1155-440E-BB54-08F34DDB412A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55D11D3D-1155-440E-BB54-08F34DDB412A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
