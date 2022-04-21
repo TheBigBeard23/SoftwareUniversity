@@ -7,16 +7,19 @@ namespace _10.MaximalSum
     {
         static void Main(string[] args)
         {
-            int[] parameters = Console.ReadLine().Split().Select(int.Parse).ToArray();
+            int[] parameters = Console.ReadLine().Split(" ",StringSplitOptions.RemoveEmptyEntries)
+                                                 .Select(int.Parse)
+                                                 .ToArray();
+
             int rows = parameters[0];
             int cols = parameters[1];
             int[,] matrix = new int[rows, cols];
-            int sum = 0;
+            int sum = int.MinValue;
             int[] coordinates = new int[2];
 
             for (int row = 0; row < rows; row++)
             {
-                int[] symbols = Console.ReadLine().Split()
+                int[] symbols = Console.ReadLine().Split(" ",StringSplitOptions.RemoveEmptyEntries)
                                                   .Select(int.Parse)
                                                   .ToArray();
 
