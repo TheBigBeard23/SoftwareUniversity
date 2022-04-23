@@ -9,12 +9,12 @@ namespace _13.JaggedArrayManipulator
         {
             int rows = int.Parse(Console.ReadLine());
 
-            int[][] matrix = new int[rows][];
+            double[][] matrix = new double[rows][];
 
             for (int row = 0; row < rows; row++)
             {
                 matrix[row] = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries)
-                                                .Select(int.Parse)
+                                                .Select(double.Parse)
                                                 .ToArray();
 
             }
