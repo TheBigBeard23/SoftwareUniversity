@@ -20,11 +20,11 @@ namespace _15.Bombs
                 }
             }
 
-            string[] data = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries);
+            string[] data = Console.ReadLine().Split();
 
             for (int i = 0; i < data.Length; i++)
             {
-                int[] coordinates = data[i].Split(",", StringSplitOptions.RemoveEmptyEntries)
+                int[] coordinates = data[i].Split(",")
                                            .Select(int.Parse)
                                            .ToArray();
 
@@ -97,6 +97,7 @@ namespace _15.Bombs
             //                       .Select(row => matrix[row][column])
             //                       .Where(value => value > 0)
             //                       .Count());
+
             int cellsCount = 0;
             int result = 0;
             for (int row = 0; row < n; row++)
