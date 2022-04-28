@@ -36,16 +36,17 @@ namespace _17.RadioactiveMutantVampireBunnies
             int pRow = playerCoordinates[0];
             int pCol = playerCoordinates[1];
 
-            for (int i = 0; i < commands.Length; i++)
+            while (commands.Length>0 && isWinning == false)
             {
-
                 if (matrix[pRow, pCol] != 'P')
                 {
                     break;
                 }
 
                 matrix[pRow, pCol] = '.';
-                char command = commands[i];
+
+                char command = char.Parse(commands.Substring(0,1));
+                commands = commands.Remove(0, 1);
 
                 switch (command)
                 {
@@ -84,25 +85,18 @@ namespace _17.RadioactiveMutantVampireBunnies
                     {
                         pCol++;
                     }
-                    MoveBunnies(rows, cols, matrix);
-                    break;
                 }
-
-                else if (matrix[pRow, pCol] == 'B')
+                else if (matrix[pRow, pCol] == '.')
                 {
-                    MoveBunnies(rows, cols, matrix);
-                    break;
+                    matrix[pRow, pCol] = 'P';
                 }
-
-                matrix[pRow, pCol] = 'P';
 
                 MoveBunnies(rows, cols, matrix);
             }
-
             if (isWinning)
             {
                 PrintMatrix(matrix);
-                Console.WriteLine($"win: {pRow} {pCol}");
+                Console.WriteLine($"won: {pRow} {pCol}");
             }
             else
             {
