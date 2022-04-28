@@ -17,23 +17,25 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07.PascalTriangle", "07.Pas
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.SumMatrixColumns", "02.SumMatrixColumns\02.SumMatrixColumns.csproj", "{667824E3-F920-4ECA-9772-1B499BC51A7D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.DiagonalDifference", "08.DiagonalDifference\08.DiagonalDifference.csproj", "{52430FFF-662D-47AD-B714-1A872ACE1371}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08.DiagonalDifference", "08.DiagonalDifference\08.DiagonalDifference.csproj", "{52430FFF-662D-47AD-B714-1A872ACE1371}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09.SquaresInMatrix", "09.SquaresInMatrix\09.SquaresInMatrix.csproj", "{DCD2EDCB-620D-4933-9D0E-3B8CAB05C22D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "09.SquaresInMatrix", "09.SquaresInMatrix\09.SquaresInMatrix.csproj", "{DCD2EDCB-620D-4933-9D0E-3B8CAB05C22D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10.MaximalSum", "10.MaximalSum\10.MaximalSum.csproj", "{19E07F59-0B18-46DC-8D18-D52D69D606F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "10.MaximalSum", "10.MaximalSum\10.MaximalSum.csproj", "{19E07F59-0B18-46DC-8D18-D52D69D606F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11.MatrixShuffling", "11.MatrixShuffling\11.MatrixShuffling.csproj", "{A8B2BCF1-5277-4AB6-81A4-C8CE37A048A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "11.MatrixShuffling", "11.MatrixShuffling\11.MatrixShuffling.csproj", "{A8B2BCF1-5277-4AB6-81A4-C8CE37A048A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12.SnakeMoves", "12.SnakeMoves\12.SnakeMoves.csproj", "{55D11D3D-1155-440E-BB54-08F34DDB412A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "12.SnakeMoves", "12.SnakeMoves\12.SnakeMoves.csproj", "{55D11D3D-1155-440E-BB54-08F34DDB412A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13.JaggedArrayManipulator", "13.JaggedArrayManipulator\13.JaggedArrayManipulator.csproj", "{ACDDB589-81BE-4FDB-9F87-60526C0F0764}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "13.JaggedArrayManipulator", "13.JaggedArrayManipulator\13.JaggedArrayManipulator.csproj", "{ACDDB589-81BE-4FDB-9F87-60526C0F0764}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14.KnightGame", "14.KnightGame\14.KnightGame.csproj", "{5469A71F-C197-4064-BB52-2BE9A3C5C093}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "14.KnightGame", "14.KnightGame\14.KnightGame.csproj", "{5469A71F-C197-4064-BB52-2BE9A3C5C093}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "15.Bombs", "15.Bombs\15.Bombs.csproj", "{B77B441A-DCFA-4849-9D28-1CB880FE141C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "15.Bombs", "15.Bombs\15.Bombs.csproj", "{B77B441A-DCFA-4849-9D28-1CB880FE141C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "16.Miner", "16.Miner\16.Miner.csproj", "{350322CC-A728-465D-B910-E6A1CF4F2C53}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "16.Miner", "16.Miner\16.Miner.csproj", "{350322CC-A728-465D-B910-E6A1CF4F2C53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "17.RadioactiveMutantVampireBunnies", "17.RadioactiveMutantVampireBunnies\17.RadioactiveMutantVampireBunnies.csproj", "{8DC9CD88-A329-4662-B5BF-FDD7D6898D5E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -105,6 +107,10 @@ Global
 		{350322CC-A728-465D-B910-E6A1CF4F2C53}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{350322CC-A728-465D-B910-E6A1CF4F2C53}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{350322CC-A728-465D-B910-E6A1CF4F2C53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DC9CD88-A329-4662-B5BF-FDD7D6898D5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DC9CD88-A329-4662-B5BF-FDD7D6898D5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DC9CD88-A329-4662-B5BF-FDD7D6898D5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DC9CD88-A329-4662-B5BF-FDD7D6898D5E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
