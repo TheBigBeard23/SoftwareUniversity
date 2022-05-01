@@ -18,6 +18,7 @@ namespace _12.EvenTimes
                 if (numbers.Contains(number))
                 {
                     evenNum = number;
+                    break;
                 }
 
                 numbers.Add(number);
