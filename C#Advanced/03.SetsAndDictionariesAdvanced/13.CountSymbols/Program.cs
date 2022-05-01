@@ -19,6 +19,7 @@ namespace _13.CountSymbols
                 {
                     charsCount[crnChar] = 0;
                 }
+
                 charsCount[crnChar]++;
             }
 
