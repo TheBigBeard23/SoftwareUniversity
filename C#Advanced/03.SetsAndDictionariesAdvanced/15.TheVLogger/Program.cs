@@ -43,13 +43,16 @@ namespace _15.TheVLogger
                         }
                         break;
                 }
+
                 input = Console.ReadLine();
             }
 
             Console.WriteLine($"The V-Logger has a total of {vloggerFllowers.Count} vloggers in its logs.");
 
             int counter = 1;
-            foreach (var vlogger in vloggerFllowers.OrderByDescending(x => x.Value["fllowers"].Count).ThenBy(x => x.Value["fllowing"].Count))
+
+            foreach (var vlogger in vloggerFllowers.OrderByDescending(x => x.Value["fllowers"].Count)
+                                                   .ThenBy(x => x.Value["fllowing"].Count))
             {
                 string name = vlogger.Key;
                 int fllowersCount = vlogger.Value["fllowers"].Count;
