@@ -75,7 +75,7 @@ namespace _16.Ranking
 
                 foreach (var contest in candidate.Value.OrderByDescending(x => x.Value))
                 {
-                    Console.WriteLine($"# {contest.Key} -> {contest.Value}");
+                    Console.WriteLine($"#  {contest.Key} -> {contest.Value}");
                 }
             }
         }
