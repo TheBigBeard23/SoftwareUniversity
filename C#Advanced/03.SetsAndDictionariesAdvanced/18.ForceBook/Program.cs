@@ -34,7 +34,6 @@ namespace _18.ForceBook
                 else
                 {
                     string[] data = input.Split(" -> ").ToArray();
-
                     string forceSide = data[1];
                     string forceUser = data[0];
 
