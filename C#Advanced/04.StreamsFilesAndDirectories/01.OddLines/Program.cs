@@ -27,18 +27,20 @@ namespace _01.OddLines
                 string text = reader.ReadLine();
                 int counter = 1;
 
-                while (text != null)
+                using (StreamWriter writer = new StreamWriter(outputFilePath))
                 {
-                    if (counter % 2 == 0)
+                    while (text != null)
                     {
-                        using (StreamWriter writer = new StreamWriter(outputFilePath))
+                        if (counter % 2 == 0)
                         {
-                            writer.WriteLine(text);
-                        }
-                    }
 
-                    counter++;
-                    text = reader.ReadLine();
+                            writer.WriteLine(text);
+
+                        }
+
+                        counter++;
+                        text = reader.ReadLine();
+                    }
                 }
             }
 
