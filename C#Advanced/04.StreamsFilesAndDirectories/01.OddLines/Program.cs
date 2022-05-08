@@ -10,18 +10,6 @@ namespace _01.OddLines
             string inputFilePath = @"..\..\..\input.txt";
             string outputFilePath = @"..\..\..\output.txt";
 
-
-            using (StreamWriter writer = new StreamWriter(inputFilePath))
-            {
-                string text = Console.ReadLine();
-
-                while (text != "")
-                {
-                    writer.WriteLine(text);
-                    text = Console.ReadLine();
-                }
-            }
-
             using (StreamReader reader = new StreamReader(inputFilePath))
             {
                 string text = reader.ReadLine();
@@ -42,11 +30,6 @@ namespace _01.OddLines
                         text = reader.ReadLine();
                     }
                 }
-            }
-
-            using (StreamReader reader = new StreamReader(outputFilePath))
-            {
-                Console.WriteLine(reader.ReadToEnd());
             }
         }
     }
