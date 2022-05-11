@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.LineNumbers", "02.LineNu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.WordCount", "03.WordCount\03.WordCount.csproj", "{EE0B09D6-DDF4-46BB-8165-0029CC56A8F9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.MergeTextFiles", "04.MergeTextFiles\04.MergeTextFiles.csproj", "{B6444639-6D50-4695-8E35-EF65424BF5F9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{EE0B09D6-DDF4-46BB-8165-0029CC56A8F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE0B09D6-DDF4-46BB-8165-0029CC56A8F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE0B09D6-DDF4-46BB-8165-0029CC56A8F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6444639-6D50-4695-8E35-EF65424BF5F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6444639-6D50-4695-8E35-EF65424BF5F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6444639-6D50-4695-8E35-EF65424BF5F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6444639-6D50-4695-8E35-EF65424BF5F9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
