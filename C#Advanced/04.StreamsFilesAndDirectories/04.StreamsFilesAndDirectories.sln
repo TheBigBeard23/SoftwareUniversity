@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.MergeTextFiles", "04.Mer
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.ExtractSpecialBytes", "05.ExtractSpecialBytes\05.ExtractSpecialBytes.csproj", "{24E1E0C3-8F19-42C3-82B7-5E63EB4940A1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.SplitMergeBinaryFiles", "06.SplitMergeBinaryFiles\06.SplitMergeBinaryFiles.csproj", "{1EF094DF-5807-4CDC-9D35-9E0A0721A8B7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{24E1E0C3-8F19-42C3-82B7-5E63EB4940A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{24E1E0C3-8F19-42C3-82B7-5E63EB4940A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{24E1E0C3-8F19-42C3-82B7-5E63EB4940A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EF094DF-5807-4CDC-9D35-9E0A0721A8B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EF094DF-5807-4CDC-9D35-9E0A0721A8B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EF094DF-5807-4CDC-9D35-9E0A0721A8B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EF094DF-5807-4CDC-9D35-9E0A0721A8B7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
