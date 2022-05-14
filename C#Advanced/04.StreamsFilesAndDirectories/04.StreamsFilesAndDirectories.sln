@@ -3,17 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30517.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.OddLines", "01.OddLines\01.OddLines.csproj", "{21DE8AD4-6BE1-4201-AE85-63463136AB5C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.OddLines", "01.OddLines\01.OddLines.csproj", "{21DE8AD4-6BE1-4201-AE85-63463136AB5C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.LineNumbers", "02.LineNumbers\02.LineNumbers.csproj", "{EE22D27B-5F3F-43DC-BC6C-318B2686EBC5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.LineNumbers", "02.LineNumbers\02.LineNumbers.csproj", "{EE22D27B-5F3F-43DC-BC6C-318B2686EBC5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.WordCount", "03.WordCount\03.WordCount.csproj", "{EE0B09D6-DDF4-46BB-8165-0029CC56A8F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.WordCount", "03.WordCount\03.WordCount.csproj", "{EE0B09D6-DDF4-46BB-8165-0029CC56A8F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.MergeTextFiles", "04.MergeTextFiles\04.MergeTextFiles.csproj", "{B6444639-6D50-4695-8E35-EF65424BF5F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04.MergeTextFiles", "04.MergeTextFiles\04.MergeTextFiles.csproj", "{B6444639-6D50-4695-8E35-EF65424BF5F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.ExtractSpecialBytes", "05.ExtractSpecialBytes\05.ExtractSpecialBytes.csproj", "{24E1E0C3-8F19-42C3-82B7-5E63EB4940A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05.ExtractSpecialBytes", "05.ExtractSpecialBytes\05.ExtractSpecialBytes.csproj", "{24E1E0C3-8F19-42C3-82B7-5E63EB4940A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.SplitMergeBinaryFiles", "06.SplitMergeBinaryFiles\06.SplitMergeBinaryFiles.csproj", "{1EF094DF-5807-4CDC-9D35-9E0A0721A8B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06.SplitMergeBinaryFiles", "06.SplitMergeBinaryFiles\06.SplitMergeBinaryFiles.csproj", "{1EF094DF-5807-4CDC-9D35-9E0A0721A8B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.FolderSize", "07.FolderSize\07.FolderSize.csproj", "{83F25A3B-AB14-4720-BFD6-C12A949EDAC3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{1EF094DF-5807-4CDC-9D35-9E0A0721A8B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1EF094DF-5807-4CDC-9D35-9E0A0721A8B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1EF094DF-5807-4CDC-9D35-9E0A0721A8B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83F25A3B-AB14-4720-BFD6-C12A949EDAC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83F25A3B-AB14-4720-BFD6-C12A949EDAC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83F25A3B-AB14-4720-BFD6-C12A949EDAC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83F25A3B-AB14-4720-BFD6-C12A949EDAC3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

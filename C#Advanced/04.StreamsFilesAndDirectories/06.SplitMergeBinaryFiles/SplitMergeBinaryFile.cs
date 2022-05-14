@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace _06.SplitMergeBinaryFiles
 {
     class SplitMergeBinaryFile
-    {
+    { 
         public static void SplitBinaryFile(string sourceFilePath, string partOneFilePath, string partTwoFilePath)
         {
             byte[] sourceFileBytes = File.ReadAllBytes(sourceFilePath);
@@ -30,7 +31,7 @@ namespace _06.SplitMergeBinaryFiles
             }
             using (StreamWriter writer = new StreamWriter(partTwoFilePath))
             {
-                for (int i = 0; i < firstFileLenght - 1; i++)
+                for (int i = firstFileLenght; i < sourceFileBytes.Length; i++)
                 {
                     writer.Write(sourceFileBytes[i]);
                 }
@@ -49,8 +50,8 @@ namespace _06.SplitMergeBinaryFiles
                 {
                     readerStream.CopyTo(writerStream);
                 }
-            }
 
+            }
         }
     }
 }
