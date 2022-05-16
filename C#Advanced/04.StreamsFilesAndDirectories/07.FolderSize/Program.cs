@@ -7,9 +7,11 @@ namespace _07.FolderSize
     {
         static void Main(string[] args)
         {
-            double fileSize = FolderSize.GetFolderSize(@"../../../TestFolder");
+            //double fileSize = FolderSize.GetFolderSize(@"../../../TestFolder");
 
-            File.WriteAllText("../../../output.txt", fileSize.ToString());
+            //File.WriteAllText("../../../output.txt", fileSize.ToString());
+
+            DeleteFolders.Delete(@"C:\Users\Bones\Desktop\Test");
         }
     }
 }
