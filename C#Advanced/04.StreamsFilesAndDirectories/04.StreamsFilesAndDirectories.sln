@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.EvenLines", "08.EvenLine
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09.LineNumbers", "09.LineNumbers\09.LineNumbers.csproj", "{EB064B19-C4DD-4062-8AE7-035E5494E20A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10.CopyBinaryFile", "10.CopyBinaryFile\10.CopyBinaryFile.csproj", "{FA17FE80-60A2-4061-BC68-249F2D6326D9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{EB064B19-C4DD-4062-8AE7-035E5494E20A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB064B19-C4DD-4062-8AE7-035E5494E20A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB064B19-C4DD-4062-8AE7-035E5494E20A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA17FE80-60A2-4061-BC68-249F2D6326D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA17FE80-60A2-4061-BC68-249F2D6326D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA17FE80-60A2-4061-BC68-249F2D6326D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA17FE80-60A2-4061-BC68-249F2D6326D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
