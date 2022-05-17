@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace _12.CopyDirectoryContents
 {
@@ -6,8 +7,16 @@ namespace _12.CopyDirectoryContents
     {
         static void Main(string[] args)
         {
-            //CopyDirectory.CheckDirectoryExist(@"C:\Users\Bones\Desktop\Test2");
-            CopyDirectory.CopyAllFiles(@"C:\Users\Bones\Desktop\Test", @"C:\Users\Bones\Desktop\Test2");
+            Console.WriteLine("Enter source path:");
+            string sourcePath = Console.ReadLine();
+            Console.WriteLine("Enter copy path:");
+            string copyPath = Console.ReadLine();
+
+            DirectoryInfo di = new DirectoryInfo(sourcePath);
+            string name = di.Name;
+
+            CopyDirectory.CheckDirectoryExist($@"{copyPath}\{name}");
+            CopyDirectory.CopyAllFiles(sourcePath, copyPath);
         }
     }
 }
