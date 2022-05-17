@@ -48,7 +48,7 @@ namespace _11.DirectoryTraversal
 
         public static void WriteReportToDesktop(string textContent,string reportFileName)
         {
-            using (FileStream stream = new FileStream(@$"C:\Users\Bones\Desktop\{reportFileName}.txt", FileMode.OpenOrCreate, FileAccess.Write))
+            using (FileStream stream = new FileStream(@$"C:\Users\Public\Desktop\{reportFileName}.txt", FileMode.OpenOrCreate, FileAccess.Write))
             {
                 byte[] bytes = Encoding.ASCII.GetBytes(textContent);
                 stream.Write(bytes, 0, bytes.Length);
