@@ -8,7 +8,7 @@ namespace _03.CountUppercaseWords
         static void Main(string[] args)
         {
             string[] words = Console.ReadLine()
-                            .Split()
+                            .Split(" ", StringSplitOptions.RemoveEmptyEntries)
                             .Where(x => UppercaseWord(x))
                             .ToArray();
 
