@@ -6,7 +6,16 @@ namespace _06.ActionPoint
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            string[] words = Console.ReadLine().Split();
+
+            Action<string[]> printerDelegate = Printer;
+
+            printerDelegate(words);
+        }
+
+        static void Printer(string[] word)
+        {
+            Console.WriteLine(string.Join(Environment.NewLine,word));
         }
     }
 }
