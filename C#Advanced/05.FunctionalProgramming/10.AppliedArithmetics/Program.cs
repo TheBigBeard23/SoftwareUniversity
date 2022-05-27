@@ -16,32 +16,27 @@ namespace _10.AppliedArithmetics
 
             while (command != "end")
             {
-                GetOperation(command, numbers);
+                switch (command)
+                {
+                    case "add":
+                        numbers = numbers.Select(x => x + 1).ToArray();
+                        break;
+
+                    case "multiply":
+                        numbers = numbers.Select(x => x * 1).ToArray();
+                        break;
+
+                    case "subtract":
+                        numbers = numbers.Select(x => x - 1).ToArray();
+                        break;
+
+                    case "print":
+                        Console.WriteLine(string.Join(" ", numbers));
+                        break;
+
+                }
 
                 command = Console.ReadLine();
-            }
-        }
-
-        static void GetOperation(string command, int[] numbers)
-        {
-            switch (command)
-            {
-                case "add":
-                    numbers = numbers.Select(x => x + 1).ToArray();
-                    break;
-
-                case "multiply":
-                    numbers = numbers.Select(x => x * 1).ToArray();
-                    break;
-
-                case "subtract":
-                    numbers = numbers.Select(x => x - 1).ToArray();
-                    break;
-
-                case "print":
-                    Console.WriteLine(string.Join(" ", numbers));
-                    break;
-
             }
         }
     }
