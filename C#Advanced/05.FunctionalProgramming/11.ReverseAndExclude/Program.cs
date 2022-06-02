@@ -16,7 +16,7 @@ namespace _11.ReverseAndExclude
 
             Func<int[], int[]> reverseArrayDelagate = ReverseArray;
 
-            Predicate<int> checkNumber = x => x % divider == 0;
+            Predicate<int> checkNumber = x => x % divider != 0;
 
             foreach (var num in reverseArrayDelagate(numbers))
             {
