@@ -74,21 +74,17 @@ namespace _14.PredicateParty
             }
             else
             {
-                names.InsertRange(0, newList);
+                foreach (var name in names)
+                {
+                    newList.Add(name);
 
-                //foreach (var name in names)
-                //{
-                //    newList.Add(name);
-
-                //    if (targets.Contains(name))
-                //    {
-                //        newList.Add(name);
-                //    }
-                //}
-                return names;
+                    if (targets.Contains(name))
+                    {
+                        newList.Add(name);
+                    }
+                }
             }
             return newList;
         }
-
     }
 }
