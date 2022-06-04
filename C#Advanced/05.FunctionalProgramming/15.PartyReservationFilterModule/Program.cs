@@ -26,7 +26,7 @@ namespace _15.PartyReservationFilterModule
                     case "Remove filter":
                         if (filterParameters.ContainsKey(filter))
                         {
-                            filterParameters.Remove(filter);
+                            filterParameters[filter].Remove(parameter);
                         }
                         break;
 
