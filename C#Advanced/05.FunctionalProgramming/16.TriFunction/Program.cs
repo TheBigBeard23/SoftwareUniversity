@@ -10,18 +10,24 @@ namespace _16.TriFunction
             int n = int.Parse(Console.ReadLine());
             string[] names = Console.ReadLine().Split();
 
+            foreach (var name in names)
+            {
+                Func<string, bool> ValidateWordDelegate = ValidateWord(n);
 
-            Func<string, int, bool> isValidWord = (str, num) => str.ToCharArray()
-                                                                   .Select(ch => (int)ch)
-                                                                   .Sum() >= num;
+                if (ValidateWordDelegate(name))
+                {
+                    Console.WriteLine(name);
+                    break;
+                }
 
-            Func<string[], int, Func<string, int, bool>, string> firstValidName = (arr, num, func) => arr
-                .FirstOrDefault(str => func(str, num));
+            }
 
-            string result = firstValidName(names, n, isValidWord);
-
-            Console.WriteLine(result);
         }
-
+        static Func<string, bool> ValidateWord(int n)
+        {
+            return x => x.ToCharArray()
+                         .Select(y => (int)y)
+                         .Sum() >= n;
+        }
     }
 }
