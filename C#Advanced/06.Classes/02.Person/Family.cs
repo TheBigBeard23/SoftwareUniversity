@@ -30,5 +30,14 @@ namespace DefiningClasses
             return People.OrderByDescending(x => x.Age).FirstOrDefault();
         }
 
+        public void PrintOlderThan(int age)
+        {
+            foreach (var person in People.Where(x => x.Age > age)
+                                         .OrderBy(x => x.Name))
+            {
+                Console.WriteLine($"{person.Name} - {person.Age}");
+            }
+        }
+
     }
 }
