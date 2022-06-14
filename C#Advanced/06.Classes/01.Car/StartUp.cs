@@ -73,6 +73,7 @@ namespace CarManufacturer
                 sb.AppendLine($"FuelQuantity: {car.FuelQuantity}");
             }
 
+            
             Console.WriteLine(sb);
 
         }
