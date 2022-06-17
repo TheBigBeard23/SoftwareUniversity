@@ -6,9 +6,9 @@ namespace GenericArrayCreator
     {
         public static void Main(string[] args)
         {
-            string[] array = ArrayCreator.Create(5, "Pesho");
+            string[] strings = ArrayCreator.Create(5, "Pesho");
+            int[] integers = ArrayCreator.Create(10, 33);
 
-            Console.WriteLine(string.Join(",",array));
         }
     }
 }
