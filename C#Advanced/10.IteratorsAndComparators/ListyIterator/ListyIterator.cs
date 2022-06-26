@@ -5,17 +5,13 @@ using System.Text;
 
 namespace ListyIterator
 {
-    public class ListyIterator<T>
+    public class ListyIterator<T> : IEnumerable<T>
     {
         private List<T> items;
         private int currentIndex = 0;
-        public ListyIterator()
+        public ListyIterator(params T[] items)
         {
-            items = new List<T>();
-        }
-        public ListyIterator(List<T> items)
-        {
-            this.items = items;
+            this.items = new List<T>(items);
         }
         public bool Move() => ++currentIndex < items.Count;
         public bool HasNext() => currentIndex + 1 < items.Count ? true : false;
@@ -31,5 +27,14 @@ namespace ListyIterator
             }
         }
 
+        public IEnumerator<T> GetEnumerator()
+        {
+            for (int i = 0; i < items.Count; i++)
+            {
+                yield return items[i];
+            }
+        }
+
+        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     }
 }

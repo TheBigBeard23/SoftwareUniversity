@@ -8,52 +8,42 @@ namespace ListyIterator
     {
         static void Main(string[] args)
         {
-            string[] data = Console.ReadLine().Split();
-            List<string> list= new List<string>();
+            var createCommand = Console.ReadLine()
+               .Split(new string[] { "Create", " " }, StringSplitOptions.RemoveEmptyEntries)
+               .ToArray();
 
-            if (data.Length > 1)
-            {
-                for (int i = 1; i < data.Length; i++)
-                {
-                    list.Add(data[i]);
-                }
-            }
+            var listyIterator = new ListyIterator<string>(createCommand);
 
-            int number;
-            List<int> numberList = new List<int>();
-            if (int.TryParse(list[0], out number))
-            {
-                numberList = list.Select(int.Parse).ToList();
-                var listyIterator = new ListyIterator<int>(numberList);
-                ExecuteCommands(listyIterator);
-            }
-            else
-            {
-                var listyIterator = new ListyIterator<string>(list);
-                ExecuteCommands(listyIterator);
-            }
+            string input = Console.ReadLine();
 
-        }
-        static void ExecuteCommands<T>(ListyIterator<T> list)
-        {
-            while (true)
+            while (input!="END")
             {
-                string command = Console.ReadLine();
-
-                switch (command)
+                switch (input)
                 {
                     case "Move":
-                        Console.WriteLine(list.Move());
+                        Console.WriteLine(listyIterator.Move());
                         break;
+
                     case "Print":
-                        list.Print();
+                        listyIterator.Print();
                         break;
+
+                    case "PrintAll":
+
+                        foreach (var item in listyIterator)
+                        {
+                            Console.Write($"{item} ");
+                        }
+                        Console.WriteLine();
+                        break;
+
                     case "HasNext":
-                        Console.WriteLine(list.HasNext());
+                        Console.WriteLine(listyIterator.HasNext());
                         break;
-                    case "END":
-                        return;
+
                 }
+
+                input = Console.ReadLine();
             }
         }
     }
