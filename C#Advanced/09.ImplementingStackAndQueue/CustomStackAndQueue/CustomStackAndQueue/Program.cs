@@ -6,17 +6,18 @@ namespace CustomStackAndQueue
     {
         static void Main(string[] args)
         {
-            CustomList list = new CustomList();
+            var stack = new CustomStack();
 
-            for (int i = 1; i <= 8; i++)
+            for (int i = 1; i <= 10; i++)
             {
-                list.Add(i);
+                stack.Push(i);
             }
+            for (int i = 1; i <= 5; i++)
+            {
+                Console.WriteLine(stack.Pop());
+            }
+            
 
-            var reversedList = list.Reverse();
-
-            Console.WriteLine(list);
-            Console.WriteLine(reversedList);
         }
     }
 }
