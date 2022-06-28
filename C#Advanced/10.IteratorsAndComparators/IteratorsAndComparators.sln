@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListyIterator", "ListyItera
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomStack", "CustomStack\CustomStack.csproj", "{EE578EDF-2E29-40BD-9CAE-A6C68EF1B083}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Froggy", "Froggy\Froggy.csproj", "{339B3E8F-C8F3-4AD2-ABC2-30F596F903FE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{EE578EDF-2E29-40BD-9CAE-A6C68EF1B083}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE578EDF-2E29-40BD-9CAE-A6C68EF1B083}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE578EDF-2E29-40BD-9CAE-A6C68EF1B083}.Release|Any CPU.Build.0 = Release|Any CPU
+		{339B3E8F-C8F3-4AD2-ABC2-30F596F903FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{339B3E8F-C8F3-4AD2-ABC2-30F596F903FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{339B3E8F-C8F3-4AD2-ABC2-30F596F903FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{339B3E8F-C8F3-4AD2-ABC2-30F596F903FE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
