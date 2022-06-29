@@ -5,17 +5,17 @@ VisualStudioVersion = 16.0.30517.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IteratorsAndComparatorsLab", "IteratorsAndComparatorsLab\IteratorsAndComparatorsLab.csproj", "{17FA4114-8011-4A55-9AEC-6869119C4F29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListyIterator", "ListyIterator\ListyIterator.csproj", "{394AF0E2-B66A-4818-A1A8-0A3F3C8394B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.ListyIterator", "01.ListyIterator\01.ListyIterator.csproj", "{394AF0E2-B66A-4818-A1A8-0A3F3C8394B3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomStack", "CustomStack\CustomStack.csproj", "{EE578EDF-2E29-40BD-9CAE-A6C68EF1B083}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.CustomStack", "02.CustomStack\02.CustomStack.csproj", "{EE578EDF-2E29-40BD-9CAE-A6C68EF1B083}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Froggy", "Froggy\Froggy.csproj", "{339B3E8F-C8F3-4AD2-ABC2-30F596F903FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.Froggy", "03.Froggy\03.Froggy.csproj", "{339B3E8F-C8F3-4AD2-ABC2-30F596F903FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComparingObjects", "ComparingObjects\ComparingObjects.csproj", "{E2B74049-3609-4AFC-8505-0382809B5B21}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04.ComparingObjects", "04.ComparingObjects\04.ComparingObjects.csproj", "{E2B74049-3609-4AFC-8505-0382809B5B21}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EqualityLogic", "EqualityLogic\EqualityLogic.csproj", "{3090F269-0F38-4F23-AFDC-2C8DFB4331DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05.EqualityLogic", "05.EqualityLogic\05.EqualityLogic.csproj", "{3090F269-0F38-4F23-AFDC-2C8DFB4331DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomLinkedList", "CustomLinkedList\CustomLinkedList.csproj", "{AC6EA461-2FE4-44E1-9C2A-B8CAF3A2E76C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06.CustomLinkedList", "06.CustomLinkedList\06.CustomLinkedList.csproj", "{AC6EA461-2FE4-44E1-9C2A-B8CAF3A2E76C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
