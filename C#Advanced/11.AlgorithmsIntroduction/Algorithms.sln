@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30517.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.RecursiveArraySum", "01.RecursiveArraySum\01.RecursiveArraySum.csproj", "{159BE882-A760-4C56-AC06-05F7D1DF6CE9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.RecursiveArraySum", "01.RecursiveArraySum\01.RecursiveArraySum.csproj", "{159BE882-A760-4C56-AC06-05F7D1DF6CE9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.RecursiveFactorial", "02.RecursiveFactorial\02.RecursiveFactorial.csproj", "{40E35678-308D-463A-84F4-11B010FB8F40}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.RecursiveFactorial", "02.RecursiveFactorial\02.RecursiveFactorial.csproj", "{40E35678-308D-463A-84F4-11B010FB8F40}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.SumOfCoins", "03.SumOfCoins\03.SumOfCoins.csproj", "{63219F85-C3CF-45A5-A222-21550ED4A3C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.SumOfCoins", "03.SumOfCoins\03.SumOfCoins.csproj", "{63219F85-C3CF-45A5-A222-21550ED4A3C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.MergeSort", "04.MergeSort\04.MergeSort.csproj", "{18E6F96F-69D9-41C0-850A-D92161B9B48D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04.MergeSort", "04.MergeSort\04.MergeSort.csproj", "{18E6F96F-69D9-41C0-850A-D92161B9B48D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.GenericMergeSort", "05.GenericMergeSort\05.GenericMergeSort.csproj", "{A261AF30-A96B-440A-BB12-6B8D9B9DB8F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05.GenericMergeSort", "05.GenericMergeSort\05.GenericMergeSort.csproj", "{A261AF30-A96B-440A-BB12-6B8D9B9DB8F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.QuickSort", "06.QuickSort\06.QuickSort.csproj", "{CF1EB00E-6BA3-4969-8F1A-10B3F8D8CC68}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{A261AF30-A96B-440A-BB12-6B8D9B9DB8F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A261AF30-A96B-440A-BB12-6B8D9B9DB8F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A261AF30-A96B-440A-BB12-6B8D9B9DB8F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF1EB00E-6BA3-4969-8F1A-10B3F8D8CC68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF1EB00E-6BA3-4969-8F1A-10B3F8D8CC68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF1EB00E-6BA3-4969-8F1A-10B3F8D8CC68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF1EB00E-6BA3-4969-8F1A-10B3F8D8CC68}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
