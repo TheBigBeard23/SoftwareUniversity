@@ -14,7 +14,6 @@ namespace _07.BinarySearch
 
             while (low <= high)
             {
-                high = array.Length - 1;
 
                 mid = (low + high) / 2;
 
