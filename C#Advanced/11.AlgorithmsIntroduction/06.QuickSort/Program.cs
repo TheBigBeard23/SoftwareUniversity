@@ -6,9 +6,10 @@ namespace _06.QuickSort
     {
         static void Main(string[] args)
         {
-            int[] array = new int[] { 3, 2, 9, 10, 1, 1, 4, 6, 5 };
+            int[] array = new int[] { 2, 4, 6, 5, 1, 3 };
+            Console.WriteLine(string.Join(" | ", array));
             QuickSort(array, 0, array.Length - 1);
-            Console.WriteLine(string.Join(" ", array));
+            Console.WriteLine(string.Join(" | ", array));
         }
         public static int[] QuickSort(int[] array, int begin, int end)
         {
@@ -32,7 +33,6 @@ namespace _06.QuickSort
                 if (array[j] <= pivot)
                 {
                     i++;
-
                     item = array[i];
                     array[i] = array[j];
                     array[j] = item;
@@ -42,6 +42,8 @@ namespace _06.QuickSort
             item = array[i + 1];
             array[i + 1] = array[end];
             array[end] = item;
+
+            Console.WriteLine(string.Join(" | ", array));
 
             return i + 1;
         }
