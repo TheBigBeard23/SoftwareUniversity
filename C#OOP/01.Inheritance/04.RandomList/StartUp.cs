@@ -14,6 +14,7 @@ namespace CustomRandomList
             }
 
             Console.WriteLine(list.RandomString());
+            Console.WriteLine(list.RandomString());
         }
     }
 }
