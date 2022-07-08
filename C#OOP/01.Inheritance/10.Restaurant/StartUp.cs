@@ -1,13 +1,12 @@
 ﻿using System;
 
-namespace _10.Restaurant
+namespace Restaurant
 {
     public class StartUp
-
     {
         static void Main(string[] args)
         {
-            
+
         }
     }
 }
