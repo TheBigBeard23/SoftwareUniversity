@@ -7,7 +7,7 @@ namespace Restaurant
     public class Coffee : HotBeverage
     {
         public Coffee(string name, double coffeine)
-            : base(name, 3.5M, 50)
+            : base(name, 3.50M, 50)
         {
             Coffeine = coffeine;
         }
