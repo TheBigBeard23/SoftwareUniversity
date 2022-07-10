@@ -21,7 +21,6 @@ namespace PersonsInfo
 
                 team.AddPlayer(person);
             }
-
             Console.WriteLine($"First team has {team.FirstTeam.Count} players.");
             Console.WriteLine($"Reserve team has {team.ReserveTeam.Count} players.");
         }

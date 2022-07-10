@@ -19,11 +19,11 @@ namespace PersonsInfo
 
         public IReadOnlyCollection<Person> FirstTeam 
         {
-            get => firstTeam;
+            get => firstTeam.AsReadOnly();
         }
         public IReadOnlyCollection<Person> ReserveTeam
         {
-            get => reserveTeam;
+            get => reserveTeam.AsReadOnly();
         }
         public void AddPlayer(Person person)
         {
