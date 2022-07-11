@@ -22,10 +22,7 @@ namespace ClassBoxData
             get => length;
             private set
             {
-                if (value < 1)
-                {
-                    throw new ArgumentException("Length cannot be zero or negative.");
-                }
+                ValidateSide(value, "Length");
                 length = value;
             }
         }
@@ -34,10 +31,7 @@ namespace ClassBoxData
             get => width;
             private set
             {
-                if (value < 1)
-                {
-                    throw new ArgumentException("Width cannot be zero or negative.");
-                }
+                ValidateSide(value, "Width");
                 width = value;
             }
         }
@@ -46,10 +40,7 @@ namespace ClassBoxData
             get => height;
             private set
             {
-                if (value < 1)
-                {
-                    throw new ArgumentException("Height cannot be zero or negative.");
-                }
+                ValidateSide(value, "Height");
                 height = value;
             }
         }
@@ -74,6 +65,13 @@ namespace ClassBoxData
             sb.AppendLine($"Volume - {GetVolume():F2}");
 
             return sb.ToString().TrimEnd();
+        }
+        private void ValidateSide(double value, string sideName)
+        {
+            if (value <= 0)
+            {
+                throw new ArgumentException($"{sideName} cannot be zero or negative.");
+            }
         }
     }
 }
