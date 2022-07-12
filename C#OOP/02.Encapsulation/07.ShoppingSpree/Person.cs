@@ -10,7 +10,7 @@ namespace ShoppingSpree
         private decimal money;
         private List<Product> bag;
 
-        public Person(string name,decimal money)
+        public Person(string name, decimal money)
         {
             Name = name;
             Money = money;
@@ -19,9 +19,9 @@ namespace ShoppingSpree
         public string Name
         {
             get => name;
-            set
+            private set
             {
-                if (value == "" || value == " ")
+                if (string.IsNullOrEmpty(value) || string.IsNullOrWhiteSpace(value))
                 {
                     throw new ArgumentException("Name cannot be empty");
                 }
@@ -31,7 +31,7 @@ namespace ShoppingSpree
         public decimal Money
         {
             get => money;
-            set
+            private set
             {
                 if (value < 0)
                 {
@@ -42,14 +42,15 @@ namespace ShoppingSpree
         }
         public void Buy(Product product)
         {
-            if (money - product.Price >= 0)
+            if (money - product.Cost >= 0)
             {
                 Console.WriteLine($"{Name} bought {product.Name}");
-                money -= product.Price;
+                money -= product.Cost;
+                bag.Add(product);
             }
             else
             {
-                Console.WriteLine($"{Name} can't afford {product.Name}");
+                throw new InvalidOperationException($"{Name} can't afford {product.Name}");
             }
         }
         public override string ToString()
@@ -58,12 +59,8 @@ namespace ShoppingSpree
 
             if (bag.Count > 0)
             {
-                sb.Append($"{Name} -");
-
-                foreach (var product in bag)
-                {
-                    sb.Append($", {product.Name}");
-                }
+                sb.Append($"{Name} - ");
+                sb.Append(string.Join(", ", bag));
             }
             else
             {

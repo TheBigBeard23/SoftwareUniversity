@@ -7,36 +7,40 @@ namespace ShoppingSpree
     public class Product
     {
         private string name;
-        private decimal price;
+        private decimal cost;
 
-        public Product(string name, decimal price)
+        public Product(string name, decimal cost)
         {
             Name = name;
-            Price = price;
+            Cost = cost;
         }
         public string Name
         {
             get => name;
-            set
+            private set
             {
-                if (value == "" || value == " ")
+                if (string.IsNullOrEmpty(value) || string.IsNullOrWhiteSpace(value))
                 {
                     throw new ArgumentException("Name cannot be empty");
                 }
                 name = value;
             }
         }
-        public decimal Price
+        public decimal Cost
         {
-            get => price;
-            set
+            get => cost;
+            private set
             {
                 if (value < 0)
                 {
                     throw new ArgumentException("Price cannot be negative");
                 }
-                price = value;
+                cost = value;
             }
+        }
+        public override string ToString()
+        {
+            return Name;
         }
     }
 }

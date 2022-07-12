@@ -55,20 +55,26 @@ namespace ShoppingSpree
                 }
             }
 
-            string input = Console.ReadLine();
+            string input;
 
-            while (input != "END")
+            while ((input = Console.ReadLine()) != "END")
             {
-                string[] crnArgs = input.Split();
-                string personName = crnArgs[0];
-                string productName = crnArgs[1];
+                try
+                {
+                    string[] crnArgs = input.Split();
+                    string personName = crnArgs[0];
+                    string productName = crnArgs[1];
 
-                people.Where(x => x.Name == personName)
-                      .FirstOrDefault()
-                      .Buy(products.Where(x => x.Name == productName)
-                      .FirstOrDefault());
-
-                input = Console.ReadLine();
+                    people.Where(x => x.Name == personName)
+                          .FirstOrDefault()
+                          .Buy(products.Where(x => x.Name == productName)
+                          .FirstOrDefault());
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                    continue;
+                }
             }
 
             foreach (var person in people)
