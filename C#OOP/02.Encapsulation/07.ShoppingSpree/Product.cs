@@ -19,10 +19,8 @@ namespace ShoppingSpree
             get => name;
             private set
             {
-                if (string.IsNullOrEmpty(value) || string.IsNullOrWhiteSpace(value))
-                {
-                    throw new ArgumentException("Name cannot be empty");
-                }
+                Validator.ThrowIfStringIsNullOrEmpty(value, "Name cannot be empty");
+
                 name = value;
             }
         }
@@ -31,10 +29,8 @@ namespace ShoppingSpree
             get => cost;
             private set
             {
-                if (value < 0)
-                {
-                    throw new ArgumentException("Price cannot be negative");
-                }
+                Validator.ThrowIfNumberIsNegative(value, "Price cannot be negative");
+
                 cost = value;
             }
         }

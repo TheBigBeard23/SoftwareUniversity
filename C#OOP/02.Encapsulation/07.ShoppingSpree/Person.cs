@@ -21,10 +21,8 @@ namespace ShoppingSpree
             get => name;
             private set
             {
-                if (string.IsNullOrEmpty(value) || string.IsNullOrWhiteSpace(value))
-                {
-                    throw new ArgumentException("Name cannot be empty");
-                }
+                Validator.ThrowIfStringIsNullOrEmpty(value, "Name cannot be empty");
+
                 name = value;
             }
         }
@@ -33,10 +31,8 @@ namespace ShoppingSpree
             get => money;
             private set
             {
-                if (value < 0)
-                {
-                    throw new ArgumentException("Money cannot be negative");
-                }
+                Validator.ThrowIfNumberIsNegative(value, "Money cannot be negative");
+
                 money = value;
             }
         }
@@ -50,7 +46,7 @@ namespace ShoppingSpree
             }
             else
             {
-                throw new InvalidOperationException($"{Name} can't afford {product.Name}");
+                Validator.ThrowIfMoneyIsNotEnough(Name, product.Name);
             }
         }
         public override string ToString()
