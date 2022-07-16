@@ -6,21 +6,21 @@ namespace Shapes
 {
     public class Rectangle : IDrawable
     {
+        private int width;
+        private int height;
         public Rectangle(int width, int height)
         {
-            Width = width;
-            Height = height;
+            this.width = width;
+            this.height = height;
         }
-        public int Width { get; set; }
-        public int Height { get; set; }
         public void Draw()
         {
-            DrawLine(Width, '*', '*');
-            for (int i = 1; i < Height - 1; i++)
+            DrawLine(width, '*', '*');
+            for (int i = 1; i < height - 1; i++)
             {
-                DrawLine(Width, '*', ' ');
+                DrawLine(width, '*', ' ');
             }
-            DrawLine(Width, '*', '*');
+            DrawLine(width, '*', '*');
         }
         private void DrawLine(int width, char end, char mid)
         {
