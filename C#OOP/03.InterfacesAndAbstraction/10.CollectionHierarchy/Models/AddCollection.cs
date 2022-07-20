@@ -5,20 +5,13 @@ using System.Text;
 
 namespace CollectionHierarchy.Models
 {
-    public class AddCollection : ICollection
+    public class AddCollection : Collection
     {
-        public AddCollection()
+        public override int Add(string item)
         {
-            collection = new string[100];
+            Items.Add(item);
+
+            return Items.Count - 1;
         }
-        public AddCollection(string[] array)
-            : base()
-        {
-            for (int i = 0; i < array.Length; i++)
-            {
-                collection[i] = array[i];
-            }
-        }
-        public string[] collection { get; private set; }
     }
 }

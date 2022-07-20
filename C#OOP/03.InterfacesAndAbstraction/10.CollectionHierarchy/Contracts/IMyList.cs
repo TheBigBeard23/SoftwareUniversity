@@ -4,8 +4,8 @@ using System.Text;
 
 namespace CollectionHierarchy.Contracts
 {
-    public interface ICollection
+    public interface IMyList : IAddRemoveCollection
     {
-        public string[] collection { get; }
+        int Used { get; }
     }
 }

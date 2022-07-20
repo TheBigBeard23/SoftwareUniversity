@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CollectionHierarchy.Models;
+using System;
+using System.Collections.Generic;
 
 namespace CollectionHierarchy
 {
@@ -6,7 +8,22 @@ namespace CollectionHierarchy
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            List<Collection> collections = new List<Collection>();
+            string[] data = Console.ReadLine().Split();
+            int count = int.Parse(Console.ReadLine());
+
+            collections.Add(new AddCollection());
+            collections.Add(new AddRemoveCollection());
+            collections.Add(new MyList());
+
+            foreach (var collection in collections)
+            {
+                for (int i = 0; i < count; i++)
+                {
+                    Console.Write($"{collection.Add(data[i])} ");
+                }
+                Console.WriteLine();
+            }
         }
     }
 }
