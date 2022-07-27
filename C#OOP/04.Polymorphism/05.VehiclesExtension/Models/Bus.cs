@@ -3,7 +3,7 @@ using VehiclesExtension.Contracts;
 
 namespace VehiclesExtension.Models
 {
-    public class Bus : Vehicle, IBus
+    public class Bus : Vehicle
     {
         private const double AirConditionerConsumption = 1.4;
         public Bus(double fuelQuantity, double fuelConsumption, int tankCapacity)
