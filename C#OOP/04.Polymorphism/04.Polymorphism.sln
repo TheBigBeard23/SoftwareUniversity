@@ -11,6 +11,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.Shapes", "03.Shapes\03.S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.Vehicles", "04.Vehicles\04.Vehicles.csproj", "{838BB95B-7207-47D5-AD05-762B068A173A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.VehiclesExtension", "05.VehiclesExtension\05.VehiclesExtension.csproj", "{E15CAD4E-4EA1-497F-85F7-C08AD0AAEEF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.Raiding", "06.Raiding\06.Raiding.csproj", "{E22BA03C-B8CC-44AE-9BEB-D4B114626E1C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{838BB95B-7207-47D5-AD05-762B068A173A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{838BB95B-7207-47D5-AD05-762B068A173A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{838BB95B-7207-47D5-AD05-762B068A173A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E15CAD4E-4EA1-497F-85F7-C08AD0AAEEF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E15CAD4E-4EA1-497F-85F7-C08AD0AAEEF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E15CAD4E-4EA1-497F-85F7-C08AD0AAEEF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E15CAD4E-4EA1-497F-85F7-C08AD0AAEEF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E22BA03C-B8CC-44AE-9BEB-D4B114626E1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E22BA03C-B8CC-44AE-9BEB-D4B114626E1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E22BA03C-B8CC-44AE-9BEB-D4B114626E1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E22BA03C-B8CC-44AE-9BEB-D4B114626E1C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -65,8 +65,6 @@ namespace Vehicles
                 Console.WriteLine(vehicle);
             }
 
-
-
         }
     }
 }
