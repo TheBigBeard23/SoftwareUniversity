@@ -13,15 +13,8 @@ namespace Vehicles
         {
             List<IVehicle> vehicles = new List<IVehicle>();
 
-            string[] carData = Console.ReadLine().Split();
-            var carFuelQuantity = double.Parse(carData[1]);
-            var carLitersPerKm = double.Parse(carData[2]);
-            vehicles.Add(new Car(carFuelQuantity, carLitersPerKm));
-
-            string[] truckData = Console.ReadLine().Split();
-            var truckFuelQuantity = double.Parse(truckData[1]);
-            var truckLitersPerKm = double.Parse(truckData[2]);
-            vehicles.Add(new Truck(truckFuelQuantity, truckLitersPerKm));
+            vehicles.Add(CreateVeh());
+            vehicles.Add(CreateVeh());
 
             var commandsCount = int.Parse(Console.ReadLine());
 
@@ -64,7 +57,23 @@ namespace Vehicles
             {
                 Console.WriteLine(vehicle);
             }
+            ;
+        }
+        private static IVehicle CreateVeh()
+        {
+            string[] vehData = Console.ReadLine().Split();
+            var typeOfVeh = vehData[0];
+            double vehFuelQuantity = double.Parse(vehData[1]);
+            double vehLitersPerKm = double.Parse(vehData[2]);
 
+            if (typeOfVeh == typeof(Car).Name)
+            {
+                return new Car(vehFuelQuantity, vehLitersPerKm);
+            }
+            else
+            {
+                return new Truck(vehFuelQuantity, vehLitersPerKm);
+            }
         }
     }
 }
