@@ -3,7 +3,7 @@ using System.Threading;
 
 namespace StreamProgress
 {
-    public class Program
+    public class StartUp
     {
         static void Main()
         {

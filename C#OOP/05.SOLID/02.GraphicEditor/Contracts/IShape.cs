@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace P02.Graphic_Editor
+namespace GraphicEditor.Contracts
 {
     public interface IShape
     {
-
     }
 }
