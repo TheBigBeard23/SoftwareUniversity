@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace P04.Recharge
+namespace Recharge.Contracts
 {
-    public interface IRechargeable
+    public interface ISleeper
     {
-        void Recharge();
+        void Sleep();
     }
 }

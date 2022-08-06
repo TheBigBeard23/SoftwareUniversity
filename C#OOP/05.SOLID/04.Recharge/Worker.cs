@@ -1,6 +1,9 @@
-﻿namespace P04.Recharge
+﻿using System;
+using Recharge.Contracts;
+
+namespace Recharge
 {
-    public abstract class Worker : ISleeper, IRechargeable
+    public abstract class Worker : IWorker
     {
         private string id;
         private int workingHours;
@@ -10,13 +13,11 @@
             this.id = id;
         }
 
-        public void Work(int hours)
+        public virtual void Work(int hours)
         {
-            this.workingHours += hours;
+            Console.WriteLine($"{this.GetType().Name} working {hours} hours..");
+            workingHours += hours;
         }
 
-        public abstract void Sleep();
-
-        public abstract void Recharge();
     }
 }

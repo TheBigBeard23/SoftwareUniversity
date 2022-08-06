@@ -1,49 +1,47 @@
-﻿using System;
+﻿using Recharge.Contracts;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace P04.Recharge
+namespace Recharge
 {
     public class Robot : Worker, IRechargeable
     {
         private int capacity;
         private int currentPower;
 
-        public Robot(string id, int capacity) : base(id)
+        public Robot(string id, int capacity) 
+            : base(id)
         {
             this.capacity = capacity;
         }
 
         public int Capacity
         {
-            get { return this.capacity; }
+            get { return capacity; }
         }
 
         public int CurrentPower
         {
-            get { return this.currentPower; }
-            set { this.currentPower = value; }
+            get { return currentPower; }
+            set { currentPower = value; }
         }
 
-        public void Work(int hours)
+        public override void Work(int hours)
         {
-            if (hours > this.currentPower)
+            if (hours > currentPower)
             {
                 hours = currentPower;
             }
 
             base.Work(hours);
-            this.currentPower -= hours;
+            currentPower -= hours;
         }
 
-        public override void Recharge()
+        public void Recharge()
         {
-            this.currentPower = this.capacity;
+            currentPower = capacity;
         }
 
-        public override void Sleep()
-        {
-            throw new InvalidOperationException("Robots cannot sleep");
-        }
     }
 }

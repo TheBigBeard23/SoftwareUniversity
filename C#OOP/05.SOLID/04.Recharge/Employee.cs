@@ -1,22 +1,19 @@
-﻿namespace P04.Recharge
+﻿namespace Recharge
 {
+    using Recharge.Contracts;
     using System;
 
     public class Employee : Worker, ISleeper
     {
-        public Employee(string id) : base(id)
+        public Employee(string id) 
+            : base(id)
         {
         }
 
-        public override void Sleep()
+        public void Sleep()
         {
-            // sleep...
+            Console.WriteLine("Sleep");
         }
 
-        public override void Recharge()
-        {
-            throw new InvalidOperationException("Employees cannot recharge");
-        }
-        
     }
 }
