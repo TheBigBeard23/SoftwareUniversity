@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DetailPrinter.Models;
+using System;
 
 namespace DetailPrinter
 {
@@ -8,7 +9,8 @@ namespace DetailPrinter
         {
             Manager manager = new Manager("Ivan",
                               new string[] { "reports", "operation" });
-            Employee employee = new Employee("Pesho");
+
+            Junior employee = new Junior("Pesho");
             Printer printer = new Printer();
 
             printer.PrintDetails(manager);

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace DetailPrinter
 {
-    public class Employee : IEmployee
+    public abstract class Employee : IEmployee
     {
         public Employee(string name)
         {
