@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.DetailPrinter", "03.Deta
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04.Recharge", "04.Recharge\04.Recharge.csproj", "{A4FA99E9-AD29-443C-8F73-E1ED46E2007F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.Logger", "05.Logger\05.Logger.csproj", "{9106E438-5FCC-48EA-B449-FE774C7B4A56}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{A4FA99E9-AD29-443C-8F73-E1ED46E2007F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4FA99E9-AD29-443C-8F73-E1ED46E2007F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A4FA99E9-AD29-443C-8F73-E1ED46E2007F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9106E438-5FCC-48EA-B449-FE774C7B4A56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9106E438-5FCC-48EA-B449-FE774C7B4A56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9106E438-5FCC-48EA-B449-FE774C7B4A56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9106E438-5FCC-48EA-B449-FE774C7B4A56}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
