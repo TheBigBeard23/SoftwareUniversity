@@ -10,18 +10,18 @@ namespace SOLID.Appenders
 {
     public class FileAppender : Appender
     {
-        private ILogFile logFilel;
+        private readonly ILogFile logFile;
         public FileAppender(ILayout layout,ILogFile logFile)
             : base(layout)
         {
-            this.logFilel = logFile;
+            this.logFile = logFile;
         }
         public override void Append(string date, ReportLevel reportLevel, string message)
         {
             string content = string.Format(layout.Tamplate, date, reportLevel, message) +
                 Environment.NewLine;
 
-            logFilel.Write(content);
+            logFile.Write(content);
         }
     }
 }

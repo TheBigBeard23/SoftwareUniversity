@@ -6,20 +6,27 @@ namespace SOLID.Loggers
 {
     class Logger : ILogger
     {
-        private IAppender appender;
-        public Logger(IAppender appender)
+        private readonly IAppender[] appenders;
+        public Logger(params IAppender[] appenders)
         {
-            this.appender = appender;
+            this.appenders = appenders;
         }
 
         public void Error(string date, string message)
         {
-            appender.Append(date, ReportLevel.ERROR, message);
+            AppendToAppenders(date, ReportLevel.ERROR, message);
         }
 
         public void Info(string date, string message)
         {
-            appender.Append(date, ReportLevel.INFO, message);
+            AppendToAppenders(date, ReportLevel.INFO, message);
+        }
+        private void AppendToAppenders(string date, ReportLevel reportLevel, string message)
+        {
+            foreach (var appender in appenders)
+            {
+                appender.Append(date, ReportLevel.INFO, message);
+            }
         }
     }
 }

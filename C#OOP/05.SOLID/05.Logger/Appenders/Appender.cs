@@ -5,7 +5,7 @@ namespace SOLID.Appenders
 {
     public abstract class Appender : IAppender
     {
-        protected ILayout layout;
+        protected readonly ILayout layout;
         protected Appender(ILayout layout)
         {
             this.layout = layout;
