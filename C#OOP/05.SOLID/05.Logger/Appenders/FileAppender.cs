@@ -11,7 +11,7 @@ namespace SOLID.Appenders
     public class FileAppender : Appender
     {
         private readonly ILogFile logFile;
-        public FileAppender(ILayout layout,ILogFile logFile)
+        public FileAppender(ILayout layout, ILogFile logFile)
             : base(layout)
         {
             this.logFile = logFile;
@@ -22,6 +22,10 @@ namespace SOLID.Appenders
                 Environment.NewLine;
 
             logFile.Write(content);
+        }
+        public override string ToString()
+        {
+            return base.ToString() + $", File size: {this.logFile.Size}";
         }
     }
 }

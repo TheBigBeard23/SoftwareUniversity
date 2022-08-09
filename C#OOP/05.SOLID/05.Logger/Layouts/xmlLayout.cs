@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SOLID.Layouts
 {
-    public class xmlLayout : ILayout
+    public class XmlLayout : ILayout
     {
         public string Tamplate
         {

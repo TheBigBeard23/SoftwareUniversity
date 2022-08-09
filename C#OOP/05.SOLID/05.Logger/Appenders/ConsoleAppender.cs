@@ -10,7 +10,6 @@ namespace SOLID.Appenders
         public ConsoleAppender(ILayout layout)
             : base(layout)
         {
-
         }
         public override void Append(string date, ReportLevel reportLevel, string message)
         {

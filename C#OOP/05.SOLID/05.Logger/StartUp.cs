@@ -1,7 +1,7 @@
-﻿using SOLID.Appenders;
-using SOLID.Layouts;
-using SOLID.Loggers;
-using System;
+﻿
+using SOLID.Core;
+using SOLID.Core.Factories;
+using SOLID.Core.IO;
 
 namespace SOLID
 {
@@ -9,18 +9,14 @@ namespace SOLID
     {
         static void Main(string[] args)
         {
-            ILayout simpleLayout = new SimpleLayout();
-            ILayout xmlLayout = new xmlLayout();
+            IAppenderFactory appenderFactory = new AppenderFactory();
+            ILayoutFactory layoutFactory = new LayoutFactory();
+            IReader consoleReader = new ConsoleReader();
+            IReader fileReader = new FileReader("../../../input.txt");
 
-            var file = new LogFile();
+            IEngine engine = new Engine(appenderFactory, layoutFactory, fileReader);
+            engine.Run();
 
-            IAppender fileAppender = new FileAppender(simpleLayout, file);
-            IAppender consoleAppender = new ConsoleAppender(xmlLayout);
-
-            ILogger logger = new Logger(consoleAppender, fileAppender);
-
-            logger.Error("3/26/2015 2:08:11 PM", "Error parsing JSON.");
-            logger.Info("3/26/2015 2:08:11 PM", "User Pesho successfully registered.");
         }
     }
 }
