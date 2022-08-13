@@ -55,14 +55,15 @@ namespace Stealer
             {
                 sb.AppendLine($"{field.Name} must be private!");
             }
-            foreach (var method in classPublicMethods)
+            foreach (var method in classPublicMethods.Where(m => m.Name.StartsWith("get")))
             {
                 sb.AppendLine($"{method.Name} has to be public!");
             }
-            foreach (var method in classNonPublicMethods)
+            foreach (var method in classNonPublicMethods.Where(m => m.Name.StartsWith("set")))
             {
                 sb.AppendLine($"{method.Name} has to be private!");
             }
+
             return sb.ToString().TrimEnd();
         }
     }
