@@ -13,9 +13,9 @@ namespace VehiclesExtension
         {
             List<IVehicle> vehicles = new List<IVehicle>();
 
-            CreateCar(vehicles);
-            CreateTruck(vehicles);
-            CreateBus(vehicles);
+            vehicles.Add(CreateVehicle());
+            vehicles.Add(CreateVehicle());
+            vehicles.Add(CreateVehicle());
 
             var commandsCount = int.Parse(Console.ReadLine());
 
@@ -55,19 +55,12 @@ namespace VehiclesExtension
                                                   .DriveEmpty(distance));
                     }
                 }
-                catch (LowFuelException lfe)
+                catch (Exception ex)
+                when (ex is LowFuelException
+                   || ex is FuelOutOfTankException
+                   || ex is NegativeFuelException)
                 {
-                    Console.WriteLine(lfe.Message);
-                    continue;
-                }
-                catch (FuelOutOfTankException foote)
-                {
-                    Console.WriteLine(foote.Message);
-                    continue;
-                }
-                catch (NegativeFuelException nfe)
-                {
-                    Console.WriteLine(nfe.Message);
+                    Console.WriteLine(ex.Message);
                     continue;
                 }
             }
@@ -78,29 +71,26 @@ namespace VehiclesExtension
             }
 
         }
-        static void CreateCar(List<IVehicle> vehicles)
+        static Vehicle CreateVehicle()
         {
-            string[] carData = Console.ReadLine().Split();
-            var carFuelQuantity = double.Parse(carData[1]);
-            var carLitersPerKm = double.Parse(carData[2]);
-            var tankCapacity = int.Parse(carData[3]);
-            vehicles.Add(new Car(carFuelQuantity, carLitersPerKm, tankCapacity));
-        }
-        static void CreateTruck(List<IVehicle> vehicles)
-        {
-            string[] truckData = Console.ReadLine().Split();
-            var truckFuelQuantity = double.Parse(truckData[1]);
-            var truckLitersPerKm = double.Parse(truckData[2]);
-            var tankCapacity = int.Parse(truckData[3]);
-            vehicles.Add(new Truck(truckFuelQuantity, truckLitersPerKm, tankCapacity));
-        }
-        static void CreateBus(List<IVehicle> vehicles)
-        {
-            string[] busData = Console.ReadLine().Split();
-            var busFuelQuantity = double.Parse(busData[1]);
-            var busLitersPerKm = double.Parse(busData[2]);
-            var tankCapacity = int.Parse(busData[3]);
-            vehicles.Add(new Bus(busFuelQuantity, busLitersPerKm, tankCapacity));
+            string[] vehData = Console.ReadLine().Split();
+            var typeOfVeh = vehData[0];
+            var vehFuelQuantity = double.Parse(vehData[1]);
+            var vehLitersPerKm = double.Parse(vehData[2]);
+            var vehCapacity = int.Parse(vehData[3]);
+
+            if (typeOfVeh == typeof(Car).Name)
+            {
+                return new Car(vehFuelQuantity, vehLitersPerKm, vehCapacity);
+            }
+            else if (typeOfVeh == typeof(Truck).Name)
+            {
+                return new Truck(vehFuelQuantity, vehLitersPerKm, vehCapacity);
+            }
+            else
+            {
+                return new Bus(vehFuelQuantity, vehLitersPerKm, vehCapacity);
+            }
         }
     }
 }
