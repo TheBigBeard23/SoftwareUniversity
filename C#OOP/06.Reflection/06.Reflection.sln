@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.CreateAttribute", "05.Cr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.CodeTracker", "06.CodeTracker\06.CodeTracker.csproj", "{DAE5FA14-73D4-4646-8D40-BED187ED198E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.CommandPattern", "07.CommandPattern\07.CommandPattern.csproj", "{999D37AF-AE7C-4EAE-B8DC-CD1F0BC4AB0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.ValidationAttributes", "08.ValidationAttributes\08.ValidationAttributes.csproj", "{05302F56-13F0-4932-BAFE-8BCB90FF22F5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{DAE5FA14-73D4-4646-8D40-BED187ED198E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DAE5FA14-73D4-4646-8D40-BED187ED198E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DAE5FA14-73D4-4646-8D40-BED187ED198E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{999D37AF-AE7C-4EAE-B8DC-CD1F0BC4AB0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{999D37AF-AE7C-4EAE-B8DC-CD1F0BC4AB0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{999D37AF-AE7C-4EAE-B8DC-CD1F0BC4AB0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{999D37AF-AE7C-4EAE-B8DC-CD1F0BC4AB0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05302F56-13F0-4932-BAFE-8BCB90FF22F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05302F56-13F0-4932-BAFE-8BCB90FF22F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05302F56-13F0-4932-BAFE-8BCB90FF22F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05302F56-13F0-4932-BAFE-8BCB90FF22F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -11,5 +11,10 @@ namespace AuthorProblem
             Tracker tracker = new Tracker();
             tracker.PrintMethodsByAuthor();
         }
+        [Author("Ivan")]
+        public void Sum()
+        {
+            Console.WriteLine("10");
+        }
     }
 }
