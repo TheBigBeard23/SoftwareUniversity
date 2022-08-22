@@ -15,7 +15,7 @@ namespace DatabaseExtended.Tests
         [SetUp]
         public void SetUp()
         {
-            id = 1;
+            id = 22;
             userName = "Pesho";
             person = new Person(id, userName);
 
@@ -94,9 +94,9 @@ namespace DatabaseExtended.Tests
         [Test]
         public void FindByUsernameMethod_ShouldReturnPersonCorrectly()
         {
-            string expectedName = "Pesho0";
-            string actualName = database.FindByUsername(expectedName).UserName;
-            Assert.AreEqual(expectedName, actualName);
+            database.Add(person);
+            var foundPerson = database.FindByUsername(person.UserName);
+            Assert.AreEqual(person.UserName, foundPerson.UserName);
         }
         [Test]
         public void When_ProvidedNegativeIdFindByIdMethod_ShouldThrowException()
@@ -108,13 +108,14 @@ namespace DatabaseExtended.Tests
         public void When_IdDoesNotExistNameFindByIdMethod_ShouldThrowException()
         {
             Assert.Throws<InvalidOperationException>(()
-                => database.FindByUsername("33"));
+                => database.FindById(33));
         }
         [Test]
         public void FindByIdMethod_ShouldReturnPersonCorrectly()
         {
-            long id = database.FindByUsername("Pesho0").Id;
-            Assert.AreEqual(id, database.FindById(id).Id);
+            database.Add(person);
+            var foundPerson = database.FindById(person.Id);
+            Assert.AreEqual(person.Id, foundPerson.Id);
         }
     }
 }
