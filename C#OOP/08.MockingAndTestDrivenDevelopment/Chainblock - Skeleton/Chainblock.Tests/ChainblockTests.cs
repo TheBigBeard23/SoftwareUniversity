@@ -113,7 +113,7 @@ namespace Blockchain.Tests
         [Test]
         public void RemoveById_ShouldThrowException_WhenIdDoesNotExist()
         {
-            Assert.Throws<ArgumentException>(()
+            Assert.Throws<InvalidOperationException>(()
                 => chainblock.RemoveTransactionById(id + 1));
         }
 
@@ -123,13 +123,13 @@ namespace Blockchain.Tests
             var count = chainblock.Count - 1;
             chainblock.RemoveTransactionById(id);
             Assert.AreEqual(count, chainblock.Count);
-            Assert.Throws<ArgumentException>(() => chainblock.GetById(id));
+            Assert.Throws<InvalidOperationException>(() => chainblock.GetById(id));
         }
 
         [Test]
         public void GetById_ShouldThrowException_WhenIdDoesNotExist()
         {
-            Assert.Throws<ArgumentException>(() => chainblock.GetById(id + 1));
+            Assert.Throws<InvalidOperationException>(() => chainblock.GetById(id + 1));
         }
 
         [Test]
@@ -142,7 +142,7 @@ namespace Blockchain.Tests
         public void GetByTransactionStatus_ShouldThrowException_WhenStatusDoesNotExist()
         {
             var status = TransactionStatus.Failed;
-            Assert.Throws<ArgumentException>(() => chainblock.GetByTransactionStatus(status));
+            Assert.Throws<InvalidOperationException>(() => chainblock.GetByTransactionStatus(status));
         }
 
         [Test]
@@ -163,7 +163,7 @@ namespace Blockchain.Tests
         public void GetAllSendersWithTransactionStatus_ShouldThrowException_WhenStatusDoesNotExist()
         {
             var status = TransactionStatus.Failed;
-            Assert.Throws<ArgumentException>(() => chainblock.GetAllSendersWithTransactionStatus(status));
+            Assert.Throws<InvalidOperationException>(() => chainblock.GetAllSendersWithTransactionStatus(status));
         }
 
         [Test]
@@ -179,7 +179,7 @@ namespace Blockchain.Tests
         public void GetAllReceiversWithTransactionStatus_ShouldThrowException_WhenStatusDoesNotExist()
         {
             var status = TransactionStatus.Failed;
-            Assert.Throws<ArgumentException>(() => chainblock.GetAllReceiversWithTransactionStatus(status));
+            Assert.Throws<InvalidOperationException>(() => chainblock.GetAllReceiversWithTransactionStatus(status));
         }
 
         [Test]

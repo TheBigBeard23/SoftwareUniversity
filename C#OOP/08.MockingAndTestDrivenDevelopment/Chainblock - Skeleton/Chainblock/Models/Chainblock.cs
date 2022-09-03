@@ -7,26 +7,53 @@ namespace Blockchain.Models
 {
     public class Chainblock : IChainblock
     {
-        public int Count => throw new NotImplementedException();
+        private readonly Dictionary<int, ITransaction> transactionById;
+        public Chainblock()
+        {
+            transactionById = new Dictionary<int, ITransaction>();
+        }
+        public int Count => transactionById.Count;
 
         public void Add(ITransaction tx)
         {
-            throw new NotImplementedException();
+            if (transactionById.ContainsKey(tx.Id))
+            {
+                throw new InvalidOperationException($"Transaction with id: {tx.Id} already exists.");
+            }
+
+            transactionById.Add(tx.Id, tx);
         }
 
         public void ChangeTransactionStatus(int id, TransactionStatus newStatus)
         {
-            throw new NotImplementedException();
+            if (this.Contains(id))
+            {
+                transactionById[id].Status = newStatus;
+            }
+            else
+            {
+                throw new ArgumentException($"{id} id does not exist.");
+            }
         }
 
         public bool Contains(ITransaction tx)
         {
-            throw new NotImplementedException();
+            if (this.Contains(tx.Id))
+            {
+                ITransaction transaction = transactionById[tx.Id];
+
+                return tx.From == transaction.From &&
+                       tx.To == transaction.To &&
+                       tx.Status == transaction.Status &&
+                       tx.Amount == transaction.Amount;
+            }
+
+            return false;
         }
 
         public bool Contains(int id)
         {
-            throw new NotImplementedException();
+            return transactionById.ContainsKey(id);
         }
 
         public IEnumerable<ITransaction> GetAllInAmountRange(double lo, double hi)
@@ -51,7 +78,7 @@ namespace Blockchain.Models
 
         public ITransaction GetById(int id)
         {
-            throw new NotImplementedException();
+            return transactionById[id];
         }
 
         public IEnumerable<ITransaction> GetByReceiverAndAmountRange(string receiver, double lo, double hi)
