@@ -3,6 +3,7 @@ using Blockchain.Models;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Blockchain.Tests
 {
@@ -148,14 +149,20 @@ namespace Blockchain.Tests
         [Test]
         public void GetByTransactionStatus_ShouldReturnTransactions_WhenTransactionStatusMatch()
         {
-            transaction = new Transaction(2, status, "Ivan", "Pesho", 100);
+            transaction = new Transaction(2, status, "Ivan", "Pesho", 5);
+            chainblock.Add(transaction);
+            transaction = new Transaction(3, status, "Jon", "Pesho", 10);
             chainblock.Add(transaction);
             List<ITransaction> transactions = (List<ITransaction>)chainblock.GetByTransactionStatus(status);
-            Assert.AreEqual(2, transactions.Count);
+            Assert.AreEqual(3, transactions.Count);
+
+            var prevAmount = transactions.FirstOrDefault().Amount;
 
             foreach (var transaction in transactions)
             {
                 Assert.AreEqual(status, transaction.Status);
+                Assert.That(transaction.Amount <= prevAmount);
+                prevAmount = transaction.Amount;
             }
         }
 
@@ -169,10 +176,21 @@ namespace Blockchain.Tests
         [Test]
         public void GetAllSendersWithTransactionStatus_ShouldReturnAllSenders_WhenTransactionStatusMatch()
         {
-            transaction = new Transaction(2, status, "Ivan", "Pesho", 100);
+
+            transaction = new Transaction(2, status, "Ivan", "Pesho", 50);
             chainblock.Add(transaction);
-            List<string> senders = (List<string>)chainblock.GetAllSendersWithTransactionStatus(status);
-            Assert.AreEqual(2, senders.Count);
+            transaction = new Transaction(3, status, "Jon", "Pesho", 1000);
+            chainblock.Add(transaction);
+
+            var expectedSenders = chainblock
+                .Where(t => t.Status == status)
+                .OrderBy(t => t.Amount)
+                .Select(t => t.From);
+
+            var senders = chainblock.GetAllSendersWithTransactionStatus(status);
+
+            Assert.AreEqual(expectedSenders.Count(), senders.Count());
+            Assert.That(expectedSenders, Is.EquivalentTo(senders));
         }
 
         [Test]
@@ -187,8 +205,18 @@ namespace Blockchain.Tests
         {
             transaction = new Transaction(2, status, "Ivan", "Pesho", 100);
             chainblock.Add(transaction);
-            List<string> receivers = (List<string>)chainblock.GetAllReceiversWithTransactionStatus(status);
-            Assert.AreEqual(2, receivers.Count);
+            transaction = new Transaction(3, status, "Jon", "Pesho", 1000);
+            chainblock.Add(transaction);
+
+            var expectedReceivers = chainblock
+                .Where(t => t.Status == status)
+                .OrderBy(t => t.Amount)
+                .Select(t => t.To);
+
+            var receivers = chainblock.GetAllReceiversWithTransactionStatus(status);
+
+            Assert.AreEqual(expectedReceivers.Count(), receivers.Count());
+            Assert.That(expectedReceivers, Is.EquivalentTo(receivers));
         }
     }
 }

@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Blockchain.Models
 {
@@ -68,16 +69,42 @@ namespace Blockchain.Models
 
         public IEnumerable<string> GetAllReceiversWithTransactionStatus(TransactionStatus status)
         {
-            throw new NotImplementedException();
+            var result = transactionById
+               .Values
+               .Where(t => t.Status == status)
+               .OrderBy(t => t.Amount)
+               .Select(t => t.To);
+
+            if (result.Count() == 0)
+            {
+                throw new InvalidOperationException($"Receivers with {status} status do not exist");
+            }
+
+            return result;
         }
 
         public IEnumerable<string> GetAllSendersWithTransactionStatus(TransactionStatus status)
         {
-            throw new NotImplementedException();
+            var result = transactionById
+                .Values
+                .Where(t => t.Status == status)
+                .OrderBy(t => t.Amount)
+                .Select(t => t.From);
+
+            if (result.Count() == 0)
+            {
+                throw new InvalidOperationException($"Senders with {status} status do not exist");
+            }
+
+            return result;
         }
 
         public ITransaction GetById(int id)
         {
+            if (!Contains(id))
+            {
+                throw new InvalidOperationException($"Transactios with {id} do not exist.");
+            }
             return transactionById[id];
         }
 
@@ -103,27 +130,45 @@ namespace Blockchain.Models
 
         public IEnumerable<ITransaction> GetByTransactionStatus(TransactionStatus status)
         {
-            throw new NotImplementedException();
+            var result = transactionById
+                .Values
+                .Where(t => t.Status == status)
+                .OrderByDescending(t => t.Amount)
+                .ToList();
+
+            if (result.Count == 0)
+            {
+                throw new InvalidOperationException($"Transactions with {status} does not exist.");
+            }
+
+            return result;
         }
 
         public IEnumerable<ITransaction> GetByTransactionStatusAndMaximumAmount(TransactionStatus status, double amount)
         {
             throw new NotImplementedException();
         }
-
-        public IEnumerator<ITransaction> GetEnumerator()
-        {
-            throw new NotImplementedException();
-        }
-
         public void RemoveTransactionById(int id)
         {
-            throw new NotImplementedException();
+            if (Contains(id))
+            {
+                transactionById.Remove(id);
+            }
+            else
+            {
+                throw new InvalidOperationException($"Transaction with {id} does not exist.");
+            }
         }
-
+        public IEnumerator<ITransaction> GetEnumerator()
+        {
+            foreach (var transaction in transactionById)
+            {
+                yield return transaction.Value;
+            }
+        }
         IEnumerator IEnumerable.GetEnumerator()
         {
-            throw new NotImplementedException();
+            return GetEnumerator();
         }
     }
 }
