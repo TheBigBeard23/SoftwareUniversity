@@ -189,7 +189,6 @@ namespace Blockchain.Tests
 
             var senders = chainblock.GetAllSendersWithTransactionStatus(status);
 
-            Assert.AreEqual(expectedSenders.Count(), senders.Count());
             Assert.That(expectedSenders, Is.EquivalentTo(senders));
         }
 
@@ -215,8 +214,196 @@ namespace Blockchain.Tests
 
             var receivers = chainblock.GetAllReceiversWithTransactionStatus(status);
 
-            Assert.AreEqual(expectedReceivers.Count(), receivers.Count());
             Assert.That(expectedReceivers, Is.EquivalentTo(receivers));
+        }
+
+        [Test]
+        public void GetAllOrderedByAmountDescendingThenById_ShouldThrowException_WhenChainblockIsEmpty()
+        {
+            chainblock = new Chainblock();
+            Assert.Throws<InvalidOperationException>(() => chainblock.GetAllOrderedByAmountDescendingThenById());
+        }
+
+        [Test]
+        public void GetAllOrderedByAmountDescendingThenById_ShouldReturnTransactionOrderedByAmountThenById()
+        {
+            transaction = new Transaction(2, status, "Ivan", "Pesho", 100);
+            chainblock.Add(transaction);
+            transaction = new Transaction(3, status, "Jon", "Pesho", 1000);
+            chainblock.Add(transaction);
+
+            var expectedTransactions = chainblock
+                .OrderBy(t => t.Amount)
+                .ThenBy(t => t.Id);
+
+            var transactions = chainblock.GetAllOrderedByAmountDescendingThenById();
+
+            Assert.That(expectedTransactions, Is.EquivalentTo(transactions));
+        }
+
+        [Test]
+        public void GetBySenderOrderedByAmountDescending_ShouldThrowException_WhenTransactionsWithSenderDoNotExist()
+        {
+            Assert.Throws<InvalidOperationException>(() => chainblock.GetBySenderOrderedByAmountDescending("Test"));
+        }
+
+        [Test]
+        public void GetBySenderOrderedByAmountDescending_ShouldReturnTransactionsFilteredBySenderAndOrderedDescendingByAmount()
+        {
+            transaction = new Transaction(5, status, from, "Pepi", 10);
+            chainblock.Add(transaction);
+            transaction = new Transaction(8, status, from, "Gogi", 15);
+            chainblock.Add(transaction);
+            transaction = new Transaction(9, status, from, "Sashi", 19);
+            chainblock.Add(transaction);
+
+            var expectedTransactions = chainblock
+                .Where(t => t.From == from)
+                .OrderByDescending(t => t.Amount);
+
+            var transactions = chainblock.GetBySenderOrderedByAmountDescending(from);
+
+            Assert.That(expectedTransactions, Is.EquivalentTo(transactions));
+        }
+
+        [Test]
+        public void GetByReceiverOrderedByAmountThenById_ShouldThrowException_WhenTransactionsWithReceiverDoNotExist()
+        {
+            Assert.Throws<InvalidOperationException>(() => chainblock.GetByReceiverOrderedByAmountThenById("Test"));
+        }
+
+        [Test]
+        public void GetByReceiverOrderedByAmountThenById_ShouldReturnTransactionsFilteredByReceiverOrderedByAmountThenById()
+        {
+            transaction = new Transaction(5, status, "Pepi", to, 10);
+            chainblock.Add(transaction);
+            transaction = new Transaction(8, status, "Gogi", to, 15);
+            chainblock.Add(transaction);
+            transaction = new Transaction(9, status, "Sashi", to, 19);
+            chainblock.Add(transaction);
+
+            var expectedTransactions = chainblock
+                .Where(t => t.To == to)
+                .OrderBy(t => t.Amount)
+                .ThenBy(t => t.Id);
+
+            var transactions = chainblock.GetByReceiverOrderedByAmountThenById(to);
+
+            Assert.That(expectedTransactions, Is.EquivalentTo(transactions));
+        }
+
+        [Test]
+        public void GetByTransactionStatusAndMaximumAmount_ShouldReturnEmptyCollection_WhenTransactionsDoNotMatch()
+        {
+            var transactions = chainblock.GetByTransactionStatusAndMaximumAmount(TransactionStatus.Failed, 10);
+            Assert.That(transactions, Is.Empty);
+        }
+
+        [Test]
+        public void GetByTransactionStatusAndMaximumAmount_ShouldReturnFilteredTransactionsByStatusThenByAmountAndOrderedByAmountDescending()
+        {
+            transaction = new Transaction(5, status, "Pepi", to, 10);
+            chainblock.Add(transaction);
+            transaction = new Transaction(8, status, "Gogi", to, 15);
+            chainblock.Add(transaction);
+            transaction = new Transaction(9, status, "Sashi", to, 19);
+            chainblock.Add(transaction);
+
+            var expectedTransactions = chainblock
+                .Where(t => t.Status == status)
+                .Where(t => t.Amount <= 100)
+                .OrderByDescending(t => t.Amount);
+
+            var transactions = chainblock.GetByTransactionStatusAndMaximumAmount(status, 100);
+
+            Assert.That(expectedTransactions, Is.EquivalentTo(transactions));
+        }
+
+        [Test]
+        public void GetBySenderAndMinimumAmountDescending_ShouldThrowException_WhenTransactionsDoNotMatch()
+        {
+            Assert.Throws<InvalidOperationException>(() => chainblock.GetBySenderAndMinimumAmountDescending(from, 10000));
+        }
+
+        [Test]
+        public void GetBySenderAndMinimumAmountDescending_ShouldReturnFilteredTransactionsBySenderAndOrderedByAmountDescending()
+        {
+            transaction = new Transaction(5, status, from, "Pepi", 10);
+            chainblock.Add(transaction);
+            transaction = new Transaction(8, status, from, "Gogi", 15);
+            chainblock.Add(transaction);
+            transaction = new Transaction(9, status, from, "Sashi", 19);
+            chainblock.Add(transaction);
+
+            var expectedTransactions = chainblock
+                .Where(t => t.From == from)
+                .Where(t => t.Amount > 5)
+                .OrderByDescending(t => t.Amount);
+
+            var transactions = chainblock.GetBySenderAndMinimumAmountDescending(from, 5);
+
+            Assert.That(expectedTransactions, Is.EquivalentTo(transactions));
+        }
+
+        [Test]
+        public void GetByReceiverAndAmountRange_ShouldThrowException_WhenTransactionsDoNotMatch()
+        {
+            Assert.Throws<InvalidOperationException>(() => chainblock.GetByReceiverAndAmountRange("Test", 10, 20));
+        }
+
+        [Test]
+        public void GetByReceiverAndAmountRange_ShouldReturnFilteredTransactionsByReceiverAndOrderedByAmountDescendingThenById()
+        {
+            transaction = new Transaction(5, status, "Pepi", to, 10);
+            chainblock.Add(transaction);
+            transaction = new Transaction(8, status, "Gogi", to, 15);
+            chainblock.Add(transaction);
+            transaction = new Transaction(9, status, "Sashi", to, 19);
+            chainblock.Add(transaction);
+
+            double lo = 1;
+            double hi = 100;
+
+            var expectedTransactions = chainblock
+                .Where(t => t.To == to)
+                .Where(t => t.Amount >= lo
+                         && t.Amount < hi)
+                .OrderByDescending(t => t.Amount)
+                .ThenBy(t => t.Id);
+
+            var transactions = chainblock.GetByReceiverAndAmountRange(to, lo, hi);
+
+            Assert.That(expectedTransactions, Is.EquivalentTo(transactions));
+        }
+
+        [Test]
+        public void GetAllInAmountRange_ShouldReturnEmptyCollection_WhenTransactionsDoNotMatch()
+        {
+            var transactions = chainblock.GetAllInAmountRange(1, 5);
+            Assert.That(transactions, Is.Empty);
+        }
+
+
+        [Test]
+        public void GetAllInAmountRange_ShouldReturnTransactionsFilteredByAmountInRange()
+        {
+            transaction = new Transaction(5, status, "Pepi", to, 10);
+            chainblock.Add(transaction);
+            transaction = new Transaction(8, status, "Gogi", to, 15);
+            chainblock.Add(transaction);
+            transaction = new Transaction(9, status, "Sashi", to, 19);
+            chainblock.Add(transaction);
+
+            double lo = 1;
+            double hi = 100;
+
+            var expectedTransactions = chainblock
+               .Where(t => t.Amount >= lo
+                        && t.Amount <= hi);
+
+            var transactions = chainblock.GetAllInAmountRange(lo, hi);
+
+            Assert.That(expectedTransactions, Is.EquivalentTo(transactions));
         }
     }
 }

@@ -59,12 +59,26 @@ namespace Blockchain.Models
 
         public IEnumerable<ITransaction> GetAllInAmountRange(double lo, double hi)
         {
-            throw new NotImplementedException();
+            return transactionById
+                .Values
+                .Where(t => t.Amount >= lo
+                        && t.Amount <= hi);
+
         }
 
         public IEnumerable<ITransaction> GetAllOrderedByAmountDescendingThenById()
         {
-            throw new NotImplementedException();
+            var transactions = transactionById
+                .Values
+                .OrderByDescending(t => t.Amount)
+                .ThenBy(t => t.Id);
+
+            if (transactions.Count() == 0)
+            {
+                throw new InvalidOperationException("The Chainblock is empty");
+            }
+
+            return transactions;
         }
 
         public IEnumerable<string> GetAllReceiversWithTransactionStatus(TransactionStatus status)
@@ -110,22 +124,67 @@ namespace Blockchain.Models
 
         public IEnumerable<ITransaction> GetByReceiverAndAmountRange(string receiver, double lo, double hi)
         {
-            throw new NotImplementedException();
+            var transactions = transactionById
+                .Values
+                .Where(t => t.To == receiver)
+                .Where(t => t.Amount >= lo
+                         && t.Amount < hi)
+                .OrderByDescending(t => t.Amount)
+                .ThenBy(t => t.Id);
+
+            if (transactions.Count() == 0)
+            {
+                throw new InvalidOperationException("There are not such transactions");
+            }
+
+            return transactions;
         }
 
         public IEnumerable<ITransaction> GetByReceiverOrderedByAmountThenById(string receiver)
         {
-            throw new NotImplementedException();
+            var transactions = transactionById
+                .Values
+                .Where(t => t.To == receiver)
+                .OrderBy(t => t.Amount)
+                .ThenBy(t => t.Id);
+
+            if (transactions.Count() == 0)
+            {
+                throw new InvalidOperationException("There are not such transactions");
+            }
+
+            return transactions;
         }
 
         public IEnumerable<ITransaction> GetBySenderAndMinimumAmountDescending(string sender, double amount)
         {
-            throw new NotImplementedException();
+            var transactions = transactionById
+                .Values
+                .Where(t => t.From == sender)
+                .Where(t => t.Amount > amount)
+                .OrderByDescending(t => t.Amount);
+
+            if (transactions.Count() == 0)
+            {
+                throw new InvalidOperationException("There are not such transactions");
+            }
+
+            return transactions;
         }
 
         public IEnumerable<ITransaction> GetBySenderOrderedByAmountDescending(string sender)
         {
-            throw new NotImplementedException();
+            var transactions = transactionById
+                .Values
+                .Where(t => t.From == sender)
+                .OrderByDescending(t => t.Amount);
+
+            if (transactions.Count() == 0)
+            {
+                throw new InvalidOperationException("There are not such transactions");
+            }
+
+            return transactions;
         }
 
         public IEnumerable<ITransaction> GetByTransactionStatus(TransactionStatus status)
@@ -146,7 +205,13 @@ namespace Blockchain.Models
 
         public IEnumerable<ITransaction> GetByTransactionStatusAndMaximumAmount(TransactionStatus status, double amount)
         {
-            throw new NotImplementedException();
+            var result = transactionById
+               .Values
+               .Where(t => t.Status == status)
+               .Where(t => t.Amount <= 100)
+               .OrderByDescending(t => t.Amount);
+
+            return result;
         }
         public void RemoveTransactionById(int id)
         {
