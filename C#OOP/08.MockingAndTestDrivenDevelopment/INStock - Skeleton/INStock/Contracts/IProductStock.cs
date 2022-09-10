@@ -22,7 +22,7 @@
 
         IEnumerable<IProduct> FindAllInRange(decimal lo, decimal hi);
 
-        IEnumerable<IProduct> FindAllByPrice(double price);
+        IEnumerable<IProduct> FindAllByPrice(decimal price);
 
         IEnumerable<IProduct> FindAllByQuantity(int quantity);
     }

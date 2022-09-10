@@ -9,18 +9,10 @@
     {
         public static void Main(string[] args)
         {
-            IProduct[] products = new IProduct[]
-            {
-                new Product("label1", 1, 2),
-                new Product("label2", 1, 2),
-                new Product("label3", 1, 2)
-            };
-            ProductStock stock = new ProductStock(products);
+            ProductStock stock = new ProductStock();
 
-            for (int i = 0; i < stock.Count; i++)
-            {
-                Console.WriteLine(stock[i].Label);
-            }
+                stock.Add(new Product("label", 10, 1));
+            stock.FindByLabel("ds");
         }
     }
 }

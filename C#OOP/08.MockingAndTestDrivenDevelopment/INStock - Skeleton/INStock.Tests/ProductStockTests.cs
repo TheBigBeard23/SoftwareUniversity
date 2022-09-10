@@ -12,7 +12,6 @@
     {
         private IProductStock stock;
         private IProduct product;
-        private IProduct[] products;
 
         private string label;
         private decimal price;
@@ -26,16 +25,20 @@
             quantity = 10;
             product = new Product(label, price, quantity);
 
-            IProduct[] products = new IProduct[] { product };
-            stock = new ProductStock(products);
+            stock = new ProductStock();
+            stock.Add(product);
         }
 
         [Test]
-        public void AddMethod_ShouldWorkCorrectly()
+        public void AddMethod_ShouldThrowException_WhenProductAlreadyExist()
         {
-            Assert.Throws<ArgumentException>(() =>
-            stock.Add(product));
+            Assert.Throws<ArgumentException>(() => stock.Add(product));
 
+        }
+
+        [Test]
+        public void AddMethod_ShouldAddProduct_WhenProductDoesNotExist()
+        {
             product = new Product("car", 10000, 1);
             int count = stock.Count;
             stock.Add(product);
@@ -52,11 +55,16 @@
         }
 
         [Test]
-        public void FindMethod_ShouldWorkCorrectly()
+        public void FindMethod_ShouldThorwException_WhenIndexIsOutOfRange()
         {
-            Assert.AreEqual(product, stock.Find(0));
             Assert.Throws<IndexOutOfRangeException>(() =>
             stock.Find(1));
+        }
+
+        [Test]
+        public void FindMethod_ShouldReturnProductByIndex()
+        {
+            Assert.AreEqual(product, stock.Find(0));
         }
 
         [Test]
@@ -66,65 +74,74 @@
         }
 
         [Test]
-        public void FindByLabelMethod_ShouldThrowException_IfProductWithThatLabelDoesNotExist()
+        public void FindByLabelMethod_ShouldThrowException_WhenProductWithThatLabelDoesNotExist()
         {
             Assert.Throws<ArgumentException>(() =>
             stock.FindByLabel("label"));
         }
 
         [Test]
-        public void FindAllInPriceRangeMethod_ShouldWorkCorrectly()
+        public void FindAllInPriceRangeMethod_ShouldReturnEmptyCollection_WhenProductsDoNotMatch()
         {
-            decimal lo = 2;
-            decimal hi = 6;
+            var foundProducts = stock.FindAllInRange(price + 1, price + 2);
 
+            Assert.That(foundProducts, Is.Empty);
+        }
+        [Test]
+        public void FindAllInPriceRangeMethod_ShouldReturnProductByPriceInRangeOrderedByPriceDescending()
+        {
             stock.Add(new Product("Milk", 2, 1));
             stock.Add(new Product("Bread", 3, 1));
             stock.Add(new Product("Fish", 4, 1));
             stock.Add(new Product("Meat", 5, 1));
             stock.Add(new Product("Burger", 6, 1));
 
-            var foundProducts = stock.FindAllInRange(lo, hi);
-            decimal previousPrice = hi + 1;
+            int lo = 1;
+            int hi = 100;
 
-            foreach (var product in foundProducts)
-            {
-                Assert.IsTrue(product.Price >= lo &&
-                              product.Price <= hi &&
-                              product.Price <= previousPrice);
+            var expectedProducts = stock
+                .Where(p => p.Price >= lo
+                         && p.Price <= hi)
+                .OrderByDescending(p => p.Price);
 
-                previousPrice = product.Price;
-            }
+            var actualProducts = stock.FindAllInRange(1, 100);
 
-            stock = new ProductStock(products);
-
-            foundProducts = stock.FindAllInRange(lo, hi);
-
-            Assert.That(foundProducts, Is.Empty);
+            Assert.That(expectedProducts, Is.EquivalentTo(actualProducts));
         }
 
         [Test]
-        public void FindAllByPriceMethod_ShouldWorkCorrectly()
+        public void FindAllByPriceMethod_ShouldReturnEmptyCollection_WhenProductsWithThatPriceDoesNotExist()
+        {
+            var result = stock.FindAllByPrice(price + 1);
+
+            Assert.That(result, Is.Empty);
+        }
+
+        [Test]
+        public void FindAllByPriceMethod_ShouldReturnProductsByPrice()
         {
 
             stock.Add(new Product("Milk", 2, 1));
             stock.Add(new Product("Bread", 2, 1));
             stock.Add(new Product("Fish", 2, 1));
 
-            var count = stock.FindAllByPrice(2).Count();
+            var expectedProducts = stock.Where(t => t.Price == 2);
+            var actualProducts = stock.FindAllByPrice(2);
 
-            Assert.AreEqual(3, count);
-
-            count = stock.FindAllByPrice(9).Count();
-
-            Assert.AreEqual(0, count);
+            Assert.That(expectedProducts, Is.EquivalentTo(actualProducts));
         }
 
         [Test]
-        public void FindMostExpensiveProductsMethod_ShouldWorkCorrectly()
+        public void FindMostExpensiveProductsMethod_ShouldThrowException_WhenProductStockIsEmpty()
+        {
+            stock = new ProductStock();
+            Assert.Throws<InvalidOperationException>(() => stock.FindMostExpensiveProduct());
+        }
+
+        [Test]
+        public void FindMostExpensiveProductsMethod_ShouldReturnMostExpensiveProduct()
         {
             product = new Product("Fish", 1000, 1);
-
             stock.Add(new Product("Milk", 2, 1));
             stock.Add(new Product("Bread", 6, 1));
             stock.Add(product);
@@ -136,23 +153,50 @@
         [Test]
         public void FindAllByQuantityMethod_ShouldReturnEnumeration()
         {
-            stock.Add(new Product("Milk", 2, 1));
-            stock.Add(new Product("Bread", 6, 1));
+            stock.Add(new Product("Milk", 2, quantity));
+            stock.Add(new Product("Bread", 6, quantity));
 
-            Assert.AreEqual(3, stock.FindAllByQuantity(1).Count());
+            Assert.AreEqual(3, stock.FindAllByQuantity(quantity).Count());
 
         }
 
         [Test]
         public void FindAllByQuantityMethod_ShouldReturnEmptyEnumeration()
         {
-            Assert.AreEqual(0, stock.FindAllByQuantity(5).Count());
+            Assert.AreEqual(0, stock.FindAllByQuantity(quantity + 1).Count());
+        }
+
+        [Test]
+        public void Remove_ShouldReturnTrue_WhenProductHasBeenRemoved()
+        {
+            Assert.IsTrue(stock.Remove(product));
+        }
+
+        [Test]
+        public void Remove_ShouldReturnFalse_WhenProductDoesNotExist()
+        {
+            Assert.IsFalse(stock.Remove(new Product("label", 100, 100)));
         }
 
         [Test]
         public void GetEnumerator_ShouldWorkCorrectly()
         {
-            Assert.AreEqual(products, );
+            var products = new ProductStock();
+
+            stock = new ProductStock();
+            stock.Add(new Product("Milk", 2, 1));
+            stock.Add(new Product("Bread", 3, 1));
+            stock.Add(new Product("Fish", 4, 1));
+            stock.Add(new Product("Meat", 5, 1));
+            stock.Add(new Product("Burger", 6, 1));
+
+            foreach (var product in stock)
+            {
+                products.Add(product);
+            }
+
+            Assert.That(stock, Is.EquivalentTo(products));
+
         }
 
         [Test]
