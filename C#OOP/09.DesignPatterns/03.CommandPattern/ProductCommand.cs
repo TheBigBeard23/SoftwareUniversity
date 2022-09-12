@@ -7,7 +7,7 @@ namespace CommandPatternDemo
     public class ProductCommand : ICommand
     {
         private readonly Product product;
-        private readonly PriceAction priceAction;
+        private PriceAction priceAction;
         private readonly int amount;
 
         public ProductCommand(Product product,PriceAction priceAction,int amount)
@@ -25,6 +25,18 @@ namespace CommandPatternDemo
             else
             {
                 product.DecreasePrice(amount);
+            }
+        }
+
+        public void UndoAction()
+        {
+            if (this.priceAction == PriceAction.Increase)
+            {
+                this.priceAction = PriceAction.Decrease;
+            }
+            else
+            {
+                this.priceAction = PriceAction.Increase;
             }
         }
     }

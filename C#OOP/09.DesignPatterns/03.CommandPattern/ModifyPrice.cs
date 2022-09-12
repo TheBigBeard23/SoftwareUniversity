@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace CommandPatternDemo
@@ -23,6 +24,13 @@ namespace CommandPatternDemo
         {
             commands.Add(command);
             command.ExecuteAction();
+        }
+        public void Undo()
+        {
+            var command = commands.Last();
+            command.UndoAction();
+            command.ExecuteAction();
+            commands.Remove(command);
         }
     }
 }

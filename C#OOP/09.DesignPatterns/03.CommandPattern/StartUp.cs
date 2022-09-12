@@ -10,6 +10,7 @@
             Execute(product,modifyPrice, new ProductCommand(product, PriceAction.Increase, 1));
             Execute(product, modifyPrice, new ProductCommand(product, PriceAction.Increase, 2));
             Execute(product, modifyPrice, new ProductCommand(product, PriceAction.Decrease, 4));
+            modifyPrice.Undo();
 
             System.Console.WriteLine(product);
         }
