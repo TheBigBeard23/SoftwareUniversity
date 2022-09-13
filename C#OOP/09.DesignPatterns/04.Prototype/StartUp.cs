@@ -15,7 +15,6 @@ namespace PrototypeDemo
             Sandwich sandwichBLT = sandwichMenu["BLT"].Clone() as Sandwich;
             Sandwich sandwichPBJ = sandwichMenu["PB&J"].Clone() as Sandwich;
             Sandwich sandwichTurkey = sandwichMenu["Turkey"].Clone() as Sandwich;
-
         }
     }
 }
