@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30517.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyInjection", "DependencyInjection\DependencyInjection.csproj", "{90F92129-4E37-4BF7-8E1A-9C3139AABD17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicrosoftDependencyInjection", "MicrosoftDependencyInjection\MicrosoftDependencyInjection.csproj", "{9FE9ACF7-97F1-4391-B618-733CE711AE3D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{90F92129-4E37-4BF7-8E1A-9C3139AABD17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90F92129-4E37-4BF7-8E1A-9C3139AABD17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90F92129-4E37-4BF7-8E1A-9C3139AABD17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90F92129-4E37-4BF7-8E1A-9C3139AABD17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FE9ACF7-97F1-4391-B618-733CE711AE3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FE9ACF7-97F1-4391-B618-733CE711AE3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FE9ACF7-97F1-4391-B618-733CE711AE3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FE9ACF7-97F1-4391-B618-733CE711AE3D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {01A04823-0267-4344-8D82-B150B2E43F2C}
+	EndGlobalSection
+EndGlobal
