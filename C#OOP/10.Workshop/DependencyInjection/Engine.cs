@@ -1,4 +1,5 @@
 ﻿using DependencyInjection.Contracts;
+using DependencyInjection.DI.Attributes;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -9,6 +10,7 @@ namespace DependencyInjection
     {
         private ILogger logger;
 
+        [Inject]
         public Engine(ILogger logger)
         {
             this.logger = logger;

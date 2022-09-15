@@ -1,6 +1,9 @@
 ﻿using DependencyInjection.Contracts;
+using DependencyInjection.DI;
+using DependencyInjection.DI.Containers;
 using DependencyInjection.Loggers;
 using System;
+
 
 namespace DependencyInjection
 {
@@ -8,10 +11,14 @@ namespace DependencyInjection
     {
         static void Main(string[] args)
         {
-            ILogger logger = new ConsoleLogger();
-            Engine engine = new Engine(logger);
+            IContainer container = new SnakeGameContainer();
+            container.ConfigureServices();
+            Injector injector = new Injector(container);
+
+            Engine engine = injector.Inject<Engine>();
 
             engine.Start();
+            engine.End();
         }
     }
 }
