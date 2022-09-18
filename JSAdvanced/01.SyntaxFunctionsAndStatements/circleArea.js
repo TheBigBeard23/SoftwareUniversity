@@ -1,6 +1,9 @@
 function CircleArea(number) {
-    if (typeof (number) == typeof (`string`)) {
-        console.log(`We can not calculate the circle area, because we receive a string.`);
+
+    let typeOfNumber = typeof (number);
+
+    if (typeOfNumber != typeof (1)) {
+        console.log(`We can not calculate the circle area, because we receive a ${typeOfNumber}.`);
     }
     else {
         console.log(`${(Math.PI * number * number).toFixed(2)}`);
