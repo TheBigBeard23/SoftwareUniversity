@@ -13,5 +13,5 @@ function solve(numbers) {
 
         return result;
     }
-}
+} 
 solve([2, 4, 8, 16])
