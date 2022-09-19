@@ -1,4 +1,4 @@
-function CircleArea(number) {
+function circleArea(number) {
 
     let typeOfNumber = typeof (number);
 
@@ -9,4 +9,4 @@ function CircleArea(number) {
         console.log(`${(Math.PI * number * number).toFixed(2)}`);
     }
 }
-CircleArea(`name`);
+circleArea(`name`);
