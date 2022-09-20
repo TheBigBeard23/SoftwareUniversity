@@ -5,7 +5,6 @@ function timeToWalk(steps, footprint, speed) {
     let time = distanceInMeters / speedMetersPerSec;
     let rest = Math.floor(distanceInMeters / 500);
 
-
     let timeMn = Math.floor(time / 60);
     let timeSs = Math.round(time - timeMn * 60);
     let timeH = Math.round(time / 3600);
@@ -19,7 +18,5 @@ function timeToWalk(steps, footprint, speed) {
         ":" +
         (timeSs < 10 ? "0" : "") + timeSs
     );
-
-
 }
 timeToWalk(4000, 0.60, 5);
