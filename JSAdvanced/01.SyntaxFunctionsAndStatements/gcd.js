@@ -1,17 +1,9 @@
-function gcd(n, m) {
-    let result = 0;
-    let firstNumber = n;
-    let secondNumber = m;
-    for (let i = 1; i <= firstNumber; i++) {
-
-        if (firstNumber % i == 0 &&
-            secondNumber % i == 0) {
-            result = i;
-        }
-        else if (i > secondNumber) {
-            break;
-        }
+function greatestDevisor(a, b) {
+    if (b) {
+        return greatestDevisor(b, a % b);
     }
-    console.log(result);
+    else {
+        console.log(a)
+    }
 }
-gcd(15, 5)
+greatestDevisor(2154, 458)

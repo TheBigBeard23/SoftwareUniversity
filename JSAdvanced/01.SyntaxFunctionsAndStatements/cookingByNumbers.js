@@ -1,7 +1,5 @@
 function cookingByNumbers(number,...params) {
 
-    let commands = new Array(params);
-
     for (let i = 0; i < params.length; i++) {
         number = calculate(params[i], number);
         console.log(number);
