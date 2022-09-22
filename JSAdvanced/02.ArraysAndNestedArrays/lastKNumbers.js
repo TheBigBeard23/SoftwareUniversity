@@ -1,30 +1,21 @@
-function lastKNumbers(n, k) {
+function getSequence(n, k) {
+    let result = new Array(n);
+    result[0] = 1;
+    result.fill(0, 1);
 
-    let result = [1];
-
-    for(let i = 1; i < n; i++){
-
-        result[i] = sumLastK(result, k);
-
-    }
-
-    function sumLastK(array = result, k) {
-
-        k = array.length > k ? k : array.length;
-
-        let sum = 0;
-
-        for(let i = 1; i <= k; i++){
-
-            sum += array[array.length - i];
-
+    for (let i = 1; i < n; i++) {
+        let count = 0;
+        let current = 0;
+        for (let a = i - 1; a >= 0; a--) {
+            count++;
+            current += result[a];
+            if (count == k) {
+                break;
+            }
         }
-
-        return sum;
-
+        result[i] = current;
     }
-
-    console.log(`[${result.join(', ')}]`);
-
+    return result;
 }
-lastKNumbers(6,3)
+
+console.log(getSequence(8, 4));
