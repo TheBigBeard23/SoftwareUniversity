@@ -10,7 +10,7 @@ function diagonalSums(matrix) {
         secondSum += matrix[row][secondDiagonalIndex - row]
     }
 
-    return [firstSum, secondSum];
+    return firstSum + " " + secondSum;
 }
 console.log(diagonalSums([[20, 40],
-                          [10, 60]]));
+[10, 60]]));
