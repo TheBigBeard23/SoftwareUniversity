@@ -1,5 +1,4 @@
 function solve(arr) {
-
     let result = [];
     let count = 1;
     for (let comand of arr) {
@@ -9,7 +8,9 @@ function solve(arr) {
         }
         count++;
     }
-
+    if (result.length == 0) {
+        return 'Empty';
+    }
     return result.join('\n');
 }
 console.log(solve([
