@@ -7,10 +7,14 @@ function magic(matrix) {
         let rowSum = 0;
         let colSum = 0;
 
-        for (let col = 0; col < matrix[0].length; col++) {
+        for (let col = 0; col < matrix[row].length; col++) {
 
+            if (col < matrix.length) {
+                rowSum += matrix[col][row];
+            }
+            
             colSum += matrix[row][col];
-            rowSum += matrix[col][row];
+
         }
         if (rowSum != sum ||
             colSum != sum) {
@@ -18,7 +22,7 @@ function magic(matrix) {
         }
     }
 
-    return true;
+    return true; 
 
 }
 console.log(
