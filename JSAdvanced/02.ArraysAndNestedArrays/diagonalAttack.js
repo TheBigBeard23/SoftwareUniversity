@@ -23,11 +23,13 @@ function attack(matrix) {
             }
         }
     }
-    return matrix.join(' ' + `\n`);
+    return matrix.forEach(line => {
+        console.log(line.join(' '));
+    });
 }
-console.log(attack([
+attack([
     '5 3 12 3 1',
     '11 4 23 2 5',
     '101 12 3 21 10',
     '1 4 5 2 2',
-    '5 22 33 11 1']));
+    '5 22 33 11 1']);
