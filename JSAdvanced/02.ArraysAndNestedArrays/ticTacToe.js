@@ -14,8 +14,10 @@ function play(arr) {
         let [row, col] = arr.shift().split(' ').map(Number);
 
         if (!matrix[row][col]) {
+
             fields--;
             matrix[row][col] = player;
+            
             if (checkForWin(player)) {
                 playerWin = true;
                 break;
