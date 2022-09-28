@@ -13,7 +13,7 @@ function createAssemblyLine() {
                 }
             }
         },
-        hasAdudio(car) {
+        hasAudio(car) {
             car.currentTrack = {
                 name: null,
                 artist: null
@@ -30,11 +30,11 @@ function createAssemblyLine() {
                 if (distance < 0.1) {
                     console.log("Beep! Beep! Beep!");
                 }
-                else if (0.1 <= distance < 0.25) {
+                else if (0.1 <= distance && distance < 0.25) {
                     console.log("Beep! Beep!");
                 }
-                else if (0.25 <= distance < 0.5) {
-                    console.log("Beep! Beep!");
+                else if (0.25 <= distance && distance < 0.5) {
+                    console.log("Beep!");
                 }
                 else {
                     console.log();
