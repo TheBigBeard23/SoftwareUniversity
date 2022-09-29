@@ -12,10 +12,9 @@ function solve(arr) {
     }
     console.log(JSON.stringify(result));
 }
-console.log(
+
     solve([
         'Isacc / 25 ',
         'Derek / 12 / BarrelVest, DestructionSword',
         'Hes / 1 / Desolator, Sentinel, Antara']
     )
-)
