@@ -2,7 +2,7 @@ function calculate(arr) {
     let operands = arr.filter(x => /-?\d+/.test(x));
     let operators = arr.filter(x => /^[\/+*-]$/.test(x));
     let numbers = [];
-    
+
     if (operands.length - operators.length > 1) {
         console.log("Error: too many operands!");
         return;
@@ -47,8 +47,6 @@ function calculate(arr) {
     }
     console.log(numbers[0]);
 }
-
-
 
 calculate([
     5,
