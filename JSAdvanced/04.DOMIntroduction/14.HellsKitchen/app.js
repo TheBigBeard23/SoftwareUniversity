@@ -10,19 +10,19 @@ function solve() {
       let output = {};
 
       for (let element of input) {
-         let resturantInfo = element.split(' - ');
-         let resturantName = resturantInfo.shift();
-         let workersInfo = resturantInfo[0].split(', ');
+         let restaurantInfo = element.split(' - ');
+         let restaurantName = restaurantInfo.shift();
+         let workersInfo = restaurantInfo[0].split(', ');
 
          for (let worker of workersInfo) {
 
             let [name, salary] = worker.split(' ');
 
-            if (!output.hasOwnProperty(resturantName)) {
-               output[resturantName] = {};
+            if (!output.hasOwnProperty(restaurantName)) {
+               output[restaurantName] = {};
             }
 
-            output[resturantName][name] = Number(salary);
+            output[restaurantName][name] = Number(salary);
 
          }
       }
@@ -50,10 +50,10 @@ function solve() {
       let result = Object.entries(output[bestName]);
       result.sort((a, b) => b[1] - a[1]);
 
-      result.forEach(x => print += `Name : ${x[0]} With Salary: ${x[1]} `);
+      result.forEach(x => print += `Name: ${x[0]} With Salary: ${x[1]} `);
 
       document.querySelector('#bestRestaurant p')
-         .textContent = `Name ${bestName} Average Salary: ${avgSalary.toFixed(2)} Best Salary: ${result[0][1].toFixed(2)}`;
+         .textContent = `Name: ${bestName} Average Salary: ${avgSalary.toFixed(2)} Best Salary: ${result[0][1].toFixed(2)}`;
 
       document.querySelector('#workers p').textContent = print;
    }
