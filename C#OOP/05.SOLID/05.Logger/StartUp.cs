@@ -14,7 +14,7 @@ namespace SOLID
             IReader consoleReader = new ConsoleReader();
             IReader fileReader = new FileReader("../../../input.txt");
 
-            IEngine engine = new Engine(appenderFactory, layoutFactory, fileReader);
+            IEngine engine = new Engine(appenderFactory, layoutFactory, consoleReader);
             engine.Run();
 
         }
