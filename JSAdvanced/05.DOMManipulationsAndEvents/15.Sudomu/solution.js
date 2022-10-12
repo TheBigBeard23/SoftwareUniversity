@@ -23,6 +23,7 @@ function solve() {
             for (let cell of cells) {
                 cell.value = '';
             }
+            
             result.textContent = '';
             table.parentElement.style.border = 'none';
 
