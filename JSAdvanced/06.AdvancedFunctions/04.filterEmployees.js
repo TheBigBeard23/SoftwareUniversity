@@ -7,12 +7,10 @@ function solve(data, criteria) {
 
     function filterByCriteria() {
         if (this[field] == value || value == 'all') {
-            return console.log(`${counter++} ${this.first_name} ${this.last_name} - ${this.email}`);
+            return console.log(`${counter++}. ${this.first_name} ${this.last_name} - ${this.email}`);
         }
     }
 }
-
-
 
 solve(
     `[{
