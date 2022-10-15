@@ -8,6 +8,5 @@ function sort(arr, order) {
     arr.sort(sortFuncs[order]);
 
     return arr;
-
 }
-console.log(sort([10, 9, 8, 7, 6, 5], 'desc'));
+console.log(result([10, 9, 8, 7, 6, 5], 'asc'));
