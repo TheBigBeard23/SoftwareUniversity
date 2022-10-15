@@ -42,9 +42,9 @@ function solution() {
 
             for (let ingredient of Object.entries(recipes[recipe])) {
                 let name = ingredient[0];
-                let quantity = ingredient[1];
+                let quantity = ingredient[1] * count;
 
-                if (stock[name] >= quantity * count) {
+                if (stock[name] >= quantity) {
                     stock[name] -= quantity;
                 }
                 else {

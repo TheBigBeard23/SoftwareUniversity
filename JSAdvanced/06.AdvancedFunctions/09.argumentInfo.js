@@ -1,14 +1,14 @@
 function solve(arr) {
     let result = {};
 
-    arr.forEach(x => {
-        printType(x);
-        add(x);
-    })
+    for (let obj of Array.from(arr)) {
+        printType(obj);
+        add(obj);
+    }
 
     Object.entries(result)
         .sort((a, b) => b[1] - a[1])
-        .forEach(x => console.log(`${x[0]} = ${x[1]}`));
+        .forEach(([type, count]) => console.log(`${type} = ${count}`));
 
 
     function printType(element) {
@@ -21,4 +21,4 @@ function solve(arr) {
         result[typeof element]++;
     }
 }
-solve(['cat', 42, 3, function () { console.log('Hello world!'); }]);
+solve(['cat', 42, function () { console.log('Hello world!'); }]);
