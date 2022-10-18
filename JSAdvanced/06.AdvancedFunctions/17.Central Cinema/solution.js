@@ -6,17 +6,23 @@ function solve() {
     onScreenButton.addEventListener('click', addToScreen);
     clearButton.addEventListener('click', (clear));
 
-
     function addToScreen(event) {
         event.preventDefault();
 
-        if (name.value && hall.value && Number(price.value)) {
+        let movieName = name.value;
+        let auditorium = hall.value;
+        let ticketPrice = Number(price.value);
+
+        if (movieName && auditorium && ticketPrice) {
+
+            [name.value, hall.value, price.value] = ["", "", ""];
+
             const li = document.createElement('li');
-            li.appendChild(createElement('span', name.value));
-            li.appendChild(createElement('strong', `Hall: ${hall.value}`, ''));
+            li.appendChild(createElement('span', movieName));
+            li.appendChild(createElement('strong', `Hall: ${auditorium}`, ''));
 
             const div = createElement('div', '', '');
-            div.appendChild(createElement('strong', `${Number(price.value).toFixed(2)}`));
+            div.appendChild(createElement('strong', `${ticketPrice.toFixed(2)}`));
             const input = createElement('input', '', 'Tickets Sold');
             div.appendChild(input);
             div.appendChild(createElement('button', 'Archive'));
@@ -27,12 +33,14 @@ function solve() {
 
             div.querySelector('button').addEventListener('click', () => {
 
-                if (Number(input.value)) {
+                let ticketsSold = Number(input.value);
 
-                    let totalAmount = Number(input.value) * Number(price.value);
+                if (!Number.isNaN(ticketsSold) && input.value != "") {
+
+                    let totalAmount = ticketsSold * ticketPrice;
 
                     li.innerHTML = '';
-                    li.appendChild(createElement('span', `${name.value}`));
+                    li.appendChild(createElement('span', `${movieName}`));
                     li.appendChild(createElement('strong', `Total amount: ${totalAmount.toFixed(2)}`));
                     let deleteButton = createElement('button', 'Delete');
                     li.appendChild(deleteButton);
@@ -44,14 +52,17 @@ function solve() {
             });
         }
     }
+
     function clear() {
-        archive.remove();
+        
+        Array.from(archive.children).forEach(li => li.remove());
 
     };
-}
-function createElement(type, textContent, placeholder) {
-    let element = document.createElement(type);
-    textContent ? element.textContent = textContent : null;
-    placeholder ? element.placeholder = placeholder : null;
-    return element;
+
+    function createElement(type, textContent, placeholder) {
+        let element = document.createElement(type);
+        textContent ? element.textContent = textContent : null;
+        placeholder ? element.placeholder = placeholder : null;
+        return element;
+    };
 }
