@@ -5,5 +5,5 @@ function sum(arr) {
     }
     return sum;
 }
-console.log(sum(['one', 'two', 'three']));
+
 module.exports = { sum };
