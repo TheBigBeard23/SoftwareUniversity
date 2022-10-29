@@ -1,0 +1,19 @@
+{
+  "name": "classes-and-attributes-unit-testing",
+  "version": "1.0.0",
+  "description": "Testing classes",
+  "main": "Circle.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "test",
+    "mocha",
+    "chai"
+  ],
+  "author": "VD",
+  "license": "MIT",
+  "dependencies": {
+    "chai": "^4.3.6"
+  }
+}
