@@ -4,9 +4,11 @@ function loadRepos() {
 
    httpRequest.addEventListener('readystatechange', () => {
       if (httpRequest.readyState == 4) {
-         document.getElementById('res').textContent = httpRequest.responseText;
+         let data = JSON.parse(httpRequest.responseText);
+         document.getElementById('res').textContent = data.map(x => x.name).join(', ');
       }
    });
+   
    httpRequest.open('GET', url);
    httpRequest.send();
 }
