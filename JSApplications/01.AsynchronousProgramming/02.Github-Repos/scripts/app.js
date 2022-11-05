@@ -2,10 +2,13 @@ function loadRepos() {
 	const username = document.getElementById('username').value;
 	const list = document.getElementById('repos');
 
-	let response = fetch(`https://api.github.com/users/${username}/repos`);
-
-	response
-		.then(res => res.json())
+	fetch(`https://api.github.com/users/${username}/repos`)
+		.then(res => {
+			if (!res.ok) {
+				throw new Error(`${res.status}: ${res.statusText}`);
+			}
+			return res.json();
+		})
 		.then(repos => {
 
 			list.innerHTML = '';
@@ -21,5 +24,4 @@ function loadRepos() {
 		.catch(err => {
 			list.innerHTML = err;
 		});
-
 }
