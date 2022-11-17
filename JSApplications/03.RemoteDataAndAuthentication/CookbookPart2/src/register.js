@@ -23,15 +23,15 @@ async function onSubmit(e) {
                 })
             });
 
-            if (!res.ok) {
-                const err = await res.json();
-                throw new Error(err.message);
+            const data = await res.json();
+
+            if (res.ok) {
+                localStorage.setItem('accessToken', data.accessToken);
+                window.location.pathname = 'CookbookPart2/index.html';
             }
-
-            const resData = await res.json();
-
-            localStorage.setItem('accessToken', resData.accessToken);
-            window.location.pathname = 'CookbookPart2/index.html';
+            else {
+                throw new Error(data.message);
+            }
 
         } catch (err) {
             alert(err.message);

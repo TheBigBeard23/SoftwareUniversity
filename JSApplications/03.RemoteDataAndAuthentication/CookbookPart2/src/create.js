@@ -6,40 +6,31 @@ function createRecipe(e) {
     e.preventDefault();
 
     const formData = new FormData(e.target);
-
-    const { name, img, ingredients, steps } = Object.fromEntries(formData.entries());
     const token = localStorage.getItem('accessToken');
 
-    const data = {
+    const body = JSON.stringify({
         name: formData.get('name'),
         img: formData.get('img'),
         ingredients: formData.get('ingredients').trim().split('\n'),
         steps: formData.get('steps').trim().split('\n')
-    };
+    });
 
-    if (name
-        && img
-        && ingredients
-        && steps) {
-
-        fetch(url, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'applitcation/json',
-                'X-Authorization': token
-            },
-            body: JSON.stringify(data)
+    fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'applitcation/json',
+            'X-Authorization': token
+        },
+        body
+    })
+        .then(res => {
+            if (res.status == 200) {
+                window.location.pathname = 'CookbookPart2/index.html';
+            }
+            else {
+                throw new Error(res.json());
+            }
         })
-            .then(res => {
-                if (res.status == 200) {
-                    window.location.pathname = 'CookbookPart2/index.html';
-                }
-                else {
-                    throw new Error(res.json());
-                }
-            })
-            .catch(err => alert(err.message));
-    }
-
+        .catch(err => alert(err.message));
 
 }
