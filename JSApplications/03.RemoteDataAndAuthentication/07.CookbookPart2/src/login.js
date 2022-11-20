@@ -36,7 +36,7 @@ form.addEventListener('submit', async (e) => {
         const responseData = await res.json();
 
         localStorage.setItem('accessToken', responseData.accessToken);
-        window.location.pathname = 'CookbookPart2/index.html';
+        window.location.pathname = '07.CookbookPart2/index.html';
 
     } catch (error) {
         alert(error.message);

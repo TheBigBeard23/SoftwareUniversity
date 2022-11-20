@@ -25,7 +25,7 @@ function createRecipe(e) {
     })
         .then(res => {
             if (res.status == 200) {
-                window.location.pathname = 'CookbookPart2/index.html';
+                window.location.pathname = '07.CookbookPart2/index.html';
             }
             else {
                 throw new Error(res.json());

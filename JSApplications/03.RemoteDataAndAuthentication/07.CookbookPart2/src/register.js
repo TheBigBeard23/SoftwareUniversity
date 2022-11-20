@@ -27,7 +27,7 @@ async function onSubmit(e) {
 
             if (res.ok) {
                 localStorage.setItem('accessToken', data.accessToken);
-                window.location.pathname = 'CookbookPart2/index.html';
+                window.location.pathname = '07.CookbookPart2/index.html';
             }
             else {
                 throw new Error(data.message);
