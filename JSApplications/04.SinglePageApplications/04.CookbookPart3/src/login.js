@@ -23,7 +23,7 @@ async function onSubmit(data) {
         const data = await response.json();
         if (response.status == 200) {
             sessionStorage.setItem('authToken', data.accessToken);
-            window.location.pathname = '04.CookbookPart3/index.html';
+            window.location.pathname = 'index.html';
         } else {
             throw new Error(data.message);
         }
