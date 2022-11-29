@@ -1,9 +1,9 @@
 const { chromium } = require('playwright-chromium');
 const { expect } = require('chai');
 
-const host = 'http://localhost:3000'; // Application host (NOT service host - that can be anything)
+const host = 'http://127.0.0.1:5500/03.Movies/'; // Application host (NOT service host - that can be anything)
 
-const interval = 300;
+const interval = 10000;
 const DEBUG = false;
 const slowMo = 500;
 
@@ -90,7 +90,7 @@ let page;
 
 describe('E2E tests', function () {
   // Setup
-  this.timeout(DEBUG ? 120000 : 7000);
+  this.timeout(DEBUG ? 120000 : 10000);
   before(
     async () =>
       (browser = await chromium.launch(
