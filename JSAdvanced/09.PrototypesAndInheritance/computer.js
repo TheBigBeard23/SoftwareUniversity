@@ -5,6 +5,7 @@ function createComputerHierarchy() {
             this.responseTime = responseTime;
         }
     }
+    
     class Monitor {
         constructor(manufacturer, width, height) {
             this.manufacturer = manufacturer;
@@ -12,20 +13,28 @@ function createComputerHierarchy() {
             this.height = height;
         }
     }
+
     class Battery {
         constructor(manufacturer, expectedLife) {
             this.manufacturer = manufacturer;
             this.expectedLife = expectedLife;
         }
     }
+
     class Computer {
         constructor(manufacturer, processorSpeed, ram, hardDiskSpace) {
+
+            if (new.target === Computer) {
+                throw new Error();
+            }
+
             this.manufacturer = manufacturer;
             this.processorSpeed = processorSpeed;
             this.ram = ram;
             this.hardDiskSpace = hardDiskSpace;
         }
     }
+
     class Laptop extends Computer {
         constructor(
             manufacturer,
@@ -51,6 +60,7 @@ function createComputerHierarchy() {
             this._battery = battery;
         }
     }
+
     class Desktop extends Computer {
         constructor(
             manufacturer,
@@ -63,6 +73,7 @@ function createComputerHierarchy() {
             this.keyboard = keyboard;
             this.monitor = monitor;
         }
+
         get keyboard() {
             return this._keyboard;
         }
@@ -72,6 +83,7 @@ function createComputerHierarchy() {
             }
             this._keyboard = keyboard;
         }
+
         get monitor() {
             return this._monitor;
         }
@@ -92,19 +104,4 @@ function createComputerHierarchy() {
         Desktop
     }
 }
-
-let classes = createComputerHierarchy();
-let Computer = classes.Computer;
-let Laptop = classes.Laptop;
-let Desktop = classes.Desktop;
-let Monitor = classes.Monitor;
-let Battery = classes.Battery;
-let Keyboard = classes.Keyboard;
-
-let battery = new Battery('Energy', 3);
-console.log(battery);
-let laptop = new Laptop("Hewlett Packard", 2.4, 4, 0.5, 3.12, "Silver", 'sd');
-console.log(laptop);
-
-
 
