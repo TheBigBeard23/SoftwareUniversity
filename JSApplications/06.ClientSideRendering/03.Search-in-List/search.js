@@ -6,7 +6,7 @@ let searchText;
 
 const listTamplate = (towns) => html`
 <ul>
-   ${towns.map(town => town.includes(searchText) && searchText
+   ${towns.map(town => searchText && town.toLowerCase().includes(searchText.toLowerCase())
       ? html`<li class="active">${town}</li>`
       : html`<li>${town}</li>`)}
 </ul>
