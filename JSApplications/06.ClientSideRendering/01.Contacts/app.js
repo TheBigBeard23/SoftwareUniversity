@@ -24,8 +24,7 @@ render(contacts.map(contactCard), root);
 root.addEventListener('click', ontoggle);
 
 function ontoggle(e) {
-    e.preventDefault();
-
+ 
     if (e.target.tagName == 'BUTTON') {
 
         const div = e.target.nextElementSibling;
