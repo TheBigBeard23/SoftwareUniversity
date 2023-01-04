@@ -27,9 +27,15 @@ function createCard(cat) {
 render(cardTamplate(cats), section);
 
 section.addEventListener('click', (e) => {
+
     if (e.target.tagName == 'BUTTON') {
-        e.target.nextElementSibling.style.display == 'none'
-            ? e.target.nextElementSibling.style.display = 'block'
-            : e.target.nextElementSibling.style.display = 'none';
+
+        if (e.target.nextElementSibling.style.display == 'none') {
+            e.target.nextElementSibling.style.display = 'block'
+            e.target.textContent = 'Hide status code';
+        } else {
+            e.target.nextElementSibling.style.display = 'none';
+            e.target.textContent = 'Show status code';
+        }
     }
 });
