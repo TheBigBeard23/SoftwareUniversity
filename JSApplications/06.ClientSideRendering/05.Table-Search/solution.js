@@ -5,7 +5,7 @@ const tbody = document.querySelector('tbody');
 
 const tableRowTemplate = (item) =>
 html`
-${input.value && checkItem(item) 
+${input.value && search(item) 
 ? html`<tr class="select">
    <td>${item.firstName} ${item.lastName}</td>
    <td>${item.email}</td>
@@ -17,7 +17,6 @@ ${input.value && checkItem(item)
    <td>${item.email}</td>
    <td>${item.course}</td>
 </tr>`}
-
 `;
 
 
@@ -30,8 +29,11 @@ function onClick() {
       update();
    }
 }
-function checkItem(item) {
+
+function search(item) {
+
    let isIncludes = false;
+
    Object.values(item).map(x => {
       if (x.toLowerCase().includes(input.value.toLowerCase())) {
          isIncludes = true;
@@ -40,13 +42,20 @@ function checkItem(item) {
    
    return isIncludes;
 }
+
 async function update() {
+
    const data = await getData();
+
    render(Object.values(data).map(tableRowTemplate), tbody);
+
    input.value='';
 }
+
 async function getData() {
+
    const res = await fetch('http://localhost:3030/jsonstore/advanced/table');
    const data = await res.json();
+
    return data;
 }
