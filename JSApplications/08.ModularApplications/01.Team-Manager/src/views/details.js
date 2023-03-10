@@ -1,11 +1,13 @@
-import { approveMember, becomeMember, getMemberships, getTeamData } from "../api/data.js";
-import { html,nothing } from "../lit.js"
+import { approveMember, becomeMember, deleteMember, getMemberships, getTeamData, getApprovedMemberships } from "../api/data.js";
+import { html, nothing } from "../lit.js"
+import { showModal } from "./modal.js";
 
 let ctx;
 let team;
 let memberships;
+let members;
 
-const detailsTeamplate = async (members, memberships) => html`
+const detailsTeamplate = () => html`
             <section id="team-home">
                 <article class="layout">
                     <img src="${team.logoUrl}" class="team-logo left-col">
@@ -17,7 +19,7 @@ const detailsTeamplate = async (members, memberships) => html`
                             ${isOwner()
                             ? html`<a href="/edit/${team._id}" class="action">Edit team</a>`
                             : ctx.user
-                            ? memberInterface(memberships)
+                            ? memberInterface()
                             : nothing
                         }
                         </div>
@@ -25,7 +27,7 @@ const detailsTeamplate = async (members, memberships) => html`
                     <div class="pad-large">
                         <h3>Members</h3>
                         <ul class="tm-members">
-                            ${loadMembers(members)}
+                            ${loadMembers()}
                         </ul>
                     </div>
                     ${isOwner()
@@ -33,7 +35,7 @@ const detailsTeamplate = async (members, memberships) => html`
                      <div class="pad-large">
                         <h3>Membership Requests</h3>
                         <ul class="tm-members">
-                            ${await loadRequests(memberships)}
+                            ${loadRequests()}
                         </ul>
                     </div>
                     `
@@ -48,66 +50,63 @@ export async function showDetails(context) {
     team = await getTeamData(ctx.params.id);
 
     memberships = await getMemberships(team._id);
-    const members = getTeamMembers(memberships);
+    members = getApprovedMemberships(memberships);
     
-    ctx.render(await detailsTeamplate(members, memberships));
+    ctx.render(detailsTeamplate());
 }
-function loadMembers(members) {
-    console.log(members);
+function loadMembers() {
+
     const result = html`
-    Your nickname:
+    Your email:
     ${ctx.user 
-    ? html`${ctx.user.username}`
+    ? html`${ctx.user.email}`
     : html `Guest`}
     ${members.map(m => 
       html`
-    <li>${m.user.username} ${isOwner() 
-    ? html `<a href="#" class="tm-control action">Remove from team</a>`
+    <li>${m.user.email} ${isOwner() 
+    ? html `<a href="javascript:void(0)" @click=${() => onDelete(m._id)} class="tm-control action">Remove from team</a>`
     : nothing}
     </li>`)}
     `
     return result;
 
 }
-function memberInterface(memberships) {
+function memberInterface() {
 
-    if (memberships.filter(m => m._ownerId == ctx.user._id && m.status == "pending").length > 0) {
-        return html`Membership pending. <a href="#"> Cancel request</a>`;
+    const membership = memberships.filter(m => m._ownerId == ctx.user._id)[0];
+
+    if (membership && membership.status == "pending") {
+        return html`Membership pending. <a @click="${() => deleteMember(membership._id)}" href="javascript:void(0)"> Cancel request</a>`;
     }
-    if (memberships.filter(m => m._ownerId == ctx.user._id && m.status != "pending").length > 0) {
-        return html`<a href="javascript:void(0)" class="action invert">Leave team</a>`;
+    if (membership && membership.status != "pending") {
+        return html`<a @click="${() => deleteMember(membership._id)}" href="javascript:void(0)" class="action invert">Leave team</a>`;
     }
     else {
         return html`
-        <a href="javascript:void(0)" @click=${joinTeam} class="action">Join team</a>`
+        <a href="javascript:void(0)" @click="${() => becomeMember({ teamId: team._id })}" class="action">Join team</a>`
     }
 
-
 }
-async function loadRequests(){
-    memberships = await getMemberships(team._id);
+ function loadRequests(){
+
      return memberships.filter(member => member.status == "pending")
             .map(x => html`
             <li>${x.user.email}
             <a @click="${() => onApprove(x._id, x)}" href="javascript:void(0)" class="tm-control action">Approve</a>
-            <a href="javascript:void(0)" class="tm-control action">Decline</a>
+            <a @click="${() => onDelete(x._id)}" href="javascript:void(0)" class="tm-control action">Decline</a>
             </li>`)
 }
 async function onApprove(id, membership){
+
     membership.status="member";
     await approveMember(id, membership);
 }
 function isOwner() {
+
     return ctx.user && ctx.user._id === team._ownerId;
+
 }
-function getTeamMembers(memberships) {
-    return memberships.filter(member => member.status == "member");
-}
-async function joinTeam() {
-   await becomeMember({ teamId: team._id });
-   let membership =  (await getMemberships(team._id)).pop();
-   //membership.user.username = ctx.user.username;
-   console.log(ctx.user);
-   console.log(membership);
-   await approveMember(membership._id, membership);
+function onDelete(id){
+     //deleteMember(id);
+     showModal(`remove user ${ctx.user.username} from the team?`);
 }

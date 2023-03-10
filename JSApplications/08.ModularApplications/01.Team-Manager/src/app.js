@@ -11,6 +11,7 @@ import { showEdit } from "./views/edit.js";
 import { showCreate } from "./views/create.js";
 import { showMyTeams } from "./views/myTeams.js";
 
+
 const main = document.querySelector('main');
 
 

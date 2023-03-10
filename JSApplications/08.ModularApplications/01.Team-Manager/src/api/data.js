@@ -50,6 +50,9 @@ export async function getMemberships(teamId) {
     const res = await api.get(endpoint.memberships(teamId));
     return res;
 }
+export function getApprovedMemberships(memberships) {
+    return memberships.filter(member => member.status == "member");
+}
 export async function deleteMember(id) {
     const res = await api.del(endpoint.deleteMember(id));
     return res;
