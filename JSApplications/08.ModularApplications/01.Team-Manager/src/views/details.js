@@ -107,6 +107,9 @@ function isOwner() {
 
 }
 function onDelete(id){
-     //deleteMember(id);
-     showModal(`remove user ${ctx.user.username} from the team?`);
+     const message = `remove user ${ctx.user.username} from the team`;
+     showModal(message, deleteMember, id);
+     console.log(ctx.page)
+     ctx.page.redirect(ctx.page.current);
+
 }

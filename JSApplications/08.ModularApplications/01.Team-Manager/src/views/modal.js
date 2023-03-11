@@ -1,24 +1,33 @@
-import { html, render } from "../lit.js"
-
 const body = document.querySelector('body');
+const div = document.createElement('div');
 
-const modalTamplate = (massage) => html`
-<div class="overlay">
-    <div class="modal">
-        <p>Are you sure you want to ${massage}</p>
-        <a @click=${onOkay} href="javascript:void(0)" class="action">OK</a>
-        <a @click=${onCancel} href="javascript:void(0)" class="action">CANCEL</a>
-    </div>
+div.className = 'overlay';
+div.innerHTML = `
+<div class="modal">
+<p></p>
+<a href="javascript:void(0)" id="modal-ok" class="action">OK</a>
+<a href="javascript:void(0)" id="modal-cancel" class="action">CANCEL</a>
 </div>
-`
+`;
 
-export function showModal(massage) {
-    render(modalTamplate(massage), body);
+div.querySelector("#modal-ok").addEventListener('click', () => onClick(true))
+div.querySelector("#modal-cancel").addEventListener('click', () => onClick(false))
+
+let operation;
+let params;
+
+export function showModal(message, callback, ...prms) {
+    operation = callback;
+    params = prms;
+    div.querySelector('p').textContent = `Are you sure you want to ${message}?`
+    body.appendChild(div);
 }
 
-function onOkay(){
-    console.log("okay");
-}
-function onCancel(){
-    console.log("cancel");
+function onClick(choice) {
+
+    if (choice) {
+        operation(...params);
+    }
+    
+    div.remove();
 }

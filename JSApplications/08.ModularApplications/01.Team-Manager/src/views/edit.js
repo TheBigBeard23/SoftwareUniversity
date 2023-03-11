@@ -29,7 +29,6 @@ export async function showEdit(context) {
 async function onEdit(e) {
     e.preventDefault();
     const data = getFormData(e);
-    //data._ownerId = ctx.user._id;
     await editTeam(team._id, data);
     ctx.page.redirect('/catalog');
 }
