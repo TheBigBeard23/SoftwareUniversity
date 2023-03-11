@@ -27,7 +27,8 @@ function onClick(choice) {
 
     if (choice) {
         operation(...params);
+        document.getElementById(params).remove();
     }
-    
+
     div.remove();
 }

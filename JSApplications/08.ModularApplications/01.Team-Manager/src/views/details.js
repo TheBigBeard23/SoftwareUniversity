@@ -6,6 +6,7 @@ let ctx;
 let team;
 let memberships;
 let members;
+let memberCount;
 
 const detailsTeamplate = () => html`
             <section id="team-home">
@@ -14,7 +15,7 @@ const detailsTeamplate = () => html`
                     <div class="tm-preview">
                         <h2>${team.name}</h2>
                         <p>${team.description}</p>
-                        <span class="details">${members.length} Members</span>
+                        <span class="details">${memberCount} Members</span>
                         <div>
                             ${isOwner()
                             ? html`<a href="/edit/${team._id}" class="action">Edit team</a>`
@@ -51,7 +52,7 @@ export async function showDetails(context) {
 
     memberships = await getMemberships(team._id);
     members = getApprovedMemberships(memberships);
-    
+    memberCount = members.length;
     ctx.render(detailsTeamplate());
 }
 function loadMembers() {
@@ -63,7 +64,7 @@ function loadMembers() {
     : html `Guest`}
     ${members.map(m => 
       html`
-    <li>${m.user.email} ${isOwner() 
+    <li id="${m._id}"> ${m.user.email} ${isOwner() 
     ? html `<a href="javascript:void(0)" @click=${() => onDelete(m._id)} class="tm-control action">Remove from team</a>`
     : nothing}
     </li>`)}
@@ -91,7 +92,7 @@ function memberInterface() {
 
      return memberships.filter(member => member.status == "pending")
             .map(x => html`
-            <li>${x.user.email}
+            <li id="${x._id}">${x.user.email}
             <a @click="${() => onApprove(x._id, x)}" href="javascript:void(0)" class="tm-control action">Approve</a>
             <a @click="${() => onDelete(x._id)}" href="javascript:void(0)" class="tm-control action">Decline</a>
             </li>`)
@@ -109,7 +110,5 @@ function isOwner() {
 function onDelete(id){
      const message = `remove user ${ctx.user.username} from the team`;
      showModal(message, deleteMember, id);
-     console.log(ctx.page)
-     ctx.page.redirect(ctx.page.current);
-
+     //TODO: Reload page and change state of the buttons
 }
