@@ -1,9 +1,10 @@
-import { getAlbum } from "../api/data.js";
+import { deleteAlbum, getAlbum } from "../api/data.js";
 import { html, nothing } from "../lit.js";
 
 let ctx;
+let album;
 
-const detailsTemplate = (album) => html`
+const detailsTemplate = () => html`
     <section id="details">
         <div id="details-wrapper">
             <p id="details-title">Album Details</p>
@@ -23,7 +24,7 @@ const detailsTemplate = (album) => html`
     
             <!--Edit and Delete are only for creator-->
             ${ctx.user
-            ? html`
+        ? html`
             <div id="action-buttons">
                 ${ctx.user._id !== album._ownerId
                 ? html`
@@ -31,17 +32,21 @@ const detailsTemplate = (album) => html`
                 `
                 : html`
                 <a href="/edit/${album._id}" id="edit-btn">Edit</a>
-                <a href="" id="delete-btn">Delete</a>
+                <a @click=${onDelete} href="javascript:void(0)" id="delete-btn">Delete</a>
                 `}
             </div>
             `
-            : nothing}
+        : nothing}
         </div>
     </section>
 `;
 
 export async function showDetails(context) {
     ctx = context;
-    const album = await getAlbum(ctx.params.id)
-    ctx.render(detailsTemplate(album));
+    album = await getAlbum(ctx.params.id)
+    ctx.render(detailsTemplate());
+}
+async function onDelete() {
+    await deleteAlbum(album._id);
+    ctx.page.redirect('/catalog');
 }
