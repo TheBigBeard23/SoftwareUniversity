@@ -1,6 +1,6 @@
-import { html, render as litRender } from "../node_modules/lit-html/lit-html.js"
+import { html, nothing, render as litRender } from "../node_modules/lit-html/lit-html.js"
 
-const cardTamplate = (avatar) => html`
+const cardTamplate = (avatar, info, onToggle) => html`
 <style>
             .user-card {
                 display: flex;
@@ -62,12 +62,19 @@ const cardTamplate = (avatar) => html`
             </figure>
             <div class="info">
                 <h3><slot></slot></h3>
+                ${info
+        ? html`
                 <div>
                     <p><slot name="email"></slot></p>
                     <p><slot name="phone"></slot></p>
-                </div>
+                </div>`
+        : nothing}
 
-                <button class="toggle-info-btn">Toggle Info</button>
+                <button @click=${onToggle} class="toggle-info-btn">
+                    ${info
+        ? 'Hide info'
+        : 'Show info'}
+                </button>
             </div>
         </div>
 `;
@@ -76,6 +83,7 @@ class UserCard extends HTMLElement {
     constructor() {
         super();
         this._avatar = this.getAttribute('avatar');
+        this._info = false;
         this.attachShadow({ mode: "open" });
     }
 
@@ -83,9 +91,13 @@ class UserCard extends HTMLElement {
         this.render();
     }
 
+    toggle() {
+        this._info = !this._info;
+        this.render();
+    }
+
     render() {
-        const avatar =
-            litRender(cardTamplate(this._avatar), this.shadowRoot, { host: this });
+        litRender(cardTamplate(this._avatar, this._info, this.toggle), this.shadowRoot, { host: this });
     }
 }
 
