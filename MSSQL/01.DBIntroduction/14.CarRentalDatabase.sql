@@ -1,0 +1,16 @@
+CREATE DATABASE [CarRental]
+
+GO
+
+USE [CarRental]
+
+GO
+
+CREATE TABLE [Directors] (
+[Id]			INT PRIMARY KEY IDENTITY (1, 1),
+[CategoryName]  NVARCHAR(50) NOT NULL,
+[DailyRate]		DECIMAL NOT NULL,
+[WeeklyRate]	DECIMAL NOT NULL,
+[MonthlyRate]	DECIMAL NOT NULL,
+[WeekendRate]	DECIMAL NOT NULL
+)
