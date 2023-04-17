@@ -1,6 +1,6 @@
 
 UPDATE [Employees]
-Set    [Salary] += [Salary] * 0.10
+SET    [Salary] += [Salary] * 0.10
 GO
 
 SELECT [Salary]
