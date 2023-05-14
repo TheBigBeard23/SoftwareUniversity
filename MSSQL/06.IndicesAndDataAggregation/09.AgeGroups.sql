@@ -1,5 +1,3 @@
-
-
      USE Gringotts
   SELECT a.AgeGroup
          ,COUNT(a.AgeGroup) AS WizardCount
