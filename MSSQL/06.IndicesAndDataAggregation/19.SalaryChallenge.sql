@@ -1,6 +1,6 @@
-SELECT TOP(10) e.FirstName
-              ,e.LastName
-	      ,e.DepartmentID
+    SELECT TOP(10) e.FirstName
+                  ,e.LastName
+	          ,e.DepartmentID
       FROM (SELECT e.DepartmentID
 	          ,AVG(e.Salary) 
 		AS AvgSalary
