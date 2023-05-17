@@ -4,7 +4,7 @@ CREATE OR ALTER PROC usp_EmployeesBySalaryLevel(@level VARCHAR(10))
       SELECT e.FirstName
 	    ,e.LastName
 	    FROM Employees 
-		  AS e
+	      AS e
 	   WHERE dbo.ufn_GetSalaryLevel(e.Salary) = @level
    END
     GO
