@@ -8,7 +8,7 @@
         public static void Main()
         {
             // Create database
-            using (var connection = new SqlConnection(@"Server=.;User Id=sa;Password=5048Vlad;MultipleActiveResultSets=true;TrustServerCertificate=True"))
+            using (var connection = new SqlConnection(@"Connection String..."))
             {
                 connection.Open();
 
