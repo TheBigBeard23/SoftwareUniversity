@@ -1,4 +1,6 @@
-﻿using Microsoft.Data.SqlClient;
+﻿using _01.InitialSetup;
+using Microsoft.Data.SqlClient;
+
 
 namespace _02.VillainNames
 {
@@ -7,7 +9,7 @@ namespace _02.VillainNames
         static async Task Main(string[] args)
         {
             await using SqlConnection connection =
-                new SqlConnection(@"Server=.;User Id=sa;Password=5048Vlad;Database=MinionsDB;MultipleActiveResultSets=True;TrustServerCertificate=True");
+                new SqlConnection(Configuration.ConnectionString("MinionsDB"));
             await connection.OpenAsync();
 
             SqlCommand sqlCommand = 

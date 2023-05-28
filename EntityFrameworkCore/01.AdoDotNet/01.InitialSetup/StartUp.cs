@@ -8,7 +8,7 @@
         public static void Main()
         {
             // Create database
-            using (var connection = new SqlConnection(@"Connection String..."))
+            using (var connection = new SqlConnection(Configuration.ConnectionString("")))
             {
                 connection.Open();
 
@@ -17,7 +17,7 @@
                 ExecNonQuery(createDbQuery, connection);
             }
 
-            using (var connection = new SqlConnection(Configuration.ConnectionString))
+            using (var connection = new SqlConnection(Configuration.ConnectionString("MinionsDB")))
             {
                 connection.Open();
 
