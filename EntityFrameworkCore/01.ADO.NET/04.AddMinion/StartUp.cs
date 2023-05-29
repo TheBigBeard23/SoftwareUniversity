@@ -22,17 +22,28 @@ namespace _04.AddMinion
             int age = int.Parse(minionInfo[1]);
             string minionName = minionInfo[0];
 
-            int? townId = await GetTownId(townName, connection);
-            int? villainId = await GetVillainId(villainName, connection);
-            int? minionId = await GetMinionId(minionName, age, townId, connection);
+            SqlTransaction sqlTransaction = connection.BeginTransaction();
 
-            await AddMinionToVillain(minionId, villainId, minionName, villainName, connection);
+            try
+            {
+                int? townId = await GetTownId(townName, connection, sqlTransaction);
+                int? villainId = await GetVillainId(villainName, connection, sqlTransaction);
+                int? minionId = await GetMinionId(minionName, age, townId, connection, sqlTransaction);
+
+                await AddMinionToVillain(minionId, villainId, minionName, villainName, connection, sqlTransaction);
+                await sqlTransaction.CommitAsync();
+            }
+            catch (Exception ex)
+            {
+                await sqlTransaction.RollbackAsync();
+            }
+
         }
 
-        private static async Task AddMinionToVillain(int? minionId, int? villainId, string minionName, string villainName, SqlConnection connection)
+        private static async Task AddMinionToVillain(int? minionId, int? villainId, string minionName, string villainName, SqlConnection connection, SqlTransaction sqlTransaction)
         {
             SqlCommand addMinionToVillainCmd =
-                 new SqlCommand(SqlQueries.AddMinionToVillain, connection);
+                 new SqlCommand(SqlQueries.AddMinionToVillain, connection, sqlTransaction);
             addMinionToVillainCmd.Parameters.AddWithValue("@minionId", minionId);
             addMinionToVillainCmd.Parameters.AddWithValue("@villainId", villainId);
 
@@ -40,10 +51,10 @@ namespace _04.AddMinion
 
             Console.WriteLine($"Successfully added {minionName} to be minion of {villainName}.");
         }
-        private static async Task<int?> GetMinionId(string minionName, int age, int? townId, SqlConnection connection)
+        private static async Task<int?> GetMinionId(string minionName, int age, int? townId, SqlConnection connection, SqlTransaction sqlTransaction)
         {
             SqlCommand getMinionId =
-                new SqlCommand(SqlQueries.GetMinionId, connection);
+                new SqlCommand(SqlQueries.GetMinionId, connection, sqlTransaction);
             getMinionId.Parameters.AddWithValue("@Name", minionName);
 
             int? minionId = (int?)await getMinionId.ExecuteScalarAsync();
@@ -51,7 +62,7 @@ namespace _04.AddMinion
             if (minionId != null)
             {
                 SqlCommand addMinion =
-                    new SqlCommand(SqlQueries.AddMinion, connection);
+                    new SqlCommand(SqlQueries.AddMinion, connection, sqlTransaction);
                 addMinion.Parameters.AddWithValue("@name", minionName);
                 addMinion.Parameters.AddWithValue("@age", age);
                 addMinion.Parameters.AddWithValue("@townId", townId);
@@ -61,10 +72,10 @@ namespace _04.AddMinion
 
             return minionId;
         }
-        private static async Task<int?> GetTownId(string townName, SqlConnection connection)
+        private static async Task<int?> GetTownId(string townName, SqlConnection connection, SqlTransaction sqlTransaction)
         {
             SqlCommand getTownIdCmd =
-                new SqlCommand(SqlQueries.GetTownId, connection);
+                new SqlCommand(SqlQueries.GetTownId, connection, sqlTransaction);
             getTownIdCmd.Parameters.AddWithValue("@townName", townName);
 
             int? townId = (int?)await getTownIdCmd.ExecuteScalarAsync();
@@ -72,7 +83,7 @@ namespace _04.AddMinion
             if (townId == null)
             {
                 SqlCommand addTown =
-                    new SqlCommand(SqlQueries.AddTown, connection);
+                    new SqlCommand(SqlQueries.AddTown, connection, sqlTransaction);
                 addTown.Parameters.AddWithValue("@townName", townName);
 
                 await addTown.ExecuteNonQueryAsync();
@@ -84,10 +95,10 @@ namespace _04.AddMinion
 
             return townId;
         }
-        private static async Task<int?> GetVillainId(string villainName, SqlConnection connection)
+        private static async Task<int?> GetVillainId(string villainName, SqlConnection connection, SqlTransaction sqlTransaction)
         {
             SqlCommand getVillainId =
-                new SqlCommand(SqlQueries.GetVillainId, connection);
+                new SqlCommand(SqlQueries.GetVillainId, connection, sqlTransaction);
             getVillainId.Parameters.AddWithValue("@Name", villainName);
 
             int? villainId = (int?)await getVillainId.ExecuteScalarAsync();
@@ -95,7 +106,7 @@ namespace _04.AddMinion
             if (villainId == null)
             {
                 SqlCommand addVillain =
-                    new SqlCommand(SqlQueries.AddVillain, connection);
+                    new SqlCommand(SqlQueries.AddVillain, connection, sqlTransaction);
                 addVillain.Parameters.AddWithValue("@villainName", villainName);
 
                 await addVillain.ExecuteNonQueryAsync();
