@@ -12,11 +12,11 @@ namespace _01.InitialSetup
         {
             if (database != "")
             {
-                return @$"Server=.;User Id=sa;Password=5048Vlad;Database={database};TrustServerCertificate=True";
+                return @$"Server=.;User Id=sa;Password=*;Database={database};TrustServerCertificate=True";
             }
             else
             {
-                return @"Server=.;User Id=sa;Password=5048Vlad;TrustServerCertificate=True";
+                return @"Server=.;User Id=sa;Password=*;TrustServerCertificate=True";
             }
         }
     }
