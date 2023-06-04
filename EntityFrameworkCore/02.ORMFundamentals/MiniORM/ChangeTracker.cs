@@ -4,7 +4,7 @@ using System.Reflection.Metadata;
 
 namespace MiniORM
 {
-    internal class ChangeTracker<T>
+    internal class ChangeTracker<T> 
         where T : class, new()
     {
         private readonly List<T> _allEntities;
@@ -54,12 +54,35 @@ namespace MiniORM
                     .Single(e => GetPrimaryKeyValues(primaryKeys, e).SequenceEqual(primaryKeyValues));
 
                 bool isModified = IsModified(proxyEntity, entity);
+
+                if (isModified)
+                {
+                    modifiedEntities.Add(proxyEntity);
+                }
             }
+
+            return modifiedEntities;
         }
 
-        private static IEnumerable<object> GetPrimaryKeyValues(PropertyInfo[] primaryKeys, T proxyEntity)
+        private static IEnumerable<object> GetPrimaryKeyValues(IEnumerable<PropertyInfo> primaryKeys, T proxyEntity)
+
         {
-            throw new NotImplementedException();
+            return primaryKeys
+                .Select(pk => pk.GetValue(proxyEntity));
+        }
+
+        private bool IsModified(T proxyEntity, T entity)
+        {
+            PropertyInfo[] monitoredProperties = typeof(T)
+                .GetProperties()
+                .Where(pi => DbContext.AllowedSqlTypes.Contains(pi.PropertyType))
+                .ToArray();
+
+            PropertyInfo[] modifiedProperties = monitoredProperties
+                .Where(pi => !Equals(pi.GetValue(proxyEntity), pi.GetValue(entity)))
+                .ToArray();
+
+            return modifiedProperties.Any();
         }
 
         private static List<T>? CloneEntities(IEnumerable<T> entities)
