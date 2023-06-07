@@ -1,6 +1,6 @@
 ﻿namespace _01.DatabaseFirst
 {
-    internal class StartUp
+    public class StartUp
     {
         static void Main(string[] args)
         {
