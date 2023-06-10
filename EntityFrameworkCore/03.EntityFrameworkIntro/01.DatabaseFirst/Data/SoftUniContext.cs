@@ -27,7 +27,7 @@ namespace _01.DatabaseFirst.Data
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server=.;User Id=sa;Password=****;Database=SoftUni;TrustServerCertificate=True");
+                optionsBuilder.UseSqlServer("Server=.;User Id=sa;Password=***;Database=SoftUni;TrustServerCertificate=True");
             }
         }
 

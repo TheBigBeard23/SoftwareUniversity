@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.EmployeesFullInformation
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.EmployeesWithSalaryOver50000", "04.EmployeesWithSalaryOver50000\04.EmployeesWithSalaryOver50000.csproj", "{72305A35-CC63-45EF-AA7E-875C256364EA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.EmployeesFromResearchAndDevelopment", "05.EmployeesFromResearchAndDevelopment\05.EmployeesFromResearchAndDevelopment.csproj", "{8D93DB64-8C08-48D1-96B5-8997050E71D8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{72305A35-CC63-45EF-AA7E-875C256364EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{72305A35-CC63-45EF-AA7E-875C256364EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{72305A35-CC63-45EF-AA7E-875C256364EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D93DB64-8C08-48D1-96B5-8997050E71D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D93DB64-8C08-48D1-96B5-8997050E71D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D93DB64-8C08-48D1-96B5-8997050E71D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D93DB64-8C08-48D1-96B5-8997050E71D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
