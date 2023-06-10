@@ -38,8 +38,6 @@ namespace _06.AddingANewAddressAndUpdatingEmployee
                     .Take(10)
                     .ToListAsync();
 
-
-
                 PrintResult(addresses);
 
                 context.Database.RollbackTransactionAsync();
