@@ -31,6 +31,7 @@ namespace _09.Employee147
                     .FirstOrDefaultAsync();
 
                 sb.AppendLine($"{employee147.FirstName} {employee147.LastName} - {employee147.JobTitle}");
+
                 foreach (var p in employee147.Projects.OrderBy(p => p.Name))
                 {
                     sb.AppendLine($"{p.Name}");
