@@ -3,17 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33712.159
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.DatabaseFirst", "01.DatabaseFirst\01.DatabaseFirst.csproj", "{72DD0C7A-64FD-474A-833B-6D7898B9B4BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.DatabaseFirst", "01.DatabaseFirst\01.DatabaseFirst.csproj", "{72DD0C7A-64FD-474A-833B-6D7898B9B4BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.EmployeesFullInformation", "02.EmployeesFullInformation\02.EmployeesFullInformation.csproj", "{47BD28DD-C6B7-4073-998D-138E41D44D92}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.EmployeesFullInformation", "02.EmployeesFullInformation\02.EmployeesFullInformation.csproj", "{47BD28DD-C6B7-4073-998D-138E41D44D92}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.EmployeesWithSalaryOver50000", "04.EmployeesWithSalaryOver50000\04.EmployeesWithSalaryOver50000.csproj", "{72305A35-CC63-45EF-AA7E-875C256364EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04.EmployeesWithSalaryOver50000", "04.EmployeesWithSalaryOver50000\04.EmployeesWithSalaryOver50000.csproj", "{72305A35-CC63-45EF-AA7E-875C256364EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.EmployeesFromResearchAndDevelopment", "05.EmployeesFromResearchAndDevelopment\05.EmployeesFromResearchAndDevelopment.csproj", "{8D93DB64-8C08-48D1-96B5-8997050E71D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05.EmployeesFromResearchAndDevelopment", "05.EmployeesFromResearchAndDevelopment\05.EmployeesFromResearchAndDevelopment.csproj", "{8D93DB64-8C08-48D1-96B5-8997050E71D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.AddingANewAddressAndUpdatingEmployee", "06.AddingANewAddressAndUpdatingEmployee\06.AddingANewAddressAndUpdatingEmployee.csproj", "{8ACE49A9-9614-45D3-A5C9-4F8A37860247}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06.AddingANewAddressAndUpdatingEmployee", "06.AddingANewAddressAndUpdatingEmployee\06.AddingANewAddressAndUpdatingEmployee.csproj", "{8ACE49A9-9614-45D3-A5C9-4F8A37860247}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.EmployeesAndProjects", "07.EmployeesAndProjects\07.EmployeesAndProjects.csproj", "{696C0478-EA8C-4BF8-9962-8FA21875537D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07.EmployeesAndProjects", "07.EmployeesAndProjects\07.EmployeesAndProjects.csproj", "{696C0478-EA8C-4BF8-9962-8FA21875537D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.AddressesByTown", "08.AddressesByTown\08.AddressesByTown.csproj", "{9ADF7158-EEFE-4ED6-A171-A6DB2A9B2B80}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{696C0478-EA8C-4BF8-9962-8FA21875537D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{696C0478-EA8C-4BF8-9962-8FA21875537D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{696C0478-EA8C-4BF8-9962-8FA21875537D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9ADF7158-EEFE-4ED6-A171-A6DB2A9B2B80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9ADF7158-EEFE-4ED6-A171-A6DB2A9B2B80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9ADF7158-EEFE-4ED6-A171-A6DB2A9B2B80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9ADF7158-EEFE-4ED6-A171-A6DB2A9B2B80}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
