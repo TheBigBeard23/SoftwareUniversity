@@ -8,4 +8,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\01.DBFirst\01.DBFirst.csproj" />
+  </ItemGroup>
+
 </Project>

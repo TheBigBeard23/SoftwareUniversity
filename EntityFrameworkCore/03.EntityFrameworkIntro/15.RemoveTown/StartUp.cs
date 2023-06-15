@@ -1,4 +1,8 @@
-﻿namespace _15.RemoveTown
+﻿using _01.DBFirst.Data;
+using _01.DBFirst.Models;
+using Microsoft.EntityFrameworkCore;
+
+namespace _15.RemoveTown
 {
     public class StartUp
     {

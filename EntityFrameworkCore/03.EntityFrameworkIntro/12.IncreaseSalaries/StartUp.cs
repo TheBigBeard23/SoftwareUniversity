@@ -1,4 +1,6 @@
-﻿using System.Text;
+﻿using _01.DBFirst.Data;
+using Microsoft.EntityFrameworkCore;
+using System.Text;
 
 namespace _12.IncreaseSalaries
 {

@@ -1,4 +1,7 @@
-﻿using System.Text;
+﻿using _01.DBFirst.Data;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Query;
+using System.Text;
 
 namespace _14.DeleteProjectById
 {
@@ -12,7 +15,6 @@ namespace _14.DeleteProjectById
 
             int id = int.Parse(Console.ReadLine());
             string result = await DeleteProjectById(context, id);
-            await Console.Out.WriteLineAsync(result);
         }
         private static async Task<string> DeleteProjectById(SoftUniContext context, int id)
         {
@@ -36,10 +38,14 @@ namespace _14.DeleteProjectById
                 var projects = await context.Projects
                     .ToListAsync();
 
+                sb.AppendLine($"{project.Name} (DELETED)");
+
                 foreach (var p in projects)
                 {
                     sb.AppendLine($"{p.Name}");
                 }
+
+                PrintResult(sb.ToString().Trim());
 
                 await Console.Out.WriteLineAsync("Do you want to save changes? Y/N");
                 char choice = char.Parse(Console.ReadLine());
@@ -56,6 +62,11 @@ namespace _14.DeleteProjectById
 
             return sb.ToString().Trim();
 
+        }
+
+        private static void PrintResult(string output)
+        {
+            Console.WriteLine(output);
         }
     }
 

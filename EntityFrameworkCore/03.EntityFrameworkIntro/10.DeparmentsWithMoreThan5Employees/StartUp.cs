@@ -1,4 +1,6 @@
-﻿using System.Text;
+﻿using _01.DBFirst.Data;
+using Microsoft.EntityFrameworkCore;
+using System.Text;
 
 namespace _10.DeparmentsWithMoreThan5Employees
 {

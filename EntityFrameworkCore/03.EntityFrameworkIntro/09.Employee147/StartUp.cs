@@ -1,4 +1,6 @@
-﻿using System.Text;
+﻿using _01.DBFirst.Data;
+using Microsoft.EntityFrameworkCore;
+using System.Text;
 
 namespace _09.Employee147
 {
@@ -24,15 +26,16 @@ namespace _09.Employee147
                         FirstName = e.FirstName,
                         LastName = e.LastName,
                         JobTitle = e.JobTitle,
-                        Projects = e.Projects
+                        Projects = e.EmployeesProjects
+                        .Select(ep => ep.Project.Name)
                     })
                     .FirstOrDefaultAsync();
 
                 sb.AppendLine($"{employee147.FirstName} {employee147.LastName} - {employee147.JobTitle}");
 
-                foreach (var p in employee147.Projects.OrderBy(p => p.Name))
+                foreach (var p in employee147.Projects.OrderBy(p => p))
                 {
-                    sb.AppendLine($"{p.Name}");
+                    sb.AppendLine($"{p}");
                 }
             }
             return sb.ToString().Trim();
