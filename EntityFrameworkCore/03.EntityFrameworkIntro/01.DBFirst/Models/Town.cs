@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.EntityFrameworkCore;
 
-namespace _01.DatabaseFirst.Models
+namespace _01.DBFirst.Models
 {
     public partial class Town
     {
@@ -13,14 +10,9 @@ namespace _01.DatabaseFirst.Models
             Addresses = new HashSet<Address>();
         }
 
-        [Key]
-        [Column("TownID")]
         public int TownId { get; set; }
-        [StringLength(50)]
-        [Unicode(false)]
         public string Name { get; set; } = null!;
 
-        [InverseProperty(nameof(Address.Town))]
         public virtual ICollection<Address> Addresses { get; set; }
     }
 }

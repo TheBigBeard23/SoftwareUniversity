@@ -1,7 +1,4 @@
-﻿using _01.DatabaseFirst.Data;
-using Microsoft.EntityFrameworkCore;
-using System.ComponentModel;
-using System.Text;
+﻿using System.Text;
 
 namespace _11.FindLatest10Projects
 {

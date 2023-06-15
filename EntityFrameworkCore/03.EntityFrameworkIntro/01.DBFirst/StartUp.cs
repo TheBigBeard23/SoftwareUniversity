@@ -1,4 +1,4 @@
-﻿namespace _01.DatabaseFirst
+﻿namespace _01.DBFirst
 {
     public class StartUp
     {

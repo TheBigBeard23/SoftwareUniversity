@@ -1,5 +1,4 @@
-﻿using _01.DatabaseFirst.Data;
-using _01.DatabaseFirst.Models;
+﻿using _01.DBFirst.Data;
 using Microsoft.EntityFrameworkCore;
 using System.Text;
 
@@ -27,9 +26,10 @@ namespace _07.EmployeesAndProjects
                         LastName = e.LastName,
                         ManagerFirstName = e.Manager.FirstName,
                         ManagerLastName = e.Manager.LastName,
-                        Projects = e.Projects.Where(p => p.StartDate.Year >= 2001
-                            && p.StartDate.Year <= 2003)
-
+                        Projects = e.EmployeesProjects
+                        .Where(p => p.Project.StartDate.Year >= 2001
+                                 && p.Project.StartDate.Year <= 2003)
+                        .Select(ep => ep.Project)
 
                     })
                     .Take(10)

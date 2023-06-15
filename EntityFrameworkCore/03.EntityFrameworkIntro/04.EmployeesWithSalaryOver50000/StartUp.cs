@@ -1,5 +1,5 @@
-﻿using _01.DatabaseFirst.Data;
-using _01.DatabaseFirst.Models;
+﻿using _01.DBFirst.Data;
+using _01.DBFirst.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Text;
 

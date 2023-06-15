@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\01.DatabaseFirst\01.DatabaseFirst.csproj" />
+    <ProjectReference Include="..\..\04.EntityFrameworkIntro\01.DBFirst\01.DBFirst.csproj" />
   </ItemGroup>
 
 </Project>
