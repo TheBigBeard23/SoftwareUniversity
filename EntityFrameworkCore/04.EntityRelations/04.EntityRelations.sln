@@ -5,6 +5,10 @@ VisualStudioVersion = 17.6.33712.159
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.StudentSystem", "01.StudentSystem\01.StudentSystem.csproj", "{00175E1C-328B-43C0-980E-D7A727F3FCA2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.FootballBetting", "02.FootballBetting\02.FootballBetting.csproj", "{56C0589B-CDEB-4500-B06E-7C42DAD0A5FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{38C02C7E-0273-4ADF-94CD-E4A233CC9172}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{00175E1C-328B-43C0-980E-D7A727F3FCA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00175E1C-328B-43C0-980E-D7A727F3FCA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00175E1C-328B-43C0-980E-D7A727F3FCA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56C0589B-CDEB-4500-B06E-7C42DAD0A5FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56C0589B-CDEB-4500-B06E-7C42DAD0A5FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56C0589B-CDEB-4500-B06E-7C42DAD0A5FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56C0589B-CDEB-4500-B06E-7C42DAD0A5FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38C02C7E-0273-4ADF-94CD-E4A233CC9172}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38C02C7E-0273-4ADF-94CD-E4A233CC9172}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38C02C7E-0273-4ADF-94CD-E4A233CC9172}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38C02C7E-0273-4ADF-94CD-E4A233CC9172}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
