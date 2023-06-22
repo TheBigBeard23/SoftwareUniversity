@@ -24,7 +24,7 @@ public class Player
 
     [ForeignKey(nameof(Team))]
     public int? TeamId { get; set; }
-    public virtual Team? Team { get; set; }
+    public virtual Team Team { get; set; }
 
     [ForeignKey(nameof(Position))]
     public int PostitionId { get; set; }

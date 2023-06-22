@@ -3,31 +3,37 @@
 using Common;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
-
-public class Student
+public class Course
 {
-    public Student()
+    public Course()
     {
         StudentCourses = new HashSet<StudentCourse>();
+        Resources = new HashSet<Resource>();
         Homeworks = new HashSet<Homework>();
     }
     [Key]
-    public int StudentId { get; set; }
+    public int CourseId { get; set; }
 
     [Required]
     [Unicode]
-    [MaxLength(ValidationConstants.StudentNameMaxLength)]
+    [MaxLength(ValidationConstants.CourseNameMaxLength)]
     public string Name { get; set; }
 
-    [MaxLength(ValidationConstants.StudentPhoneNumberLength)]
-    public string? PhoneNumber { get; set; }
+    [Required]
+    [Unicode]
+    public string? Description { get; set; }
 
-    public DateTime RegisteredOn { get; set; }
+    public DateTime StartDate { get; set; }
 
-    public DateTime? Birthday { get; set; }
+    public DateTime EndDate { get; set; }
+
+    public decimal? Price { get; set; }
 
     public ICollection<StudentCourse> StudentCourses { get; set; }
 
+    public ICollection<Resource> Resources { get; set; }
+
     public ICollection<Homework> Homeworks { get; set; }
 }
+
 
