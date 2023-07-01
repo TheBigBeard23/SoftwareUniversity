@@ -16,7 +16,7 @@ public class StartUp
 
         DbInitializer.ResetDatabase(context);
 
-        Console.WriteLine("Write Song Duration ");
+        Console.WriteLine("Write Song Duration");
         int duration = int.Parse(Console.ReadLine());
 
         Console.WriteLine(ExportSongsAboveDuration(context, duration));
