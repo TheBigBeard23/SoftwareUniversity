@@ -17,7 +17,7 @@ public class StartUp
 
 
         //int input = int.Parse(Console.ReadLine());
-        Console.WriteLine(GetTotalProfitByCategory(dbContext));
+        Console.WriteLine(GetMostRecentBooks(dbContext));
     }
 
     //2. Age Restriction
@@ -135,9 +135,9 @@ public class StartUp
     }
 
     //12. Total Book Copies
-    public static string CountCopiesByAuthor(BookShopContext DbContext)
+    public static string CountCopiesByAuthor(BookShopContext dbContext)
     {
-        return String.Join(Environment.NewLine, DbContext.Authors
+        return String.Join(Environment.NewLine, dbContext.Authors
                                     .OrderByDescending(a => a.Books.Sum(b => b.Copies))
                                     .Select(a => $"{a.FirstName} {a.LastName} - {a.Books.Sum(b => b.Copies)}")
                                     .ToArray());
@@ -156,6 +156,24 @@ public class StartUp
                                     .ThenBy(c => c.categoryName)
                                     .Select(c => $"{c.categoryName} {c.categoryTotalProfit:f2}")
                                     .ToArray());
+    }
+
+    //14. Most Recent Books
+    public static string GetMostRecentBooks(BookShopContext dbContext)
+    {
+        return String.Join(Environment.NewLine, dbContext.Categories
+                                                         .Select(c => new
+                                                         {
+                                                             categoryName = c.Name,
+                                                             books = c.CategoryBooks.Select(cb => cb.Book)
+                                                                                    .OrderByDescending(b => b.ReleaseDate)
+                                                                                    .Take(3)
+                                                         })
+                                                         .OrderBy(c => c.categoryName)
+                                                         .Select(c => $"--{c.categoryName}" +
+                                                                      $"{Environment.NewLine}" +
+                                                                      $"{String.Join(Environment.NewLine, c.books.Select(b => $"{b.Title} ({b.ReleaseDate.Value.Year})"))}")
+                                                         .ToArray());
     }
 }
 
