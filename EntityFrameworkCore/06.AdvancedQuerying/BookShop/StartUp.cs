@@ -16,8 +16,8 @@ public class StartUp
         //  DbInitializer.ResetDatabase(dbContext);
 
 
-        string input = Console.ReadLine();
-        Console.WriteLine(GetBooksByAuthor(dbContext, input));
+        int input = int.Parse(Console.ReadLine());
+        Console.WriteLine(CountBooks(dbContext, input));
     }
 
     //2. Age Restriction
@@ -126,6 +126,12 @@ public class StartUp
                                                         .OrderBy(b => b.BookId)
                                                         .Select(b => $"{b.Title} ({b.Author.FirstName} {b.Author.LastName})")
                                                         .ToArray());
+    }
+
+    //11. Count Books
+    public static int CountBooks(BookShopContext dbContext, int titleLength)
+    {
+        return dbContext.Books.Where(b => b.Title.Length > titleLength ).Count();
     }
 }
 
