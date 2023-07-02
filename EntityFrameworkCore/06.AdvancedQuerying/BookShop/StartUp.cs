@@ -16,8 +16,8 @@ public class StartUp
         //  DbInitializer.ResetDatabase(dbContext);
 
 
-
-        Console.WriteLine(GetBooksReleasedBefore(dbContext, "12-04-1992"));
+        string input = Console.ReadLine();
+        Console.WriteLine(GetAuthorNamesEndingIn(dbContext, input));
     }
 
     //2. Age Restriction
@@ -88,13 +88,24 @@ public class StartUp
     //7. Released Before Date
     public static string GetBooksReleasedBefore(BookShopContext dbContext, string date)
     {
-        DateTime inputDate = DateTime.ParseExact(date, "dd-MM-yyyy",CultureInfo.InvariantCulture);
+        DateTime inputDate = DateTime.ParseExact(date, "dd-MM-yyyy", CultureInfo.InvariantCulture);
 
         return String.Join(Environment.NewLine, dbContext.Books
                                                         .Where(b => EF.Functions.DateDiffDay(b.ReleaseDate, inputDate) > 0)
                                                         .OrderByDescending(b => b.ReleaseDate)
                                                         .Select(b => $"{b.Title} - {b.EditionType} - ${b.Price}")
                                                         .ToArray());
+    }
+
+    //8. Author Search
+    public static string GetAuthorNamesEndingIn(BookShopContext dbContext, string input)
+    {
+        return String.Join(Environment.NewLine, dbContext.Authors
+                                                         .Where(a => a.FirstName.EndsWith(input))
+                                                         .OrderBy(a => a.FirstName)
+                                                         .ThenBy(a => a.LastName)
+                                                         .Select(a => $"{a.FirstName} {a.LastName}")
+                                                         .ToArray());
     }
 }
 
