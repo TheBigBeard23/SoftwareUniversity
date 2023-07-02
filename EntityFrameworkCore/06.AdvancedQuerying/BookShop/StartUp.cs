@@ -17,7 +17,7 @@ public class StartUp
 
 
         //int input = int.Parse(Console.ReadLine());
-        Console.WriteLine(GetMostRecentBooks(dbContext));
+        IncreasePrices(dbContext);
     }
 
     //2. Age Restriction
@@ -175,6 +175,21 @@ public class StartUp
                              $"{Environment.NewLine}" +
                              $"{String.Join(Environment.NewLine, c.books.Select(b => $"{b.Title} ({b.ReleaseDate.Value.Year})"))}")
                 .ToArray());
+    }
+
+    //15. Increase Prices
+    public static void IncreasePrices(BookShopContext dbContext)
+    {
+        var books = dbContext.Books
+                             .Where(b => b.ReleaseDate.Value.Year < 2010)
+                             .ToList();
+
+        foreach (var book in books)
+        {
+            book.Price += 5;
+        }
+
+        dbContext.SaveChanges();
     }
 }
 
