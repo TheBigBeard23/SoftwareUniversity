@@ -17,7 +17,7 @@ public class StartUp
 
 
         string input = Console.ReadLine();
-        Console.WriteLine(GetAuthorNamesEndingIn(dbContext, input));
+        Console.WriteLine(GetBooksByAuthor(dbContext, input));
     }
 
     //2. Age Restriction
@@ -65,9 +65,9 @@ public class StartUp
     }
 
     //5. Not Released In
-    public static string GetBooksNotReleasedIn(BookShopContext context, int year)
+    public static string GetBooksNotReleasedIn(BookShopContext dbContext, int year)
     {
-        return String.Join(Environment.NewLine, context.Books
+        return String.Join(Environment.NewLine, dbContext.Books
                                                       .Where(b => b.ReleaseDate.Value.Year != year)
                                                       .OrderBy(b => b.BookId)
                                                       .Select(b => b.Title)
@@ -106,6 +106,26 @@ public class StartUp
                                                          .ThenBy(a => a.LastName)
                                                          .Select(a => $"{a.FirstName} {a.LastName}")
                                                          .ToArray());
+    }
+
+    //9. Book Search
+    public static string GetBookTitlesContaining(BookShopContext dbContext, string input)
+    {
+        return String.Join(Environment.NewLine, dbContext.Books
+                                                      .Where(b => b.Title.Contains(input.ToLower()))
+                                                      .Select(b => b.Title)
+                                                      .OrderBy(t => t)
+                                                      .ToArray());
+    }
+
+    //10. Book Search By Author
+    public static string GetBooksByAuthor(BookShopContext dbContext, string input)
+    {
+        return String.Join(Environment.NewLine, dbContext.Books
+                                                        .Where(b => b.Author.LastName.ToLower().StartsWith(input.ToLower()))
+                                                        .OrderBy(b => b.BookId)
+                                                        .Select(b => $"{b.Title} ({b.Author.FirstName} {b.Author.LastName})")
+                                                        .ToArray());
     }
 }
 
