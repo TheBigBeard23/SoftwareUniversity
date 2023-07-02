@@ -1,9 +1,12 @@
 ﻿namespace BookShop;
 
+using BookShop.Models;
 using BookShop.Models.Enums;
 using Data;
 using Initializer;
+using Microsoft.EntityFrameworkCore;
 using System;
+using System.Globalization;
 
 public class StartUp
 {
@@ -12,12 +15,9 @@ public class StartUp
         using var dbContext = new BookShopContext();
         //  DbInitializer.ResetDatabase(dbContext);
 
-        string[] categories  = Console.ReadLine()
-            .Split(" ",StringSplitOptions.RemoveEmptyEntries)
-            .ToArray();
 
 
-        Console.WriteLine(GetBooksByCategory(dbContext, categories));
+        Console.WriteLine(GetBooksReleasedBefore(dbContext, "12-04-1992"));
     }
 
     //2. Age Restriction
@@ -83,6 +83,18 @@ public class StartUp
                                                          .OrderBy(t => t)
                                                          .ToArray());
 
+    }
+
+    //7. Released Before Date
+    public static string GetBooksReleasedBefore(BookShopContext dbContext, string date)
+    {
+        DateTime inputDate = DateTime.ParseExact(date, "dd-MM-yyyy",CultureInfo.InvariantCulture);
+
+        return String.Join(Environment.NewLine, dbContext.Books
+                                                        .Where(b => EF.Functions.DateDiffDay(b.ReleaseDate, inputDate) > 0)
+                                                        .OrderByDescending(b => b.ReleaseDate)
+                                                        .Select(b => $"{b.Title} - {b.EditionType} - ${b.Price}")
+                                                        .ToArray());
     }
 }
 
