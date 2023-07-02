@@ -16,8 +16,8 @@ public class StartUp
         //  DbInitializer.ResetDatabase(dbContext);
 
 
-        int input = int.Parse(Console.ReadLine());
-        Console.WriteLine(CountBooks(dbContext, input));
+        //int input = int.Parse(Console.ReadLine());
+        Console.WriteLine(GetTotalProfitByCategory(dbContext));
     }
 
     //2. Age Restriction
@@ -131,7 +131,31 @@ public class StartUp
     //11. Count Books
     public static int CountBooks(BookShopContext dbContext, int titleLength)
     {
-        return dbContext.Books.Where(b => b.Title.Length > titleLength ).Count();
+        return dbContext.Books.Where(b => b.Title.Length > titleLength).Count();
+    }
+
+    //12. Total Book Copies
+    public static string CountCopiesByAuthor(BookShopContext DbContext)
+    {
+        return String.Join(Environment.NewLine, DbContext.Authors
+                                    .OrderByDescending(a => a.Books.Sum(b => b.Copies))
+                                    .Select(a => $"{a.FirstName} {a.LastName} - {a.Books.Sum(b => b.Copies)}")
+                                    .ToArray());
+    }
+
+    //13. Profit By Category
+    public static string GetTotalProfitByCategory(BookShopContext dbContext)
+    {
+        return String.Join(Environment.NewLine, dbContext.Categories
+                                    .Select(c => new
+                                    {
+                                        categoryName = c.Name,
+                                        categoryTotalProfit = c.CategoryBooks.Select(cb => cb.Book.Price * cb.Book.Copies).Sum()
+                                    })
+                                    .OrderByDescending(c => c.categoryTotalProfit)
+                                    .ThenBy(c => c.categoryName)
+                                    .Select(c => $"{c.categoryName} {c.categoryTotalProfit:f2}")
+                                    .ToArray());
     }
 }
 
