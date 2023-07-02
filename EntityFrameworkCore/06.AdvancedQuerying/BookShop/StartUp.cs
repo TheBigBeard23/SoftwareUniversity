@@ -161,19 +161,20 @@ public class StartUp
     //14. Most Recent Books
     public static string GetMostRecentBooks(BookShopContext dbContext)
     {
-        return String.Join(Environment.NewLine, dbContext.Categories
-                                                         .Select(c => new
-                                                         {
-                                                             categoryName = c.Name,
-                                                             books = c.CategoryBooks.Select(cb => cb.Book)
-                                                                                    .OrderByDescending(b => b.ReleaseDate)
-                                                                                    .Take(3)
-                                                         })
-                                                         .OrderBy(c => c.categoryName)
-                                                         .Select(c => $"--{c.categoryName}" +
-                                                                      $"{Environment.NewLine}" +
-                                                                      $"{String.Join(Environment.NewLine, c.books.Select(b => $"{b.Title} ({b.ReleaseDate.Value.Year})"))}")
-                                                         .ToArray());
+        return String.Join(Environment.NewLine,
+            dbContext.Categories
+                .Select(c => new
+                {
+                    categoryName = c.Name,
+                    books = c.CategoryBooks.Select(cb => cb.Book)
+                                           .OrderByDescending(b => b.ReleaseDate)
+                                           .Take(3)
+                })
+                .OrderBy(c => c.categoryName)
+                .Select(c => $"--{c.categoryName}" +
+                             $"{Environment.NewLine}" +
+                             $"{String.Join(Environment.NewLine, c.books.Select(b => $"{b.Title} ({b.ReleaseDate.Value.Year})"))}")
+                .ToArray());
     }
 }
 
