@@ -12,10 +12,10 @@ public class StartUp
         using var dbContext = new BookShopContext();
         //  DbInitializer.ResetDatabase(dbContext);
 
-        var titles = GetGoldenBooks(dbContext);
-        Console.WriteLine(titles);
+        Console.WriteLine(GetBooksByPrice(dbContext));
     }
 
+    //2. Age Restriction
     public static string GetBooksByAgeRestriction(BookShopContext dbContext, string command)
     {
         try
@@ -37,6 +37,7 @@ public class StartUp
 
     }
 
+    //3. Golden Books
     public static string GetGoldenBooks(BookShopContext dbContext)
     {
         var booksTitles = dbContext.Books
@@ -46,6 +47,16 @@ public class StartUp
             .ToArray();
 
         return String.Join(Environment.NewLine, booksTitles);
+    }
+
+    //4. Books by Price
+    public static string GetBooksByPrice(BookShopContext dbContext)
+    {
+        return String.Join(Environment.NewLine, dbContext.Books
+                                                        .Where(b => b.Price > 40)
+                                                        .OrderByDescending(b => b.Price)
+                                                        .Select(b => $"{b.Title} - ${b.Price:f2}")
+                                                        .ToArray());
     }
 }
 
