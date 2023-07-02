@@ -12,7 +12,12 @@ public class StartUp
         using var dbContext = new BookShopContext();
         //  DbInitializer.ResetDatabase(dbContext);
 
-        Console.WriteLine(GetBooksByPrice(dbContext));
+        string[] categories  = Console.ReadLine()
+            .Split(" ",StringSplitOptions.RemoveEmptyEntries)
+            .ToArray();
+
+
+        Console.WriteLine(GetBooksByCategory(dbContext, categories));
     }
 
     //2. Age Restriction
@@ -57,6 +62,27 @@ public class StartUp
                                                         .OrderByDescending(b => b.Price)
                                                         .Select(b => $"{b.Title} - ${b.Price:f2}")
                                                         .ToArray());
+    }
+
+    //5. Not Released In
+    public static string GetBooksNotReleasedIn(BookShopContext context, int year)
+    {
+        return String.Join(Environment.NewLine, context.Books
+                                                      .Where(b => b.ReleaseDate.Value.Year != year)
+                                                      .OrderBy(b => b.BookId)
+                                                      .Select(b => b.Title)
+                                                      .ToArray());
+    }
+
+    //6. Book Titles by Category
+    public static string GetBooksByCategory(BookShopContext dbContext, string[] categories)
+    {
+        return String.Join(Environment.NewLine, dbContext.BooksCategories
+                                                         .Where(bc => categories.Contains(bc.Category.Name))
+                                                         .Select(bc => bc.Book.Title)
+                                                         .OrderBy(t => t)
+                                                         .ToArray());
+
     }
 }
 
