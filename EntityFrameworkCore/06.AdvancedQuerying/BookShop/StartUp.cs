@@ -17,7 +17,7 @@ public class StartUp
 
 
         //int input = int.Parse(Console.ReadLine());
-        IncreasePrices(dbContext);
+        Console.WriteLine(RemoveBooks(dbContext));
     }
 
     //2. Age Restriction
@@ -190,6 +190,22 @@ public class StartUp
         }
 
         dbContext.SaveChanges();
+    }
+
+    //16. Remove Books
+    public static int RemoveBooks(BookShopContext dbContext)
+    {
+        var books = dbContext.Books
+                                   .Where(b => b.Copies < 4200)
+                                   .ToArray();
+
+        int count = books.Count();
+
+        dbContext.RemoveRange(books);
+        dbContext.SaveChanges();
+
+        return count;
+
     }
 }
 
