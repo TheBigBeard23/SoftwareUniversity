@@ -12,7 +12,6 @@
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
-*.Configuration.cs
 
 # Mono auto generated files
 mono_crash.*
@@ -352,3 +351,4 @@ MigrationBackup/
 
 #Configuration files
 Common/
+Configuration.cs
