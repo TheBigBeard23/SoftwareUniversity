@@ -20,8 +20,8 @@
 
             ProductShopContext context = new ProductShopContext();
             
-            string inputJson = File.ReadAllText("../../../Datasets/users.json");
-            string result = ImportUsers(context, inputJson);
+            string inputJson = File.ReadAllText("../../../Datasets/products.json");
+            string result = ImportProducts(context, inputJson);
             
             Console.WriteLine(result);
         }
@@ -41,6 +41,17 @@
             context.SaveChanges();
 
             return $"Successfully imported {validUsers.Count} users";
+        }
+        public static string ImportProducts(ProductShopContext context, string inputJson)
+        {
+            ImportProductDto[] productDtos = JsonConvert.DeserializeObject<ImportProductDto[]>(inputJson);
+
+            ICollection<Product> products = mapper.Map<Product[]>(productDtos);
+
+            context.Products.AddRange(products);
+            context.SaveChanges();
+
+            return $"Successfully imported {products.Count} products";
         }
     }
 }
