@@ -28,7 +28,7 @@
             };
 
             ProductShopContext context = new ProductShopContext();
-
+           // string json = File.ReadAllText("../../../Datasets/categories-products.json");
 
             string result = GetSoldProducts(context);
 
@@ -100,11 +100,13 @@
 
             foreach (var categoryProductDto in categoryProductDtos)
             {
-                if (context.Categories.Any(c => c.Id == categoryProductDto.CategoryId) &&
-                    context.Products.Any(p => p.Id == categoryProductDto.ProductId))
+                if (!context.Categories.Any(c => c.Id == categoryProductDto.CategoryId) ||
+                    !context.Products.Any(p => p.Id == categoryProductDto.ProductId))
                 {
-                    validEntities.Add(mapper.Map<CategoryProduct>(categoryProductDto));
+                    continue;
                 }
+
+                validEntities.Add(mapper.Map<CategoryProduct>(categoryProductDto));
             }
 
             context.CategoriesProducts.AddRange(validEntities);
@@ -130,10 +132,10 @@
         }
 
         //6. Export Sold Products
-        public static string GetSoldProducts(ProductShopContext ctx)
+        public static string GetSoldProducts(ProductShopContext context)
         {
-            var usersWithSoldProducts = ctx.Users
-                //.Where(u => u.ProductsSold.Any(p => p.Buyer != null))
+            var usersWithSoldProducts = context.Users
+                .Where(u => u.ProductsSold.Any(p => p.Buyer != null))
                 .OrderBy(u => u.LastName)
                 .ThenBy(u => u.FirstName)
                 .Select(u => new
@@ -152,8 +154,35 @@
                 })
                 .AsNoTracking()
                 .ToArray();
-
+       
             return JsonConvert.SerializeObject(usersWithSoldProducts,
+                Formatting.Indented,
+                new JsonSerializerSettings()
+                {
+                    ContractResolver = contractResolver
+                });
+        }
+
+        //7. Export Categories by Products Count
+        public static string GetCategoriesByProductsCount(ProductShopContext context)
+        {
+            var categories = context.Categories
+                .OrderByDescending(c => c.CategoriesProducts.Count)
+                .Select(c => new
+                {
+                    Category = c.Name,
+                    ProductsCount = c.CategoriesProducts.Count,
+                    AvaragePrice = (c.CategoriesProducts.Any() ?
+                    c.CategoriesProducts.Average(cp => cp.Product.Price) : 0)
+                    .ToString("f2"),
+                    TotalRevenue = (c.CategoriesProducts.Any() ?
+                    c.CategoriesProducts.Sum(cp => cp.Product.Price) : 0)
+                    .ToString("f2")
+                })
+                .AsNoTracking()
+                .ToArray();
+
+            return JsonConvert.SerializeObject(categories,
                 Formatting.Indented,
                 new JsonSerializerSettings()
                 {
