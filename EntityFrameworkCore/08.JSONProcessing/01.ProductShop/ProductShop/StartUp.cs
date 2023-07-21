@@ -28,9 +28,9 @@
             };
 
             ProductShopContext context = new ProductShopContext();
-           // string json = File.ReadAllText("../../../Datasets/categories-products.json");
+            // string json = File.ReadAllText("../../../Datasets/categories-products.json");
 
-            string result = GetSoldProducts(context);
+            string result = GetUsersWithProducts(context);
 
             Console.WriteLine(result);
         }
@@ -154,7 +154,7 @@
                 })
                 .AsNoTracking()
                 .ToArray();
-       
+
             return JsonConvert.SerializeObject(usersWithSoldProducts,
                 Formatting.Indented,
                 new JsonSerializerSettings()
@@ -172,12 +172,10 @@
                 {
                     Category = c.Name,
                     ProductsCount = c.CategoriesProducts.Count,
-                    AvaragePrice = (c.CategoriesProducts.Any() ?
-                    c.CategoriesProducts.Average(cp => cp.Product.Price) : 0)
-                    .ToString("f2"),
-                    TotalRevenue = (c.CategoriesProducts.Any() ?
-                    c.CategoriesProducts.Sum(cp => cp.Product.Price) : 0)
-                    .ToString("f2")
+                    AvaragePrice = Math.Round((c.CategoriesProducts.Any() ?
+                    c.CategoriesProducts.Average(cp => cp.Product.Price) : 0), 2),
+                    TotalRevenue = Math.Round((c.CategoriesProducts.Any() ?
+                    c.CategoriesProducts.Sum(cp => cp.Product.Price) : 0), 2)
                 })
                 .AsNoTracking()
                 .ToArray();
@@ -187,6 +185,49 @@
                 new JsonSerializerSettings()
                 {
                     ContractResolver = contractResolver
+                });
+        }
+
+        //8. Export Users and Products
+        public static string GetUsersWithProducts(ProductShopContext context)
+        {
+            var usersWithSoldProducts = context.Users
+                .Where(u => u.ProductsSold
+                              .Any(p => p.Buyer != null))
+                .Select(u => new
+                {
+                    FirstName = u.FirstName,
+                    LastName = u.LastName,
+                    Age = u.Age,
+                    SoldProducts = new
+                    {
+                        Count = u.ProductsSold.Count,
+                        Products = u.ProductsSold
+                                                .Select(p => new
+                                                {
+                                                    Name = p.Name,
+                                                    Price = p.Price
+                                                })
+                    }
+                })
+                .OrderByDescending(u=>u.SoldProducts.Count)
+                .AsNoTracking()
+                .ToArray();
+
+
+            var output = new
+            {
+                UsersCount = usersWithSoldProducts.Count(),
+                Users = usersWithSoldProducts
+
+            };
+
+            return JsonConvert.SerializeObject(output,
+                Formatting.Indented,
+                new JsonSerializerSettings()
+                {
+                    ContractResolver = contractResolver,
+                    NullValueHandling = NullValueHandling.Ignore
                 });
         }
     }
