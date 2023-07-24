@@ -20,8 +20,8 @@ namespace CarDealer
             }));
 
             CarDealerContext context = new CarDealerContext();
-            string xml = File.ReadAllText("../../../Datasets/customers.xml");
-            string result = ImportCustomers(context, xml);
+            string xml = File.ReadAllText("../../../Datasets/sales.xml");
+            string result = ImportSales(context, xml);
             Console.WriteLine(result);
         }
 
@@ -141,6 +141,31 @@ namespace CarDealer
             context.SaveChanges();
 
             return $"Successfully imported {validCustomers.Count} customers!";
+        }
+
+        //05. Import Sales
+        public static string ImportSales(CarDealerContext context, string inputXml)
+        {
+            XmlHelper xmlHelper = new XmlHelper();
+
+            ImportSaleDto[] saleDtos = xmlHelper.Deserialize<ImportSaleDto[]>(inputXml, "Sales");
+
+            ICollection<Sale> validSales = new HashSet<Sale>();
+            
+            foreach (ImportSaleDto saleDto in saleDtos)
+            {
+
+                if (context.Cars.Any(c => c.Id == saleDto.CarId) &&
+                    context.Customers.Any(c => c.Id == saleDto.CustomerId))
+                {
+                    validSales.Add(mapper.Map<Sale>(saleDto));  
+                }
+            }
+
+            context.Sales.AddRange(validSales);
+            context.SaveChanges();
+
+            return $"Successfully importe+d {validSales.Count} sales";
         }
     }
 }
