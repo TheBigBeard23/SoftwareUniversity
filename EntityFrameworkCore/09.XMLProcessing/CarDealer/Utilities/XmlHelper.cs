@@ -12,9 +12,9 @@
             XmlSerializer xmlSerializer =
                 new XmlSerializer(typeof(T), xmlRoot);
 
-            StringReader sr = new StringReader(inputXml);
+            using StringReader sr = new StringReader(inputXml);
 
-            
+
             T deserializedObject =
                 (T)xmlSerializer.Deserialize(sr);
 
@@ -28,13 +28,13 @@
             XmlSerializer xmlSerializer =
                 new XmlSerializer(typeof(T[]), xmlRoot);
 
-            StringReader sr = new StringReader(inputXml);
+            using StringReader sr = new StringReader(inputXml);
 
 
-            T[] deserializedObject =
+            T[] deserializedDtos =
                 (T[])xmlSerializer.Deserialize(sr);
 
-            return deserializedObject;
+            return deserializedDtos;
         }
     }
 }

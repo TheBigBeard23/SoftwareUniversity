@@ -10,6 +10,11 @@ namespace CarDealer
         {
             // Supplier
             this.CreateMap<ImportSupplierDto, Supplier>();
+
+            //Part
+            this.CreateMap<ImportPartDto, Part>()
+                .ForMember(d => d.SupplierId,
+                opt => opt.MapFrom(s => s.SupplierId.Value));
         }
     }
 }
