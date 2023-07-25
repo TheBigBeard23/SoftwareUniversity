@@ -11,6 +11,9 @@ namespace CarDealer
         {
             // Supplier
             this.CreateMap<ImportSupplierDto, Supplier>();
+            this.CreateMap<Supplier, ExportLocalSupplierDto>()
+                .ForMember(d => d.PartCount, opt => opt
+                .MapFrom(s => s.Parts.Count));
 
             //Part
             this.CreateMap<ImportPartDto, Part>()
