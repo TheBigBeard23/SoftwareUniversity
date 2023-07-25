@@ -64,6 +64,7 @@
             XmlSerializer xmlSerializer = new XmlSerializer(typeof(T[]), xmlRoot);
 
             using StringWriter writer = new StringWriter(sb);
+            
             xmlSerializer.Serialize(writer, obj, namespaces);
 
             return sb.ToString().TrimEnd();

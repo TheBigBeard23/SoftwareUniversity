@@ -24,7 +24,7 @@ namespace CarDealer
 
             CarDealerContext context = new CarDealerContext();
             //string xml = File.ReadAllText("../../../Datasets/sales.xml");
-            string result = GetCarsWithDistance(context);
+            string result = GetCarsFromMakeBmw(context);
             Console.WriteLine(result);
         }
 
@@ -187,8 +187,22 @@ namespace CarDealer
                 .ToArray();
 
 
-
             return xmlHelper.Serialize<ExportCarDto[]>(cars, "cars");
+        }
+
+        //15.Export Cars from Make BMW
+        public static string GetCarsFromMakeBmw(CarDealerContext context)
+        {
+            XmlHelper xmlHelper = new XmlHelper();
+
+            ExportCarBmwDto[] bmwCars = context.Cars
+                .Where(c => c.Make == "BMW")
+                .OrderBy(c => c.Model)
+                .ThenByDescending(c => c.TravelledDistance)
+                .ProjectTo<ExportCarBmwDto>(mapper.ConfigurationProvider)
+                .ToArray();
+
+            return xmlHelper.Serialize<ExportCarBmwDto[]>(bmwCars, "cars");
         }
     }
 }
