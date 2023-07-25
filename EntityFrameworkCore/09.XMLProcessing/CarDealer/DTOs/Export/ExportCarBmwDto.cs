@@ -14,7 +14,7 @@ namespace CarDealer.DTOs.Export
         public int Id { get; set; }
 
         [XmlAttribute("model")]
-        public string Model { get; set; }
+        public string Model { get; set; } = null!;
 
         [XmlAttribute("traveled-distance")]
         public long TravelledDistance { get; set; }

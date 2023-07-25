@@ -24,7 +24,7 @@ namespace CarDealer
 
             CarDealerContext context = new CarDealerContext();
             //string xml = File.ReadAllText("../../../Datasets/sales.xml");
-            string result = GetLocalSuppliers(context);
+            string result = GetTotalSalesByCustomer(context);
             Console.WriteLine(result);
         }
 
@@ -218,5 +218,38 @@ namespace CarDealer
 
             return xmlHelper.Serialize<ExportLocalSupplierDto>(localSupplierDto, "suppliers");
         }
+
+        //17. Export Cars with Their List of Parts
+        public static string GetCarsWithTheirListOfParts(CarDealerContext context)
+        {
+            XmlHelper xmlHelper = new XmlHelper();
+
+            ExportCarWithPartsDto[] exportCarWithPartsDtos = context
+                .Cars
+                .OrderByDescending(c => c.TravelledDistance)
+                .ThenBy(c => c.Model)
+                .Take(5)
+                .ProjectTo<ExportCarWithPartsDto>(mapper.ConfigurationProvider)
+                .ToArray();
+
+            return xmlHelper.Serialize<ExportCarWithPartsDto>(exportCarWithPartsDtos, "cars");
+        }
+
+        //18. Export Total Sales by Customer
+        public static string GetTotalSalesByCustomer(CarDealerContext context)
+        {
+            XmlHelper xmlHelper = new XmlHelper();
+
+            ExportCustomerDto[] exportCustomerDto = context
+                .Customers
+                .Where(c => c.Sales.Count > 0)
+                .ProjectTo<ExportCustomerDto>(mapper.ConfigurationProvider)
+                .OrderByDescending(c => c.SpendMoney)
+                .ToArray();
+
+            return xmlHelper.Serialize<ExportCustomerDto>(exportCustomerDto, "customers");
+
+        }
+
     }
 }

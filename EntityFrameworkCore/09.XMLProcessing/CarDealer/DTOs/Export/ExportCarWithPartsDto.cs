@@ -1,25 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 
-namespace CarDealer.DTOs.Import
+namespace CarDealer.DTOs.Export
 {
-    [XmlType("Car")]
-    public class ImportCarDto
+    [XmlType("car")]
+    public class ExportCarWithPartsDto
     {
-        [XmlElement("make")]
+        [XmlAttribute("make")]
         public string Make { get; set; } = null!;
 
-        [XmlElement("model")]
+        [XmlAttribute("model")]
         public string Model { get; set; } = null!;
 
-        [XmlElement("traveledDistance")]
+        [XmlAttribute("traveled-distance")]
         public long TravelledDistance { get; set; }
 
         [XmlArray("parts")]
-        public ImportCarPartDto[] Parts { get; set; } = null!;
+        public ExportPartDto[] Parts { get; set; } = null!;
     }
 }

@@ -7,16 +7,13 @@ using System.Xml.Serialization;
 
 namespace CarDealer.DTOs.Export
 {
-    [XmlType("supplier")]
-    public class ExportLocalSupplierDto
+    [XmlType("part")]
+    public class ExportPartDto
     {
-        [XmlAttribute("id")]
-        public int Id { get; set; }
-
         [XmlAttribute("name")]
         public string Name { get; set; } = null!;
 
-        [XmlAttribute("parts-count")]
-        public int  PartCount { get; set; }
+        [XmlAttribute("price")]
+        public decimal Price  { get; set; }
     }
 }
