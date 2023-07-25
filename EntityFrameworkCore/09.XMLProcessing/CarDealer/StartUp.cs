@@ -1,10 +1,13 @@
 ﻿using AutoMapper;
+using AutoMapper.QueryableExtensions;
 using CarDealer.Data;
+using CarDealer.DTOs.Export;
 using CarDealer.DTOs.Import;
 using CarDealer.Models;
 using CarDealer.Utilities;
 using System.Data.Common;
 using System.Runtime.CompilerServices;
+using System.Text;
 using System.Xml.Serialization;
 
 namespace CarDealer
@@ -20,14 +23,14 @@ namespace CarDealer
             }));
 
             CarDealerContext context = new CarDealerContext();
-            string xml = File.ReadAllText("../../../Datasets/sales.xml");
-            string result = ImportSales(context, xml);
+            //string xml = File.ReadAllText("../../../Datasets/sales.xml");
+            string result = GetCarsWithDistance(context);
             Console.WriteLine(result);
         }
 
         //---------------- Import Data ----------------
 
-        //01. Import Users
+        //09. Import Users
         public static string ImportSuppliers(CarDealerContext context, string inputXml)
         {
             XmlHelper xmlHelper = new XmlHelper();
@@ -56,7 +59,7 @@ namespace CarDealer
             return $"Successfully imported {validSuppliers.Count} suppliers!";
         }
 
-        //02. Import Products
+        //10. Import Parts
         public static string ImportParts(CarDealerContext context, string inputXml)
         {
             XmlHelper xmlHelper = new XmlHelper();
@@ -82,7 +85,7 @@ namespace CarDealer
             return $"Successfully imported {validParts.Count} parts!";
         }
 
-        //03. Import Cars
+        //11. Import Cars
         public static string ImportCars(CarDealerContext context, string inputXml)
         {
             XmlHelper xmlHelper = new XmlHelper();
@@ -121,7 +124,7 @@ namespace CarDealer
             return $"Successfully imported {validCars.Count} cars!";
         }
 
-        //04. Import Customers
+        //12. Import Customers
         public static string ImportCustomers(CarDealerContext context, string inputXml)
         {
             XmlHelper xmlHelper = new XmlHelper();
@@ -143,7 +146,7 @@ namespace CarDealer
             return $"Successfully imported {validCustomers.Count} customers!";
         }
 
-        //05. Import Sales
+        //13. Import Sales
         public static string ImportSales(CarDealerContext context, string inputXml)
         {
             XmlHelper xmlHelper = new XmlHelper();
@@ -151,21 +154,41 @@ namespace CarDealer
             ImportSaleDto[] saleDtos = xmlHelper.Deserialize<ImportSaleDto[]>(inputXml, "Sales");
 
             ICollection<Sale> validSales = new HashSet<Sale>();
-            
+
             foreach (ImportSaleDto saleDto in saleDtos)
             {
 
                 if (context.Cars.Any(c => c.Id == saleDto.CarId) &&
                     context.Customers.Any(c => c.Id == saleDto.CustomerId))
                 {
-                    validSales.Add(mapper.Map<Sale>(saleDto));  
+                    validSales.Add(mapper.Map<Sale>(saleDto));
                 }
             }
 
             context.Sales.AddRange(validSales);
             context.SaveChanges();
 
-            return $"Successfully importe+d {validSales.Count} sales";
+            return $"Successfully imported {validSales.Count} sales";
+        }
+
+        //---------------- Query and Export Data -----------------
+
+        //14. Export Cars With Distance
+        public static string GetCarsWithDistance(CarDealerContext context)
+        {
+            XmlHelper xmlHelper = new XmlHelper();
+
+            ExportCarDto[] cars = context.Cars
+                .Where(c => c.TravelledDistance > 2000000)
+                .OrderBy(c => c.Make)
+                .ThenBy(c => c.Model)
+                .Take(10)
+                .ProjectTo<ExportCarDto>(mapper.ConfigurationProvider)
+                .ToArray();
+
+
+
+            return xmlHelper.Serialize<ExportCarDto[]>(cars, "cars");
         }
     }
 }
