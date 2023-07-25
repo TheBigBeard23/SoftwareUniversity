@@ -44,6 +44,14 @@ namespace CarDealer
 
             //Sale
             this.CreateMap<ImportSaleDto, Sale>();
+            this.CreateMap<Sale, ExportSaleWithAppliedDiscount>()
+                .ForMember(d => d.CustomerName, opt => opt
+                .MapFrom(s => s.Customer.Name))
+                .ForMember(d => d.Price, opt => opt
+                .MapFrom(s => s.Car.PartsCars.Sum(pc => pc.Part.Price)))
+                .ForMember(d => d.PriceWithDiscount, opt => opt
+                .MapFrom(s => decimal.Parse(((100 - s.Discount) / 100 * s.Car.PartsCars.Sum(pc => pc.Part.Price))
+                .ToString("F2"))));
         }
     }
 }

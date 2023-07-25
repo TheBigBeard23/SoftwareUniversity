@@ -24,7 +24,7 @@ namespace CarDealer
 
             CarDealerContext context = new CarDealerContext();
             //string xml = File.ReadAllText("../../../Datasets/sales.xml");
-            string result = GetTotalSalesByCustomer(context);
+            string result = GetSalesWithAppliedDiscount(context);
             Console.WriteLine(result);
         }
 
@@ -249,6 +249,19 @@ namespace CarDealer
 
             return xmlHelper.Serialize<ExportCustomerDto>(exportCustomerDto, "customers");
 
+        }
+
+        //19. Export Sales with Applied Discount
+        public static string GetSalesWithAppliedDiscount(CarDealerContext context)
+        {
+            XmlHelper xmlHelper = new XmlHelper();
+
+            ExportSaleWithAppliedDiscount[] exportSaleWithAppliedDiscounts = context
+                .Sales
+                .ProjectTo<ExportSaleWithAppliedDiscount>(mapper.ConfigurationProvider)
+                .ToArray();
+
+            return xmlHelper.Serialize<ExportSaleWithAppliedDiscount>(exportSaleWithAppliedDiscounts, "sales");
         }
 
     }
