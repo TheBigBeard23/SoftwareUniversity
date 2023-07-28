@@ -1,17 +1,14 @@
-﻿using AutoMapper;
-using AutoMapper.QueryableExtensions;
-using CarDealer.Data;
-using CarDealer.DTOs.Export;
-using CarDealer.DTOs.Import;
-using CarDealer.Models;
-using CarDealer.Utilities;
-using System.Data.Common;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Xml.Serialization;
-
-namespace CarDealer
+﻿namespace CarDealer
 {
+
+    using AutoMapper;
+    using AutoMapper.QueryableExtensions;
+    using CarDealer.Data;
+    using CarDealer.DTOs.Export;
+    using CarDealer.DTOs.Import;
+    using CarDealer.Models;
+    using CarDealer.Utilities;
+
     public class StartUp
     {
         public static IMapper mapper;
@@ -24,7 +21,7 @@ namespace CarDealer
 
             CarDealerContext context = new CarDealerContext();
             //string xml = File.ReadAllText("../../../Datasets/sales.xml");
-            string result = GetSalesWithAppliedDiscount(context);
+            string result = GetTotalSalesByCustomer(context);
             Console.WriteLine(result);
         }
 

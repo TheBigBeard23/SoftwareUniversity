@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Serialization;
+﻿namespace CarDealer.DTOs.Export
 
-namespace CarDealer.DTOs.Export
 {
+    using System.Xml.Serialization;
+
     [XmlType("supplier")]
     public class ExportLocalSupplierDto
     {
@@ -17,6 +13,6 @@ namespace CarDealer.DTOs.Export
         public string Name { get; set; } = null!;
 
         [XmlAttribute("parts-count")]
-        public int  PartCount { get; set; }
+        public int PartCount { get; set; }
     }
 }

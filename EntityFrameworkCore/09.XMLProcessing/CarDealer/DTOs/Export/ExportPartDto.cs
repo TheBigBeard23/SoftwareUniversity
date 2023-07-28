@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Serialization;
+﻿namespace CarDealer.DTOs.Export
 
-namespace CarDealer.DTOs.Export
 {
+    using System.Xml.Serialization;
+
     [XmlType("part")]
     public class ExportPartDto
     {
@@ -14,6 +10,6 @@ namespace CarDealer.DTOs.Export
         public string Name { get; set; } = null!;
 
         [XmlAttribute("price")]
-        public decimal Price  { get; set; }
+        public decimal Price { get; set; }
     }
 }

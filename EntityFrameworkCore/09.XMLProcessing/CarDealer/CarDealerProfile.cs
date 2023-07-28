@@ -1,10 +1,11 @@
-﻿using AutoMapper;
-using CarDealer.DTOs.Export;
-using CarDealer.DTOs.Import;
-using CarDealer.Models;
-
-namespace CarDealer
+﻿namespace CarDealer
 {
+
+    using AutoMapper;
+    using CarDealer.DTOs.Export;
+    using CarDealer.DTOs.Import;
+    using CarDealer.Models;
+
     public class CarDealerProfile : Profile
     {
         public CarDealerProfile()
@@ -39,7 +40,7 @@ namespace CarDealer
                 .MapFrom(s => s.Sales.Count))
                 .ForMember(d => d.SpendMoney, opt => opt
                 .MapFrom(s => s.Sales
-                        .SelectMany(s => s.Car.PartsCars)
+                        .SelectMany(sl => sl.Car.PartsCars)
                         .Sum(p => p.Part.Price)));
 
             //Sale

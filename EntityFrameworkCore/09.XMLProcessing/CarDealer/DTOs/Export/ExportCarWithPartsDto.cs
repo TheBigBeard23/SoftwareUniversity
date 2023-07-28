@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Metadata.Ecma335;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Serialization;
-
-namespace CarDealer.DTOs.Export
+﻿namespace CarDealer.DTOs.Export
 {
+
+    using System.Xml.Serialization;
+
     [XmlType("car")]
     public class ExportCarWithPartsDto
     {
