@@ -352,3 +352,4 @@ MigrationBackup/
 #Configuration files
 Common/
 Configuration.cs
+appsettings.json
