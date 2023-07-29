@@ -19,6 +19,7 @@
         {
             Event entity = new Event()
             {
+                Id = model.Id,
                 Name = model.Name,
                 Start = model.Start,
                 End = model.End,
@@ -50,7 +51,7 @@
                 .ToListAsync();
         }
 
-        public async Task<EventDetailsModel> GetEventAsync(int id)
+        public async Task<EventModel> GetEventAsync(int id)
         {
             Event entity = await repo.GetByIdAsync<Event>(id);
 
@@ -59,8 +60,9 @@
                 throw new ArgumentException("The Id does not exist", nameof(id));
             }
 
-            return new EventDetailsModel()
+            return new EventModel()
             {
+                Id = entity.Id,
                 Name = entity.Name,
                 Start = entity.Start,
                 End = entity.End,
@@ -77,6 +79,7 @@
                 throw new ArgumentException("The Id does not exist", nameof(model.Id));
             }
 
+            entity.Id = model.Id;
             entity.Name = model.Name;
             entity.Start = model.Start;
             entity.End = model.End;

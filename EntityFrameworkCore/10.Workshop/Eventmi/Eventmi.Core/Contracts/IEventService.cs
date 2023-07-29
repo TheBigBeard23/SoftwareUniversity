@@ -17,7 +17,7 @@ namespace Eventmi.Core.Contracts
 
         Task<IEnumerable<EventModel>> GetAllAsync();
 
-        Task<EventDetailsModel> GetEventAsync(int id);
+        Task<EventModel> GetEventAsync(int id);
 
     }
 }
