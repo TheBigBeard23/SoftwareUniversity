@@ -1,9 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using MVCIntroDemo.Models;
-using System.Diagnostics;
-
-namespace MVCIntroDemo.Controllers
+﻿namespace MVCIntroDemo.Controllers
 {
+
+    using Microsoft.AspNetCore.Mvc;
+    using MVCIntroDemo.Models;
+    using System.Diagnostics;
+
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -15,6 +16,7 @@ namespace MVCIntroDemo.Controllers
 
         public IActionResult Index()
         {
+            ViewBag.Message = "Hello World!";
             return View();
         }
 
