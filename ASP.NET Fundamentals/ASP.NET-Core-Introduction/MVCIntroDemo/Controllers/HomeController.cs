@@ -2,7 +2,7 @@
 {
 
     using Microsoft.AspNetCore.Mvc;
-    using MVCIntroDemo.Models;
+    using MVCIntroDemo.ViewModels;
     using System.Diagnostics;
 
     public class HomeController : Controller
@@ -26,6 +26,11 @@
         }
         public IActionResult Numbers()
         {
+            return View();
+        }
+        public IActionResult NumbersToN(int count)
+        {
+            ViewBag.Count = count;
             return View();
         }
         public IActionResult Privacy()
