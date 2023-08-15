@@ -4,17 +4,34 @@
 @{
     ViewData["Title"] = "All Products";
 }
+<div class="container-fluid">
+    <div class="row-cols-4" style="margin: 5px">
+        <form asp-controller="Product" asp-action="All" method="get">
+            <div class="input-group">
+                <input type="search" class="form-control rounded" name="keyword" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                <button type="submit" class="btn btn-outline-primary">search</button>
+            </div>
+        </form>
 
-<div class="card" style="width: 18rem">
-    <div class="card-header">@ViewData["Title"]</div>
-    <ul class="list-group list-group-flush">
-        @foreach (var product in Model)
-        {
-            <li class="list-group-item">@product.Id: @product.Name - @product.Price$</li>
-        }
-    </ul>
+    </div>
+    <div class="row-cols-6" >
+        <div class="col-lg-4">
+            <div class="card" style="width: 18rem">
+                <div class="card-header">@ViewData["Title"]</div>
+                <ul class="list-group list-group-flush">
+                    @foreach (var product in Model)
+                    {
+                        <li class="list-group-item">@product.Id: @product.Name - @product.Price$</li>
+                    }
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-lg-4" style="margin: 5px">
+            <a class="btn btn-primary" asp-controller="Product" asp-action="DownloadProductsInfo">Download products info</a>
+        </div>
+    </div>
 </div>
-<div class="row">
-    <a class="btn btn-primary" asp-controller="Product" asp-action="DownloadProductsInfo">Download products info</a>
-</div>
+
+
 

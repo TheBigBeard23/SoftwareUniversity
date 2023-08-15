@@ -10,9 +10,20 @@
     using static MVCIntroDemo.Seeding.ProductsData;
     public class ProductController : Controller
     {
-        public IActionResult All()
+        public IActionResult All(string keyword)
         {
-            return View(Products);
+            if (String.IsNullOrWhiteSpace(keyword))
+            {
+                return View(Products);
+            }
+            else
+            {
+                IEnumerable<ProductViewModel> foundProducts = Products
+                    .Where(p => p.Name.ToLower().Contains(keyword.ToLower()))
+                    .ToArray();
+
+                return View(foundProducts);
+            }
         }
 
         public IActionResult ById(string id)
