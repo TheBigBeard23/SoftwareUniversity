@@ -1,7 +1,5 @@
-﻿
-namespace TaskBoardApp.Services
+﻿namespace TaskBoardApp.Services
 {
-
     using Microsoft.EntityFrameworkCore;
 
     using TaskBoardApp.Data;
@@ -17,6 +15,7 @@ namespace TaskBoardApp.Services
         {
             this._dbContext = dbContext;
         }
+
         public async Task<IEnumerable<BoardAllViewModel>> AllAsync()
         {
             IEnumerable<BoardAllViewModel> allBoards = await this._dbContext
@@ -37,6 +36,25 @@ namespace TaskBoardApp.Services
                 .ToArrayAsync();
 
             return allBoards;
+        }
+
+        public async Task<IEnumerable<BoardSelectViewModel>> AllForSelectAsync()
+        {
+            return await this._dbContext
+                .Board
+                .Select(b => new BoardSelectViewModel()
+                {
+                    Id = b.Id,
+                    Name = b.Name
+                })
+            .ToArrayAsync();
+        }
+
+        public async Task<bool> ExistsByIdAsync(int id)
+        {
+            return await this._dbContext
+                .Board
+                .AnyAsync(b => b.Id == id);
         }
     }
 }

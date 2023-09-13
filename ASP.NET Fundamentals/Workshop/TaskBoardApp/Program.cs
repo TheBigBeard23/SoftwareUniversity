@@ -31,6 +31,7 @@ namespace TaskBoardApp
                 })
                 .AddEntityFrameworkStores<TaskBoardDbContext>();
 
+            builder.Services.AddScoped<ITaskService,TaskService>(); 
             builder.Services.AddScoped<IBoardService, BoardService>();
             builder.Services.AddControllersWithViews();
 
