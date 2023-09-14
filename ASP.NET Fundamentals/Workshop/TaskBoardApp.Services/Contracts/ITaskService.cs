@@ -4,5 +4,8 @@
     public interface ITaskService
     {
         Task AddAsync(string ownerId, TaskFormModel viewModel);
+
+        Task<TaskDetailsViewModel> GetByIdAsync(string id);
+
     }
 }

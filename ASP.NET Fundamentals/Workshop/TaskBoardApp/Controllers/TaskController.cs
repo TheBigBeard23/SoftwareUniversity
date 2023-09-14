@@ -54,5 +54,21 @@
 
             return this.RedirectToAction("All", "Board");
         }
+
+        [HttpGet]
+        public async Task<IActionResult> Details(string id)
+        {
+            try
+            {
+                TaskDetailsViewModel model =
+                    await this._taskService.GetByIdAsync(id);
+
+                return this.View(model);
+            }
+            catch (Exception)
+            {
+                return this.RedirectToAction("All", "Board");
+            }
+        }
     }
 }
