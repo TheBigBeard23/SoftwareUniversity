@@ -3,11 +3,11 @@
     using Data;
     using Microsoft.EntityFrameworkCore;
     using Services.Contracts;
+    using TaskBoardApp.Web.ViewModels.Board;
     using Web.ViewModels.Task;
     public class TaskService : ITaskService
     {
         private readonly TaskBoardDbContext _dbContext;
-
         public TaskService(TaskBoardDbContext dbContext)
         {
             this._dbContext = dbContext;
@@ -27,7 +27,20 @@
             await this._dbContext.SaveChangesAsync();
         }
 
-        public async Task<TaskDetailsViewModel> GetByIdAsync(string id)
+        public async Task<TaskOwnerViewModel> GetTaskById(string id)
+        {
+            TaskOwnerViewModel task = await _dbContext.Tasks
+                .Select(t => new TaskOwnerViewModel
+                {
+                    Owner = t.Owner.UserName,
+                    OwnerId = t.Owner.Id
+                })
+                .FirstAsync();
+
+            return task;
+        }
+
+        public async Task<TaskDetailsViewModel> GetTaskDetailsByIdAsync(string id)
         {
             TaskDetailsViewModel viewModel = await this._dbContext
                 .Tasks
@@ -41,6 +54,28 @@
                     CreatedOn = t.CreatedOn.ToString("f")
                 })
                 .FirstAsync(t => t.Id == id);
+
+            return viewModel;
+        }
+        public async Task<TaskFormModel> GetTaskEditByIdAsync(string id)
+        {
+            TaskFormModel viewModel = await this._dbContext
+                .Tasks
+                .Select(t => new TaskFormModel
+                {
+                    Title = t.Title,
+                    Description = t.Description,
+                    BoardId = t.BoardId,
+                    AllBoards = _dbContext
+                                          .Board
+                                          .Select(b => new BoardSelectViewModel
+                                          {
+                                              Id = b.Id,
+                                              Name = b.Name
+                                          })
+
+                })
+                .FirstAsync();
 
             return viewModel;
         }

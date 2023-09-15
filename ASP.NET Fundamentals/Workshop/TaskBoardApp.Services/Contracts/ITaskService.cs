@@ -5,7 +5,10 @@
     {
         Task AddAsync(string ownerId, TaskFormModel viewModel);
 
-        Task<TaskDetailsViewModel> GetByIdAsync(string id);
+        Task<TaskDetailsViewModel> GetTaskDetailsByIdAsync(string id);
 
+        Task<TaskFormModel> GetTaskEditByIdAsync(string id);
+
+        Task<TaskOwnerViewModel> GetTaskById(string id);
     }
 }

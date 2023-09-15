@@ -2,7 +2,8 @@
 {
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
-
+    using Microsoft.EntityFrameworkCore;
+    using System.Security.Claims;
     using TaskBoardApp.Extensions;
     using TaskBoardApp.Services.Contracts;
     using TaskBoardApp.Web.ViewModels.Task;
@@ -61,7 +62,7 @@
             try
             {
                 TaskDetailsViewModel model =
-                    await this._taskService.GetByIdAsync(id);
+                    await this._taskService.GetTaskDetailsByIdAsync(id);
 
                 return this.View(model);
             }
@@ -70,5 +71,32 @@
                 return this.RedirectToAction("All", "Board");
             }
         }
+
+        [HttpGet]
+        public async Task<IActionResult> Edit(string id)
+        {
+            try
+            {
+
+                TaskOwnerViewModel task = await _taskService.GetTaskById(id);
+
+                var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+                if (userId != task.OwnerId)
+                {
+                    throw new UnauthorizedAccessException();
+                }
+
+                TaskFormModel viewModel = await _taskService.GetTaskEditByIdAsync(id);
+
+                return View(viewModel);
+
+            }
+            catch (Exception)
+            {
+                return this.RedirectToAction("All", "Board");
+            }
+        }
+
     }
 }
