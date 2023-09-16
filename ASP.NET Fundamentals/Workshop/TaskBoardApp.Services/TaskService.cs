@@ -27,9 +27,21 @@
             await this._dbContext.SaveChangesAsync();
         }
 
+        public async Task EditTask(string id, string title, string description, int boardId)
+        {
+            var task = await this._dbContext.Tasks.FindAsync(new Guid(id));
+
+            task.Title = title;
+            task.Description = description;
+            task.BoardId = boardId;
+
+            await this._dbContext.SaveChangesAsync();
+        }
+
         public async Task<TaskOwnerViewModel> GetTaskById(string id)
         {
             TaskOwnerViewModel task = await _dbContext.Tasks
+                .Where(t => t.Id.ToString() == id)
                 .Select(t => new TaskOwnerViewModel
                 {
                     Owner = t.Owner.UserName,
@@ -61,6 +73,7 @@
         {
             TaskFormModel viewModel = await this._dbContext
                 .Tasks
+                .Where(t => t.Id.ToString() == id)
                 .Select(t => new TaskFormModel
                 {
                     Title = t.Title,
@@ -73,6 +86,7 @@
                                               Id = b.Id,
                                               Name = b.Name
                                           })
+                                          .AsEnumerable()
 
                 })
                 .FirstAsync();

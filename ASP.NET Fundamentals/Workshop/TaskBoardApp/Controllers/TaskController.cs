@@ -6,6 +6,7 @@
     using System.Security.Claims;
     using TaskBoardApp.Extensions;
     using TaskBoardApp.Services.Contracts;
+    using TaskBoardApp.Web.ViewModels.Board;
     using TaskBoardApp.Web.ViewModels.Task;
 
     [Authorize]
@@ -95,6 +96,43 @@
             catch (Exception)
             {
                 return this.RedirectToAction("All", "Board");
+            }
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(string id, TaskFormModel taskModel)
+        {
+            try
+            {
+                TaskOwnerViewModel task = await _taskService.GetTaskById(id);
+
+                var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+                if (userId != task.OwnerId)
+                {
+                    throw new UnauthorizedAccessException();
+                }
+
+                ICollection<BoardAllViewModel> boards = (ICollection<BoardAllViewModel>)await _boardService.AllAsync();
+
+                if (!boards.Any(b => b.Id == taskModel.BoardId.ToString()))
+                {
+                    ModelState.AddModelError(nameof(taskModel.BoardId), "Board does not exist.");
+                }
+
+                if (!ModelState.IsValid)
+                {
+                    taskModel.AllBoards = (IEnumerable<BoardSelectViewModel>?)boards;
+                    return View(taskModel);
+                }
+
+                await _taskService.EditTask(id, taskModel.Title, taskModel.Description, taskModel.BoardId);
+                return RedirectToAction("All", "Board");
+
+            }
+            catch (Exception)
+            {
+                return this.RedirectToAction("Edit", "Task", id);
             }
         }
 

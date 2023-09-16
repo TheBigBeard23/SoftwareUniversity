@@ -6,6 +6,7 @@ namespace TaskBoardApp.Web.ViewModels.Board
     {
         public string Name { get; set; } = null!;
 
+        public string Id { get; set; }
         public ICollection<TaskViewModel> Tasks { get; set; } = null!;
     }
 }

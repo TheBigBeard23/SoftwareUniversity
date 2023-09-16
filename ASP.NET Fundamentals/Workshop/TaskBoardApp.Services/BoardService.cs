@@ -23,6 +23,7 @@
                 .Select(b => new BoardAllViewModel()
                 {
                     Name = b.Name,
+                    Id = b.Id.ToString(),
                     Tasks = b.Tasks
                             .Select(t => new TaskViewModel()
                             {
