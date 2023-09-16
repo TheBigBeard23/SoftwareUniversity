@@ -7,6 +7,8 @@
 
         Task EditTask(string id, string Title, string Description, int BoardId);
 
+        Task DeleteTask(string id);
+
         Task<TaskDetailsViewModel> GetTaskDetailsByIdAsync(string id);
 
         Task<TaskFormModel> GetTaskEditByIdAsync(string id);

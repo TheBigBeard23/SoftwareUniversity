@@ -106,7 +106,7 @@
             {
                 TaskOwnerViewModel task = await _taskService.GetTaskById(id);
 
-                var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                string userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
                 if (userId != task.OwnerId)
                 {
@@ -134,6 +134,44 @@
             {
                 return this.RedirectToAction("Edit", "Task", id);
             }
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Delete(string id)
+        {
+            try
+            {
+                TaskOwnerViewModel task = await _taskService.GetTaskById(id);
+
+                if (task == null)
+                {
+                    throw new BadHttpRequestException("A Task with this ID does not exist");
+                }
+
+                string userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+                if (userId != task.OwnerId)
+                {
+                    throw new UnauthorizedAccessException();
+                }
+
+                TaskDetailsViewModel model = await _taskService.GetTaskDetailsByIdAsync(id);
+
+                return View(model);
+
+            }
+            catch (Exception)
+            {
+                return this.RedirectToAction("All", "Boards");
+            }
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Delete(TaskDetailsViewModel model)
+        {
+            await _taskService.DeleteTask(model.Id);
+
+            return RedirectToAction("All", "Board");
         }
 
     }

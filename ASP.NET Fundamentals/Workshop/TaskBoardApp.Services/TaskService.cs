@@ -27,6 +27,20 @@
             await this._dbContext.SaveChangesAsync();
         }
 
+        public async Task DeleteTask(string id)
+        {
+            var task = await this._dbContext
+                                        .Tasks
+                                        .FirstOrDefaultAsync(t => t.Id.ToString() == id);
+
+            if (task != null)
+            {
+                _dbContext.Remove(task);
+                await _dbContext.SaveChangesAsync();
+
+            }
+        }
+
         public async Task EditTask(string id, string title, string description, int boardId)
         {
             var task = await this._dbContext.Tasks.FindAsync(new Guid(id));
