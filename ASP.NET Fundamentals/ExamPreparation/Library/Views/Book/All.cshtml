@@ -23,6 +23,10 @@
                     <input type="submit" value="Add to Collection" class="fs-6 btn btn-success mb-3 p-2" />
                 </form>
 
+                <form class="input-group-sm" asp-controller="Book" asp-action="Edit" asp-route-id="@book.Id">
+                    <input type="submit" value="Edit Book" class="fs-6 btn btn-primary mb-3 p-2" />
+                </form>
+
                 <form class="input-group-sm delete-form" asp-controller="Book" asp-action="Delete" asp-route-id="@book.Id" method="post">
                     <button type="button" class="fs-6 btn btn-danger mb-3 p-2" data-toggle="modal" data-target="#deleteConfirmationModal">
                         Delete

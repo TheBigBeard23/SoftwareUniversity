@@ -103,6 +103,27 @@ namespace Library.Controllers
             }
         }
 
+        [HttpGet]
+        public async Task<IActionResult> Edit(int id)
+        {
+            BookViewModel? book = await bookService.GetBookByIdAsync(id);
+
+            if (book == null)
+            {
+                return NotFound("The Book does not exist!");
+            }
+
+            AddBookViewModel model = await bookService.GetNewAddBookViewModel();
+            model.Title = book.Title;
+            model.Description = book.Description;
+            model.Author = book.Author;
+            model.Url = book.ImageUrl;
+            model.Rating = book.Rating.ToString();
+
+            return View(model);
+    
+        }
+
 
     }
 }
