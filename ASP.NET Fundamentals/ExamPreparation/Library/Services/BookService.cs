@@ -126,5 +126,20 @@ namespace Library.Services
 
 
         }
+
+        public async Task<bool> DeleteBook(int id)
+        {
+            Book? book = await _dbContext.Books.Where(b => b.Id == id).FirstOrDefaultAsync();
+
+            if (book == null)
+            {
+                return false;
+            }
+
+            _dbContext.Books.Remove(book);
+            await _dbContext.SaveChangesAsync();
+
+            return true;
+        }
     }
 }

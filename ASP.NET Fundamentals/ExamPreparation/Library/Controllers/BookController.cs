@@ -90,6 +90,19 @@ namespace Library.Controllers
 
         }
 
+        [HttpPost]
+        public async Task<IActionResult> Delete(int id)
+        {
+            if (await bookService.DeleteBook(id))
+            {
+                return RedirectToAction(nameof(All));
+            }
+            else
+            {
+                return NotFound("The Book does not exist!");
+            }
+        }
+
 
     }
 }
