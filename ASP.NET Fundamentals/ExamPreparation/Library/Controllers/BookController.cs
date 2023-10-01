@@ -18,7 +18,7 @@ namespace Library.Controllers
 
             return View(models);
         }
-        public async Task<ActionResult> Mine()
+        public async Task<IActionResult> Mine()
         {
             IEnumerable<AllBookViewModel> model = await bookService.GetMyBookAsync(GetUserId());
 
