@@ -141,5 +141,28 @@ namespace Library.Services
 
             return true;
         }
+
+        public async Task<bool> EditBook(int id, AddBookViewModel model)
+        {
+            Book? book = await _dbContext.Books.FirstOrDefaultAsync(b => b.Id == id);
+
+            if (book != null)
+            {
+                book.Author = model.Author;
+                book.Title = model.Title;
+                book.Description = model.Description;
+                book.CategoryId = model.CategoryId;
+                book.Rating = decimal.Parse(model.Rating);
+                book.ImageUrl = model.Url;
+
+                await _dbContext.SaveChangesAsync();
+
+                return true;
+            }
+
+            return false;
+
+        }
+
     }
 }

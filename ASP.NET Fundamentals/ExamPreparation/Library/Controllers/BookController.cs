@@ -121,9 +121,36 @@ namespace Library.Controllers
             model.Rating = book.Rating.ToString();
 
             return View(model);
-    
+
         }
 
+        [HttpPost]
+        public async Task<IActionResult> Edit(int id, AddBookViewModel model)
+        {
+            decimal rating;
+
+            if (!decimal.TryParse(model.Rating, out rating) ||
+               rating < 0 ||
+               rating > 10)
+            {
+                ModelState.AddModelError(nameof(model.Rating), "Rating must be a number between 0 and 10");
+
+                return View(model);
+            }
+
+            if (!ModelState.IsValid)
+            {
+                return View(id);
+            }
+
+            if (!await bookService.EditBook(id, model))
+            {
+                return View(id);
+            }
+
+            return RedirectToAction(nameof(All));
+
+        }
 
     }
 }
