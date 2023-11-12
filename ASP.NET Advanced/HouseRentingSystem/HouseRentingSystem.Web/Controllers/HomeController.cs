@@ -1,8 +1,9 @@
 ﻿namespace HouseRentingSystem.Web.Controllers
 {
-    using Models;
     using Microsoft.AspNetCore.Mvc;
     using System.Diagnostics;
+    using HouseRentingSystem.Web.ViewModels.Home;
+
     public class HomeController : Controller
     {
         public HomeController()
