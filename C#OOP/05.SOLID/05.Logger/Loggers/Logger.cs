@@ -43,7 +43,7 @@ namespace SOLID.Loggers
             {
                 sb.AppendLine(appender.ToString());
             }
-            return sb.ToString().TrimEnd(); ;
+            return sb.ToString().TrimEnd(); 
         }
         private void AppendToAppenders(string date, ReportLevel reportLevel, string message)
         {

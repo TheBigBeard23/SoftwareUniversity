@@ -6,8 +6,8 @@ namespace PizzaCalories
 {
     public class Dough
     {
-        private const double MinWeight = 1;
-        private const double MaxWeight = 200;
+            private const double MinWeight = 1;
+            private const double MaxWeight = 200;
         private const int BaseCaloriesPerGram = 2;
 
         private string flourType;
