@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stealer", "Stealer\Stealer.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommandPattern", "D:\Downloads\Reflection\Reflection-and-Attributes-Skeleton\ReflectionAndAttributes\CommandPattern\CommandPattern.csproj", "{54D3B5C2-0BEA-4111-86D3-CD545437F3C4}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ValidationAttributes", "D:\Downloads\Reflection\Reflection-and-Attributes-Skeleton\ReflectionAndAttributes\ValidationAttributes\ValidationAttributes.csproj", "{549C50F4-4AFC-4A73-ACD7-5F52453C8C9A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{54D3B5C2-0BEA-4111-86D3-CD545437F3C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{54D3B5C2-0BEA-4111-86D3-CD545437F3C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{54D3B5C2-0BEA-4111-86D3-CD545437F3C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{549C50F4-4AFC-4A73-ACD7-5F52453C8C9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{549C50F4-4AFC-4A73-ACD7-5F52453C8C9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{549C50F4-4AFC-4A73-ACD7-5F52453C8C9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{549C50F4-4AFC-4A73-ACD7-5F52453C8C9A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
