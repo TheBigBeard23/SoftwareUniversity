@@ -11,7 +11,7 @@
             this.UserName = userName;
         }
 
-        public string UserName
+        public string UserName      
         {
             get { return userName; }
             private set { userName = value; }
