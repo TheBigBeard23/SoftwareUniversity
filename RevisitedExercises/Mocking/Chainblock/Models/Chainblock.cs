@@ -38,27 +38,62 @@ namespace Chainblock.Models
 
         public bool Contains(ITransaction tx)
         {
-            throw new System.NotImplementedException();
+            if (_transactions.ContainsKey(tx.Id))
+            {
+                ITransaction transaction = _transactions[tx.Id];
+
+                if (transaction.Status == tx.Status &&
+                    transaction.From == tx.From &&
+                    transaction.To == tx.To &&
+                    transaction.Amount == tx.Amount)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public bool Contains(int id)
         {
-            throw new System.NotImplementedException();
+            return _transactions.ContainsKey(id);
         }
 
         public IEnumerable<ITransaction> GetAllInAmountRange(double lo, double hi)
         {
-            throw new System.NotImplementedException();
+            return _transactions
+                .Values
+                .Where(t => t.Amount >= lo && t.Amount <= hi);
         }
 
         public IEnumerable<ITransaction> GetAllOrderedByAmountDescendingThenById()
         {
-            throw new System.NotImplementedException();
+            return _transactions
+                .Values
+                .OrderByDescending(t => t.Amount)
+                .ThenBy(t => t.Id);
         }
 
         public IEnumerable<string> GetAllReceiversWithTransactionStatus(TransactionStatus status)
         {
-            throw new System.NotImplementedException();
+            var result = _transactions
+                .Values
+                .Where(t => t.Status == status)
+                .OrderBy(t => t.Amount)
+                .Select(t => t.To);
+
+            if (result.Count() == 0)
+            {
+                throw new InvalidOperationException($"Receivers with {status} do not exist");
+            }
+
+            return result;
         }
 
         public IEnumerable<string> GetAllSendersWithTransactionStatus(TransactionStatus status)
