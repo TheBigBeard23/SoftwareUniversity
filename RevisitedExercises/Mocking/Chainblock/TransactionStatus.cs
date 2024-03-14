@@ -1,4 +1,4 @@
-﻿namespace Chainblock
+﻿namespace Blockchain
 {
     public enum TransactionStatus
     {

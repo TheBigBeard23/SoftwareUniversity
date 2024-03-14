@@ -1,6 +1,6 @@
-﻿using Chainblock.Contracts;
+﻿using Blockchain.Contracts;
 
-namespace Chainblock.Models
+namespace Blockchain.Models
 {
     public class Transaction : ITransaction
     {

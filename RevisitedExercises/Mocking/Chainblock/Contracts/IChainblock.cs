@@ -1,4 +1,4 @@
-﻿namespace Chainblock.Contracts
+﻿namespace Blockchain.Contracts
 {
     using System.Collections.Generic;
 

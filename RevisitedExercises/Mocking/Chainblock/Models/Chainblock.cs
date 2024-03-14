@@ -1,10 +1,10 @@
-﻿using Chainblock.Contracts;
+﻿using Blockchain.Contracts;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Chainblock.Models
+namespace Blockchain.Models
 {
     public class Chainblock : IChainblock
     {
@@ -21,6 +21,10 @@ namespace Chainblock.Models
             if (!this._transactions.ContainsKey(tx.Id))
             {
                 _transactions[tx.Id] = tx;
+            }
+            else
+            {
+                throw new InvalidOperationException($"Transaction with id: {tx.Id} already exists.");
             }
         }
 
@@ -42,17 +46,12 @@ namespace Chainblock.Models
             {
                 ITransaction transaction = _transactions[tx.Id];
 
-                if (transaction.Status == tx.Status &&
+                return
+                    transaction.Status == tx.Status &&
                     transaction.From == tx.From &&
                     transaction.To == tx.To &&
-                    transaction.Amount == tx.Amount)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
+                    transaction.Amount == tx.Amount;
+
             }
             else
             {
@@ -74,10 +73,14 @@ namespace Chainblock.Models
 
         public IEnumerable<ITransaction> GetAllOrderedByAmountDescendingThenById()
         {
-            return _transactions
+            var transactions = _transactions
                 .Values
                 .OrderByDescending(t => t.Amount)
                 .ThenBy(t => t.Id);
+
+            Validator.ValidateNotEmpty(transactions, "The Chainblock is empty");
+
+            return transactions;
         }
 
         public IEnumerable<string> GetAllReceiversWithTransactionStatus(TransactionStatus status)
@@ -88,67 +91,128 @@ namespace Chainblock.Models
                 .OrderBy(t => t.Amount)
                 .Select(t => t.To);
 
-            if (result.Count() == 0)
-            {
-                throw new InvalidOperationException($"Receivers with {status} do not exist");
-            }
+            Validator<string>.ValidateNotEmpty(result, $"Receivers with {status} status do not exist");
 
             return result;
         }
 
         public IEnumerable<string> GetAllSendersWithTransactionStatus(TransactionStatus status)
         {
-            throw new System.NotImplementedException();
+            var result = _transactions
+               .Values
+               .Where(t => t.Status == status)
+               .OrderBy(t => t.Amount)
+               .Select(t => t.From);
+
+            Validator<string>.ValidateNotEmpty(result, $"Senders with {status} status do not exist");
+
+            return result;
         }
 
         public ITransaction GetById(int id)
         {
-            throw new System.NotImplementedException();
+            if (!Contains(id))
+            {
+                throw new InvalidOperationException($"Transaction with {id} do not exist.");
+            }
+
+            return _transactions[id];
         }
 
         public IEnumerable<ITransaction> GetByReceiverAndAmountRange(string receiver, double lo, double hi)
         {
-            throw new System.NotImplementedException();
+            var result = _transactions
+                .Values
+                .Where(t => t.To == receiver)
+                .Where(t => t.Amount >= lo && t.Amount <= hi);
+
+            Validator<ITransaction>.ValidateNotEmpty(result, "There are not such transactions.");
+
+            return result;
         }
 
         public IEnumerable<ITransaction> GetByReceiverOrderedByAmountThenById(string receiver)
         {
-            throw new System.NotImplementedException();
+            var result = _transactions
+              .Values
+              .Where(t => t.To == receiver)
+              .OrderBy(t => t.Amount)
+              .ThenBy(t => t.Id);
+
+            Validator<ITransaction>.ValidateNotEmpty(result, "There are not such transactions");
+
+            return result;
         }
 
         public IEnumerable<ITransaction> GetBySenderAndMinimumAmountDescending(string sender, double amount)
         {
-            throw new System.NotImplementedException();
+            return _transactions
+              .Values
+              .Where(t => t.From == sender)
+              .Where(t => t.Amount >= amount)
+              .OrderByDescending(t => t.Amount);
         }
 
         public IEnumerable<ITransaction> GetBySenderOrderedByAmountDescending(string sender)
         {
-            throw new System.NotImplementedException();
+            var result = _transactions
+             .Values
+             .Where(t => t.From == sender)
+             .OrderByDescending(t => t.Amount);
+
+            Validator<ITransaction>.ValidateNotEmpty(result, "There are not such transactions");
+
+            return result;
         }
 
         public IEnumerable<ITransaction> GetByTransactionStatus(TransactionStatus status)
         {
-            throw new System.NotImplementedException();
+            var result = _transactions
+            .Values
+             .Where(t => t.Status == status);
+
+            Validator<ITransaction>.ValidateNotEmpty(result, $"Transactions with {status} status does not exist.");
+
+            return result;
+
+
         }
 
         public IEnumerable<ITransaction> GetByTransactionStatusAndMaximumAmount(TransactionStatus status, double amount)
         {
-            throw new System.NotImplementedException();
-        }
+            var result = _transactions
+             .Values
+             .Where(t => t.Status == status)
+             .Where(t => t.Amount <= amount);
 
-        public IEnumerator<ITransaction> GetEnumerator()
-        {
-            throw new System.NotImplementedException();
+            Validator<ITransaction>.ValidateNotEmpty(result, $"Transactions with {status} status does not exist.");
+
+            return result;
         }
 
         public void RemoveTransactionById(int id)
         {
-            throw new System.NotImplementedException();
+            if (Contains(id))
+            {
+                _transactions.Remove(id);
+            }
+            else
+            {
+                throw new InvalidOperationException($"Transaction with {id} does not exist.");
+            }
+        }
+
+        public IEnumerator<ITransaction> GetEnumerator()
+        {
+            foreach (ITransaction transaction in _transactions.Values)
+            {
+                yield return transaction;
+            }
         }
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            throw new System.NotImplementedException();
+            return this.GetEnumerator();
         }
     }
 }
