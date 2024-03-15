@@ -162,6 +162,54 @@ namespace Blockchain.Tests
             }
         }
 
+        [Test]
+        public void GetAllOrderedByAmountDescendingThenById_ThrowsInvalidOperationException()
+        {
+            chainblock.RemoveTransactionById(id);
+
+            InvalidOperationException ex = Assert.Throws<InvalidOperationException>(() =>
+            {
+                chainblock.GetAllOrderedByAmountDescendingThenById();
+            });
+
+            Assert.AreEqual("The Chainblock is empty", ex.Message);
+        }
+
+        [Test]
+        public void GetAllReceiversWithTransactionStatus_ReturnsReceiversWithSpecifiedStatusOrderedByAmount()
+        {
+            chainblock.RemoveTransactionById(id);
+
+            for (int i = 1; i < 6; i++)
+            {
+                chainblock.Add(new Transaction(id + i, status, from, to + i, amount + i));
+            }
+
+            var result = chainblock.GetAllReceiversWithTransactionStatus(status).ToList();
+
+            Assert.AreEqual(5, result.Count());
+
+            for (int i = 1; i < result.Count(); i++)
+            {
+                int prevReceiver = int.Parse(result[i - 1].Substring(result[i - 1].Length - 1, 1));
+                int crnReceiver = int.Parse(result[i].Substring(result[i].Length - 1, 1));
+
+                Assert.IsTrue(prevReceiver < crnReceiver);
+            }
+
+        }
+
+        [Test]
+        public void GetAllReceiversWithTransactionStatus_ThrowsInvalidOperationException()
+        {
+            InvalidOperationException ex = Assert.Throws<InvalidOperationException>(() =>
+            {
+                chainblock.GetAllReceiversWithTransactionStatus(TransactionStatus.Failed);
+            });
+
+            Assert.AreEqual($"Receivers with {TransactionStatus.Failed} status do not exist", ex.Message);
+        }
+
         //[Test]
         //public void GetByTransactionStatus_ReturnsTransactionsWithMatchingStatus()
         //{
