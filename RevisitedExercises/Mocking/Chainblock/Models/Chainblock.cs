@@ -66,9 +66,13 @@ namespace Blockchain.Models
 
         public IEnumerable<ITransaction> GetAllInAmountRange(double lo, double hi)
         {
-            return _transactions
+            var result = _transactions
                 .Values
                 .Where(t => t.Amount >= lo && t.Amount <= hi);
+
+            Validator<ITransaction>.ValidateNotEmpty(result, "The Chainblock is empty");
+
+            return result;
         }
 
         public IEnumerable<ITransaction> GetAllOrderedByAmountDescendingThenById()
@@ -78,7 +82,7 @@ namespace Blockchain.Models
                 .OrderByDescending(t => t.Amount)
                 .ThenBy(t => t.Id);
 
-            Validator.ValidateNotEmpty(transactions, "The Chainblock is empty");
+            Validator<ITransaction>.ValidateNotEmpty(transactions, "The Chainblock is empty");
 
             return transactions;
         }
