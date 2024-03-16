@@ -100,18 +100,18 @@ namespace Blockchain.Models
             return result;
         }
 
-        public IEnumerable<string> GetAllSendersWithTransactionStatus(TransactionStatus status)
-        {
-            var result = _transactions
-               .Values
-               .Where(t => t.Status == status)
-               .OrderBy(t => t.Amount)
-               .Select(t => t.From);
+            public IEnumerable<string> GetAllSendersWithTransactionStatus(TransactionStatus status)
+            {
+                var result = _transactions
+                   .Values
+                   .Where(t => t.Status == status)
+                   .OrderBy(t => t.Amount)
+                   .Select(t => t.From);
 
-            Validator<string>.ValidateNotEmpty(result, $"Senders with {status} status do not exist");
+                Validator<string>.ValidateNotEmpty(result, $"Senders with {status} status do not exist");
 
-            return result;
-        }
+                return result;
+            }
 
         public ITransaction GetById(int id)
         {

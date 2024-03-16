@@ -210,26 +210,66 @@ namespace Blockchain.Tests
             Assert.AreEqual($"Receivers with {TransactionStatus.Failed} status do not exist", ex.Message);
         }
 
-        //[Test]
-        //public void GetByTransactionStatus_ReturnsTransactionsWithMatchingStatus()
-        //{
-        //    IEnumerable<ITransaction> transactions = chainblock.GetByTransactionStatus(status);
+        [Test]
+        public void GetByTransactionStatus_ReturnsTransactionsWithMatchingStatus()
+        {
+            IEnumerable<ITransaction> transactions = chainblock.GetByTransactionStatus(status);
 
-        //    Assert.AreEqual(transactions.Count(), 1);
-        //    Assert.AreEqual(transactions.First(), transaction);
-        //}
-        //[Test]
-        //public void GetByTransactionStatus_ThrowsExceptionForEmptyTransactions()
-        //{
-        //    InvalidOperationException ex = Assert.Throws<InvalidOperationException>(() =>
-        //    {
-        //        IEnumerable<ITransaction> transactions = chainblock.GetByTransactionStatus(TransactionStatus.Failed);
-        //    });
+            Assert.AreEqual(transactions.Count(), 1);
+            Assert.AreEqual(transactions.First(), transaction);
+        }
 
-
-        //    Assert.AreEqual($"Transactions with {TransactionStatus.Failed} status does not exist.", ex.Message);
+        [Test]
+        public void GetByTransactionStatus_ThrowsExceptionForEmptyTransactions()
+        {
+            InvalidOperationException ex = Assert.Throws<InvalidOperationException>(() =>
+            {
+                IEnumerable<ITransaction> transactions = chainblock.GetByTransactionStatus(TransactionStatus.Failed);
+            });
 
 
-        //}
+            Assert.AreEqual($"Transactions with {TransactionStatus.Failed} status does not exist.", ex.Message);
+
+
+        }
+
+        [Test]
+        public void RemoveTransactionById_RemoveCorrectTransaction()
+        {
+            chainblock.RemoveTransactionById(id);
+
+            Assert.IsTrue(chainblock.Count == 0);
+
+        }
+
+        [Test]
+        public void RemoveTransactionById_ThrowsExceptionWhenIdDoesNotExist()
+        {
+            InvalidOperationException ex = Assert.Throws<InvalidOperationException>(() =>
+            {
+                chainblock.RemoveTransactionById(id + 1);
+            });
+
+            Assert.AreEqual($"Transaction with {id} does not exist.", ex.Message);
+        }
+
+        [Test]
+        public void GetEnumerator_ReturnsAllTransactions()
+        {
+            for (int i = 1; i <= 3; i++)
+            {
+                chainblock.Add(new Transaction(id + i, status, from, to, amount + i * 100));
+            }
+
+            var enumerator = chainblock.GetEnumerator();
+
+            for (int i = 0; i < 4; i++)
+            {
+                Assert.IsTrue(enumerator.MoveNext());
+                Assert.AreEqual(id + i, enumerator.Current.Id);
+            }
+
+        }
+
     }
 }
