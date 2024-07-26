@@ -1,7 +1,7 @@
 ﻿namespace ForumApp.Models.Post
 {
     using System.ComponentModel.DataAnnotations;
-    using static ForumApp.Data.DataConstants.Post;
+    using static Forum.Common.Validations.DataConstants.Post;
     public class PostFormModel
     {
         [Required]

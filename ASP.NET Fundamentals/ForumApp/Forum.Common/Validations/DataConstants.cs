@@ -1,4 +1,4 @@
-﻿namespace ForumApp.Data
+﻿namespace Forum.Common.Validations
 {
     public class DataConstants
     {
