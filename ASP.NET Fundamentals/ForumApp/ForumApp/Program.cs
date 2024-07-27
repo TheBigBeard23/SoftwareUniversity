@@ -1,3 +1,5 @@
+using Forum.Services;
+using Forum.Services.Interfaces;
 using ForumApp.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -14,6 +16,9 @@ builder
 
 builder
     .Services.AddControllersWithViews();
+
+//Add custom services
+builder.Services.AddScoped<IPostService, PostService>();
 
 var app = builder.Build();
 
